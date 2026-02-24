@@ -19,50 +19,74 @@
     <!-- Custom Cursor -->
     <div id="cursor" class="hidden lg:block"></div>
 
-    <!-- Top Status Bar (Authority Indicator) -->
+    <!-- Top Status Bar -->
     <div
-        class="bg-[#0D1117] border-b border-white/5 py-2 px-[4%] flex justify-between items-center text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500">
+        class="bg-[#0D1117] border-b border-white/5 py-2 px-[4%] flex justify-between items-center text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 relative z-[2000]">
         <div class="flex gap-6">
             <span>Operational Center: New Delhi</span>
             <span class="text-green-500">● Systems Online</span>
         </div>
         <div class="flex gap-6 items-center">
-            <span class="text-white">Direct Hotline: 9667084988</span>
-            <a href="contact.html" class="hover:text-red-500 transition">Request Enterprise Audit</a>
+            <span class="text-white">Hotline: 9667084988</span>
+            <a href="contact.html" class="hover:text-red-500 transition">Enterprise Audit</a>
         </div>
     </div>
 
-    <!-- Header Architecture -->
-    <header class="curved-header-container">
-        <div class="nav-box sora text-[11px] uppercase tracking-widest font-bold">
-            <a href="index.html" class="text-white">Home</a>
-            <a href="about.html" class="text-gray-500 hover:text-white transition">Strategic History</a>
-            <a href="services.html" class="text-gray-500 hover:text-white transition">Soltuion Matrix</a>
-            <a href="pricing.html" class="text-gray-500 hover:text-white transition">Value Tiers</a>
-            <a href="contact.html" class="text-gray-500 hover:text-white transition">Command Center</a>
-        </div>
-
-        <div class="logo-curved-cutout">
-            <img src="assets/logo.png" alt="Brahmas Express" class="h-10">
-            <div class="text-[12px] font-black text-[#05080E] tracking-tighter mt-1 uppercase sora">Brahmas Express
-            </div>
-        </div>
-
-        <div class="flex items-center gap-6">
-            <div class="hidden lg:flex flex-col items-end">
-                <span class="text-[9px] text-gray-500 font-bold uppercase tracking-widest">Global Fleet Coverage</span>
-                <span class="text-sm font-bold text-white sora">PAN India Support</span>
-            </div>
-            <a href="contact.html" class="btn-enterprise">
-                Connect With Us
-                <span class="bg-white/20 rounded-full w-5 h-5 flex items-center justify-center text-[10px]">↗</span>
+    <!-- Sticky Header Architecture -->
+    <header class="site-header">
+        <div class="header-inner">
+            <!-- Left: Logo (SVG Mark + Text) -->
+            <a href="index.html" class="flex items-center gap-4 group">
+                <div
+                    class="relative w-10 h-10 flex items-center justify-center bg-red-600 rounded-xl group-hover:rotate-12 transition-transform duration-500 shadow-lg shadow-red-600/20">
+                    <svg viewBox="0 0 24 24" class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <div class="text-sm font-black text-white tracking-[0.2em] leading-none uppercase sora">Brahmas
+                    </div>
+                    <div class="text-[9px] font-bold text-red-500 tracking-[0.4em] mt-1 uppercase opacity-80">Express
+                        Logistics</div>
+                </div>
             </a>
+
+            <!-- Center: Navigation -->
+            <nav class="hidden lg:flex nav-links-container">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">Strategic History</a>
+                <a href="services.html" class="nav-link">Solution Matrix</a>
+                <a href="pricing.html" class="nav-link">Value Tiers</a>
+                <a href="contact.html" class="nav-link">Command Center</a>
+            </nav>
+
+
+            <!-- Right: Action -->
+            <div class="flex items-center gap-6">
+                <a href="contact.html" class="btn-enterprise !py-3 !px-8 !text-xs">
+                    CONNECT
+                </a>
+                <!-- Mobile Trigger -->
+                <button class="lg:hidden text-white text-2xl" onclick="toggleMenu()">☰</button>
+            </div>
         </div>
     </header>
 
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-[#05080E] z-[3000] flex flex-col items-center justify-center gap-8 -translate-x-full transition-transform duration-500 lg:hidden">
+        <button class="absolute top-10 right-10 text-4xl text-white" onclick="toggleMenu()">✕</button>
+        <a href="index.html" class="text-2xl font-bold sora hover:text-red-500">Home</a>
+        <a href="about.html" class="text-2xl font-bold sora hover:text-red-500">About</a>
+        <a href="services.html" class="text-2xl font-bold sora hover:text-red-500">Services</a>
+        <a href="pricing.html" class="text-2xl font-bold sora hover:text-red-500">Pricing</a>
+        <a href="contact.html" class="text-2xl font-bold sora hover:text-red-500">Contact</a>
+    </div>
+
     <!-- Cinematic Hero -->
     <section class="hero-enterprise"
-        style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2000');">
+        style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2000'); margin-top: 0;">
         <div class="hero-overlay"></div>
 
         <div class="authority-container relative z-10">
@@ -90,7 +114,7 @@
         </div>
 
         <!-- Hero Status Bar -->
-        <div class="absolute bottom-0 left-0 w-full border-t border-white/5 bg-white/5 backdrop-blur-md relative z-10">
+        <div class="absolute bottom-0 left-0 w-full border-t border-white/5 bg-white/5 backdrop-blur-md z-10">
             <div class="authority-container grid grid-cols-2 lg:grid-cols-4 py-8">
                 <div class="stat-box">
                     <div class="text-xs text-gray-500 font-bold uppercase tracking-widest mb-2">Years of Expertise</div>
@@ -115,7 +139,8 @@
         </div>
     </section>
 
-    <!-- Strategic Verticals (High Density Section) -->
+    <!-- [Rest of the sections remain the same] -->
+    <!-- Strategic Verticals -->
     <section class="section-pad bg-[#0D1117]">
         <div class="authority-container">
             <div class="grid lg:grid-cols-2 gap-20 items-end mb-24">
@@ -196,7 +221,7 @@
         </div>
     </section>
 
-    <!-- Operational Trust Section (The "45-year experience" feel) -->
+    <!-- Operational Trust Section -->
     <section class="section-pad relative overflow-hidden">
         <div class="absolute top-0 right-0 w-1/3 h-full bg-red-600/5 -skew-x-12 translate-x-1/4"></div>
 
@@ -336,11 +361,20 @@
         </div>
     </section>
 
-    <!-- Detailed Footer (Enterprise Standard) -->
+    <!-- Detailed Footer -->
     <footer class="py-24 bg-[#05080E] border-t border-white/5">
         <div class="authority-container grid md:grid-cols-4 gap-16">
             <div class="col-span-1 lg:col-span-1">
-                <img src="assets/logo.png" alt="Logo" class="h-12 brightness-0 invert opacity-50 mb-8">
+                <div class="flex items-center gap-4 mb-8 grayscale opacity-50">
+                    <div class="w-10 h-10 bg-white flex items-center justify-center rounded-lg">
+                        <svg viewBox="0 0 24 24" class="w-6 h-6 text-black" fill="none" stroke="currentColor"
+                            stroke-width="3">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                        </svg>
+                    </div>
+                    <div class="text-xl font-black text-white tracking-tighter sora uppercase">Brahmas</div>
+                </div>
+
                 <p class="text-sm text-gray-500 leading-relaxed font-bold italic">
                     "We redefine logistics through engineering precision and unwavering ethics. Your assets, our
                     mandate."
@@ -392,7 +426,7 @@
 
     <!-- Fixed Leading Element -->
     <a href="https://wa.me/919667084988"
-        class="fixed bottom-10 right-10 bg-green-600 text-white w-20 h-20 rounded-full shadow-2xl flex items-center justify-center text-4xl hover:scale-110 transition duration-300 z-[200] border-4 border-[#05080E] animate-bounce">
+        class="fixed bottom-10 right-10 bg-green-600 text-white w-20 h-20 rounded-full shadow-2xl flex items-center justify-center text-4xl hover:scale-110 transition duration-300 z-[2000] border-4 border-[#05080E] animate-bounce">
         💬
     </a>
 
@@ -405,6 +439,11 @@
             once: true,
             easing: 'ease-out-cubic'
         });
+
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('-translate-x-full');
+        }
     </script>
 </body>
 

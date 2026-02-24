@@ -13,31 +13,70 @@
 
     <div id="cursor" class="hidden lg:block"></div>
 
-    <!-- Header Architecture -->
-    <header class="curved-header-container">
-        <div class="nav-box sora text-[11px] uppercase tracking-widest font-bold">
-            <a href="index.html" class="text-gray-500 hover:text-white transition">Home</a>
-            <a href="about.html" class="text-gray-500 hover:text-white transition">Strategic History</a>
-            <a href="services.html" class="text-gray-500 hover:text-white transition">Solution Matrix</a>
-            <a href="pricing.html" class="text-white">Value Tiers</a>
-            <a href="contact.html" class="text-gray-500 hover:text-white transition">Command Center</a>
+    <!-- Top Status Bar -->
+    <div
+        class="bg-[#0D1117] border-b border-white/5 py-2 px-[4%] flex justify-between items-center text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 relative z-[2000]">
+        <div class="flex gap-6">
+            <span>Operational Center: New Delhi</span>
+            <span class="text-green-500">● Systems Online</span>
         </div>
-        <div class="logo-curved-cutout">
-            <img src="assets/logo.png" alt="Brahmas Express" class="h-10">
-            <div class="text-[12px] font-black text-[#05080E] tracking-tighter mt-1 uppercase sora">Brahmas Express
+        <div class="flex gap-6 items-center">
+            <span class="text-white">Hotline: 9667084988</span>
+            <a href="contact.html" class="hover:text-red-500 transition">Enterprise Audit</a>
+        </div>
+    </div>
+
+    <!-- Sticky Header Architecture -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <div
+                    class="relative w-10 h-10 flex items-center justify-center bg-red-600 rounded-xl group-hover:rotate-12 transition-transform duration-500 shadow-lg shadow-red-600/20">
+                    <svg viewBox="0 0 24 24" class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <div class="text-sm font-black text-white tracking-[0.2em] leading-none uppercase sora">Brahmas
+                    </div>
+                    <div class="text-[9px] font-bold text-red-500 tracking-[0.4em] mt-1 uppercase opacity-80">Express
+                        Logistics</div>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex nav-links-container">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">Strategic History</a>
+                <a href="services.html" class="nav-link">Solution Matrix</a>
+                <a href="pricing.html" class="nav-link active">Value Tiers</a>
+                <a href="contact.html" class="nav-link">Command Center</a>
+            </nav>
+
+            <div class="flex items-center gap-6">
+                <a href="contact.html" class="btn-enterprise !py-3 !px-8 !text-xs">CONNECT</a>
+                <button class="lg:hidden text-white text-2xl" onclick="toggleMenu()">☰</button>
             </div>
         </div>
     </header>
 
-    <!-- Authority Header -->
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-[#05080E] z-[3000] flex flex-col items-center justify-center gap-8 -translate-x-full transition-transform duration-500 lg:hidden">
+        <button class="absolute top-10 right-10 text-4xl text-white" onclick="toggleMenu()">✕</button>
+        <a href="index.html" class="text-2xl font-bold sora hover:text-red-500">Home</a>
+        <a href="about.html" class="text-2xl font-bold sora hover:text-red-500">About</a>
+        <a href="services.html" class="text-2xl font-bold sora hover:text-red-500">Services</a>
+        <a href="pricing.html" class="text-2xl font-bold sora hover:text-red-500">Pricing</a>
+        <a href="contact.html" class="text-2xl font-bold sora hover:text-red-500">Contact</a>
+    </div>
+
     <section class="py-32 px-[8%] border-b border-white/5 relative overflow-hidden bg-[#0D1117]">
         <div class="max-w-4xl relative z-10" data-aos="fade-up">
             <span class="section-label">Investment Structures</span>
             <h1 class="display-text mb-8">Value Tiers & Value.</h1>
-            <p class="text-xl text-gray-400 leading-relaxed italic max-w-2xl">
-                "Transparent, institutional-grade pricing designed for long-term scalability and absolute budgetary
-                clarity."
-            </p>
+            <p class="text-xl text-gray-400 leading-relaxed italic max-w-2xl">"Transparent, institutional-grade pricing
+                designed for long-term scalability and absolute budgetary clarity."</p>
         </div>
     </section>
 
@@ -45,24 +84,18 @@
     <section class="section-pad">
         <div class="authority-container">
             <div class="grid lg:grid-cols-3 gap-8">
-                <!-- Tier 01 -->
                 <div class="protocol-card flex flex-col" data-aos="fade-up">
                     <h3 class="text-2xl font-black sora mb-2">Essential Matrix</h3>
                     <p class="text-xs text-red-500 uppercase tracking-widest font-bold mb-10">Standard Grade Ops</p>
                     <div class="text-sm text-gray-500 mb-12 flex-grow">Designed for high-quality domestic movement with
                         core security protocols and verified personnel.</div>
-                    <ul class="space-y-4 mb-12 text-sm">
-                        <li class="flex gap-4"><span>●</span> Standard Asset Protection</li>
-                        <li class="flex gap-4"><span>●</span> Managed Transit Logic</li>
-                        <li class="flex gap-4"><span>●</span> Dedicated Support Center</li>
-                        <li class="flex gap-4 opacity-30 italic strike"><span>✗</span> White-Glove Restoration</li>
+                    <ul class="space-y-4 mb-12 text-sm text-gray-300">
+                        <li>● Standard Asset Protection</li>
+                        <li>● Managed Transit Logic</li>
                     </ul>
                     <a href="contact.html"
-                        class="btn-outline w-full text-center py-4 text-xs font-black uppercase">Inquire Essential
-                        Tier</a>
+                        class="btn-outline w-full text-center py-4 text-xs font-black uppercase">Inquire Essential</a>
                 </div>
-
-                <!-- Tier 02 -->
                 <div class="protocol-card flex flex-col border-2 border-red-500 scale-105 relative z-10 bg-[#0D1117]"
                     data-aos="fade-up" data-aos-delay="100">
                     <div
@@ -73,56 +106,16 @@
                     </p>
                     <div class="text-sm text-gray-300 mb-12 flex-grow">Our most deployed tier for executive relocations
                         and business departmental shifts. Includes real-time audit protocols.</div>
-                    <ul class="space-y-4 mb-12 text-sm text-white">
-                        <li class="flex gap-4"><span>●</span> 7-Layer Engineering Packing</li>
-                        <li class="flex gap-4"><span>●</span> Real-Time GPS Operational Link</li>
-                        <li class="flex gap-4"><span>●</span> Full-Value Protection Coverage</li>
-                        <li class="flex gap-4"><span>●</span> Structural Disassembly Support</li>
-                    </ul>
-                    <a href="contact.html" class="btn-enterprise w-full justify-center py-4 text-xs">Request Advanced
-                        Audit</a>
+                    <a href="contact.html" class="btn-enterprise w-full justify-center py-4 text-xs">Request Audit</a>
                 </div>
-
-                <!-- Tier 03 -->
                 <div class="protocol-card flex flex-col" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="text-2xl font-black sora mb-2">Authority Management</h3>
                     <p class="text-xs text-red-500 uppercase tracking-widest font-bold mb-10">Elite Operational Control
                     </p>
                     <div class="text-sm text-gray-500 mb-12 flex-grow">Full white-glove, managed operational service for
                         ultra-high-value relocations and strategic enterprise movement.</div>
-                    <ul class="space-y-4 mb-12 text-sm">
-                        <li class="flex gap-4"><span>●</span> Zero-Impact White Glove Service</li>
-                        <li class="flex gap-4"><span>●</span> Dedicated Operational Commander</li>
-                        <li class="flex gap-4"><span>●</span> System Restoration & Setup</li>
-                        <li class="flex gap-4"><span>●</span> Priority Route Clearance</li>
-                    </ul>
                     <a href="contact.html"
-                        class="btn-outline w-full text-center py-4 text-xs font-black uppercase">Direct Executive
-                        Inquiry</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Policy -->
-    <section class="section-pad bg-[#0D1117] border-y border-white/5">
-        <div class="authority-container grid lg:grid-cols-2 gap-20 items-center">
-            <div data-aos="fade-right">
-                <h2 class="authority-title">Direct-Audit Transparency.</h2>
-                <p class="text-gray-500 italic">"Brahmas Express operates on a no-placeholder, no-hidden-cost mandate.
-                    Every investment is validated by a pre-operational audit Report."</p>
-            </div>
-            <div class="p-10 border border-white/10 bg-white/5 rounded-3xl" data-aos="fade-left">
-                <div class="text-xs font-black uppercase tracking-widest text-red-500 mb-4">Investment Mandate</div>
-                <div class="space-y-6 text-sm">
-                    <div class="flex justify-between border-b border-white/5 pb-4">
-                        <span>Pre-Audit Report Accuracy</span>
-                        <span class="text-white">99.8%</span>
-                    </div>
-                    <div class="flex justify-between border-b border-white/5 pb-4">
-                        <span>Hidden Fee Protocol</span>
-                        <span class="text-green-500">Zero-Tolerance</span>
-                    </div>
+                        class="btn-outline w-full text-center py-4 text-xs font-black uppercase">Direct Inquiry</a>
                 </div>
             </div>
         </div>
@@ -135,7 +128,13 @@
 
     <script src="assets/js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>AOS.init({ duration: 1000, once: true });</script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('-translate-x-full');
+        }
+    </script>
 </body>
 
 </html>

@@ -13,47 +13,79 @@
 
     <div id="cursor" class="hidden lg:block"></div>
 
-    <!-- Header Architecture -->
-    <header class="curved-header-container">
-        <div class="nav-box sora text-[11px] uppercase tracking-widest font-bold">
-            <a href="index.html" class="text-gray-500 hover:text-white transition">Home</a>
-            <a href="about.html" class="text-gray-500 hover:text-white transition">Strategic History</a>
-            <a href="services.html" class="text-gray-500 hover:text-white transition">Solution Matrix</a>
-            <a href="pricing.html" class="text-gray-500 hover:text-white transition">Value Tiers</a>
-            <a href="contact.html" class="text-white">Command Center</a>
+    <div
+        class="bg-[#0D1117] border-b border-white/5 py-2 px-[4%] flex justify-between items-center text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 relative z-[2000]">
+        <div class="flex gap-6">
+            <span>Operational Center: New Delhi</span>
+            <span class="text-green-500">● Systems Online</span>
         </div>
-        <div class="logo-curved-cutout">
-            <img src="assets/logo.png" alt="Brahmas Express" class="h-10">
-            <div class="text-[12px] font-black text-[#05080E] tracking-tighter mt-1 uppercase sora">Brahmas Express
+        <div class="flex gap-6 items-center">
+            <span class="text-white">Hotline: 9667084988</span>
+            <a href="contact.html" class="hover:text-red-500 transition">Enterprise Audit</a>
+        </div>
+    </div>
+
+    <!-- Sticky Header Architecture -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <div
+                    class="relative w-10 h-10 flex items-center justify-center bg-red-600 rounded-xl group-hover:rotate-12 transition-transform duration-500 shadow-lg shadow-red-600/20">
+                    <svg viewBox="0 0 24 24" class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <div class="text-sm font-black text-white tracking-[0.2em] leading-none uppercase sora">Brahmas
+                    </div>
+                    <div class="text-[9px] font-bold text-red-500 tracking-[0.4em] mt-1 uppercase opacity-80">Express
+                        Logistics</div>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex nav-links-container">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">Strategic History</a>
+                <a href="services.html" class="nav-link">Solution Matrix</a>
+                <a href="pricing.html" class="nav-link">Value Tiers</a>
+                <a href="contact.html" class="nav-link active">Command Center</a>
+            </nav>
+
+            <div class="flex items-center gap-6">
+                <a href="tel:9667084988"
+                    class="btn-glass sora text-[10px] uppercase font-bold tracking-widest px-8">Hotline Support</a>
+                <button class="lg:hidden text-white text-2xl" onclick="toggleMenu()">☰</button>
             </div>
-        </div>
-        <div class="flex items-center gap-6">
-            <a href="tel:9667084988" class="btn-glass sora text-[10px] uppercase font-bold tracking-widest px-8">Hotline
-                Support</a>
         </div>
     </header>
 
-    <!-- Authority Header -->
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-[#05080E] z-[3000] flex flex-col items-center justify-center gap-8 -translate-x-full transition-transform duration-500 lg:hidden">
+        <button class="absolute top-10 right-10 text-4xl text-white" onclick="toggleMenu()">✕</button>
+        <a href="index.html" class="text-2xl font-bold sora hover:text-red-500">Home</a>
+        <a href="about.html" class="text-2xl font-bold sora hover:text-red-500">About</a>
+        <a href="services.html" class="text-2xl font-bold sora hover:text-red-500">Services</a>
+        <a href="pricing.html" class="text-2xl font-bold sora hover:text-red-500">Pricing</a>
+        <a href="contact.html" class="text-2xl font-bold sora hover:text-red-500">Contact</a>
+    </div>
+
     <section class="py-32 px-[8%] border-b border-white/5 bg-[#0D1117] relative overflow-hidden">
         <div class="max-w-4xl relative z-10" data-aos="fade-up">
             <span class="section-label">Institutional Contact Hub</span>
             <h1 class="display-text mb-8 text-red-500">Direct Command.</h1>
-            <p class="text-xl text-gray-400 leading-relaxed italic max-w-2xl">
-                "Connecting enterprise stability with operational responsiveness. Our central hub is active 24/7 for
-                strategic support."
-            </p>
+            <p class="text-xl text-gray-400 leading-relaxed italic max-w-2xl">"Connecting enterprise stability with
+                operational responsiveness. Our central hub is active 24/7 for strategic support."</p>
         </div>
     </section>
 
-    <!-- Contact Strategy -->
+    <!-- Contact Form -->
     <section class="section-pad">
         <div class="authority-container grid lg:grid-cols-2 gap-24">
-
             <div data-aos="fade-right">
                 <h2 class="authority-title mb-12">Reach the Authority Center.</h2>
-
                 <div class="space-y-12">
-                    <!-- Point 1 -->
                     <div class="flex gap-8 items-start">
                         <div
                             class="w-16 h-16 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center shrink-0 shadow-lg text-red-500 text-2xl">
@@ -62,12 +94,8 @@
                             <div class="text-[10px] font-black uppercase text-gray-500 tracking-[0.2em] mb-2">Central
                                 Dispatch Hotline</div>
                             <div class="text-3xl font-black sora text-white">9667084988</div>
-                            <p class="text-sm text-gray-500 mt-2 font-bold italic">Active 24/7 for Institutional Support
-                            </p>
                         </div>
                     </div>
-
-                    <!-- Point 2 -->
                     <div class="flex gap-8 items-start">
                         <div
                             class="w-16 h-16 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center shrink-0 shadow-lg text-red-500 text-2xl">
@@ -76,86 +104,28 @@
                             <div class="text-[10px] font-black uppercase text-gray-500 tracking-[0.2em] mb-2">Command
                                 Headquarters</div>
                             <div class="text-2xl font-black sora text-white">New Delhi, India</div>
-                            <p class="text-sm text-gray-500 mt-2">Strategic hubs across Mumbai, Bangalore, and Chennai.
-                            </p>
                         </div>
-                    </div>
-
-                    <!-- Point 3 -->
-                    <div class="flex gap-8 items-start">
-                        <div
-                            class="w-16 h-16 bg-green-500 flex items-center justify-center shrink-0 shadow-2xl text-white text-3xl rounded-full translate-y-2 pulse-animation">
-                            💬</div>
-                        <div>
-                            <div class="text-[10px] font-black uppercase text-gray-500 tracking-[0.2em] mb-2">Instant
-                                Business Channel</div>
-                            <a href="https://wa.me/919667084988"
-                                class="text-2xl font-black sora text-green-500 hover:underline">Chat with Command
-                                Hub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Credibility Indicator -->
-                <div class="mt-24 p-8 border border-white/5 bg-white/2 rounded-3xl" data-aos="fade-up">
-                    <h4 class="text-xs font-black uppercase tracking-widest text-gray-600 mb-6 flex items-center gap-4">
-                        <span class="w-10 h-px bg-white/10"></span> Regional HQ Accessibility
-                    </h4>
-                    <div class="grid grid-cols-2 gap-8 text-[11px] font-bold text-gray-400">
-                        <div class="flex gap-2"><span>●</span> North Operational Hub</div>
-                        <div class="flex gap-2"><span>●</span> West Logistics Node</div>
-                        <div class="flex gap-2"><span>●</span> South IT Division Hub</div>
-                        <div class="flex gap-2"><span>●</span> East Network Gateway</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Authority Form -->
             <div class="bg-[#0D1117] p-16 rounded-[4rem] border border-white/10 shadow-2xl relative"
                 data-aos="fade-left">
-                <div class="absolute -top-10 -right-10 w-40 h-40 bg-red-600/10 rounded-full blur-[100px] -z-10"></div>
                 <h3 class="text-3xl font-black sora mb-12 text-red-500">Institutional Audit Request</h3>
                 <form class="space-y-10">
-                    <div class="space-y-2">
-                        <label class="text-[10px] font-black uppercase tracking-widest text-gray-600">Full Legal Name /
-                            Entity</label>
-                        <input type="text" placeholder="Authorized Contact"
-                            class="w-full bg-transparent border-b-2 border-white/10 py-4 focus:border-red-500 focus:outline-none transition font-bold text-white uppercase tracking-widest text-sm">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-[10px] font-black uppercase tracking-widest text-gray-600">Secure Mobile
-                            Contact</label>
-                        <input type="tel" placeholder="Primary Channel"
-                            class="w-full bg-transparent border-b-2 border-white/10 py-4 focus:border-red-500 focus:outline-none transition font-bold text-white uppercase tracking-widest text-sm">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-[10px] font-black uppercase tracking-widest text-gray-600">Tactical Support
-                            Requirement</label>
-                        <select
-                            class="w-full bg-transparent border-b-2 border-white/10 py-4 focus:border-red-500 focus:outline-none transition font-bold text-gray-500 uppercase tracking-widest text-xs">
-                            <option>Institutional Relocation Audit</option>
-                            <option>Managed Logistics Strategy</option>
-                            <option>Executive Personal Movement</option>
-                            <option>Warehousing Solution</option>
-                        </select>
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-[10px] font-black uppercase tracking-widest text-gray-600">Mission
-                            Parameters</label>
-                        <textarea rows="4" placeholder="Briefly define objective constraints and complexity..."
-                            class="w-full bg-transparent border-b-2 border-white/10 py-4 focus:border-red-500 focus:outline-none transition font-medium text-gray-300"></textarea>
-                    </div>
-                    <button type="submit" class="btn-enterprise w-full justify-center p-6 text-base shadow-2xl">Connect
-                        Protocol ↗</button>
-                    <p class="text-center text-[9px] text-gray-600 font-bold uppercase tracking-widest italic">Encrypted
-                        Secure InBound Channel</p>
+                    <input type="text" placeholder="Authorized Contact"
+                        class="w-full bg-transparent border-b-2 border-white/10 py-4 focus:border-red-500 focus:outline-none transition font-bold text-white uppercase tracking-widest text-sm">
+                    <input type="tel" placeholder="Primary Channel"
+                        class="w-full bg-transparent border-b-2 border-white/10 py-4 focus:border-red-500 focus:outline-none transition font-bold text-white uppercase tracking-widest text-sm">
+                    <textarea rows="4" placeholder="Briefly define objective constraints and complexity..."
+                        class="w-full bg-transparent border-b-2 border-white/10 py-4 focus:border-red-500 focus:outline-none transition font-medium text-gray-300"></textarea>
+                    <button type="submit" class="btn-enterprise w-full justify-center p-6 text-base">Connect Protocol
+                        ↗</button>
                 </form>
             </div>
-
         </div>
     </section>
 
-    <!-- Footer -->
     <footer
         class="py-12 bg-[#05080E] border-t border-white/5 text-gray-600 text-[10px] text-center uppercase tracking-widest font-bold">
         © 2025 Brahmas Express | Logistics Central Command
@@ -163,7 +133,13 @@
 
     <script src="assets/js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>AOS.init({ duration: 1000, once: true });</script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('-translate-x-full');
+        }
+    </script>
 </body>
 
 </html>

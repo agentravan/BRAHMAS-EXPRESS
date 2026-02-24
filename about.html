@@ -13,24 +13,63 @@
 
     <div id="cursor" class="hidden lg:block"></div>
 
-    <!-- Header Architecture -->
-    <header class="curved-header-container">
-        <div class="nav-box sora text-[11px] uppercase tracking-widest font-bold">
-            <a href="index.html" class="text-gray-500 hover:text-white transition">Home</a>
-            <a href="about.html" class="text-white">Strategic History</a>
-            <a href="services.html" class="text-gray-500 hover:text-white transition">Solution Matrix</a>
-            <a href="pricing.html" class="text-gray-500 hover:text-white transition">Value Tiers</a>
-            <a href="contact.html" class="text-gray-500 hover:text-white transition">Command Center</a>
+    <!-- Top Status Bar -->
+    <div
+        class="bg-[#0D1117] border-b border-white/5 py-2 px-[4%] flex justify-between items-center text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 relative z-[2000]">
+        <div class="flex gap-6">
+            <span>Operational Center: New Delhi</span>
+            <span class="text-green-500">● Systems Online</span>
         </div>
-        <div class="logo-curved-cutout">
-            <img src="assets/logo.png" alt="Brahmas Express" class="h-10">
-            <div class="text-[12px] font-black text-[#05080E] tracking-tighter mt-1 uppercase sora">Brahmas Express
+        <div class="flex gap-6 items-center">
+            <span class="text-white">Hotline: 9667084988</span>
+            <a href="contact.html" class="hover:text-red-500 transition">Enterprise Audit</a>
+        </div>
+    </div>
+
+    <!-- Sticky Header Architecture -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <div
+                    class="relative w-10 h-10 flex items-center justify-center bg-red-600 rounded-xl group-hover:rotate-12 transition-transform duration-500 shadow-lg shadow-red-600/20">
+                    <svg viewBox="0 0 24 24" class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <div class="text-sm font-black text-white tracking-[0.2em] leading-none uppercase sora">Brahmas
+                    </div>
+                    <div class="text-[9px] font-bold text-red-500 tracking-[0.4em] mt-1 uppercase opacity-80">Express
+                        Logistics</div>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex nav-links-container">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">Strategic History</a>
+                <a href="services.html" class="nav-link">Solution Matrix</a>
+                <a href="pricing.html" class="nav-link">Value Tiers</a>
+                <a href="contact.html" class="nav-link">Command Center</a>
+            </nav>
+
+            <div class="flex items-center gap-6">
+                <a href="contact.html" class="btn-enterprise !py-3 !px-8 !text-xs">CONNECT</a>
+                <button class="lg:hidden text-white text-2xl" onclick="toggleMenu()">☰</button>
             </div>
         </div>
-        <div class="flex items-center gap-6">
-            <a href="contact.html" class="btn-enterprise">Connect</a>
-        </div>
     </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-[#05080E] z-[3000] flex flex-col items-center justify-center gap-8 -translate-x-full transition-transform duration-500 lg:hidden">
+        <button class="absolute top-10 right-10 text-4xl text-white" onclick="toggleMenu()">✕</button>
+        <a href="index.html" class="text-2xl font-bold sora hover:text-red-500">Home</a>
+        <a href="about.html" class="text-2xl font-bold sora hover:text-red-500">About</a>
+        <a href="services.html" class="text-2xl font-bold sora hover:text-red-500">Services</a>
+        <a href="pricing.html" class="text-2xl font-bold sora hover:text-red-500">Pricing</a>
+        <a href="contact.html" class="text-2xl font-bold sora hover:text-red-500">Contact</a>
+    </div>
 
     <!-- Authority Header -->
     <section class="py-32 px-[8%] bg-[#0D1117] border-b border-white/5 relative overflow-hidden">
@@ -45,7 +84,7 @@
         </div>
     </section>
 
-    <!-- Deep Content: History & Pillars -->
+    <!-- Content -->
     <section class="section-pad">
         <div class="authority-container">
             <div class="grid lg:grid-cols-2 gap-24 items-center">
@@ -74,13 +113,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- Infrastructure Showcase -->
                 <div class="p-12 border border-white/5 bg-white/5 rounded-[4rem] relative overflow-hidden h-[600px] flex items-center justify-center"
                     data-aos="fade-left">
                     <img src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&q=80&w=1000"
                         class="absolute inset-0 w-full h-full object-cover opacity-30 grayscale hover:grayscale-0 transition duration-1000">
                     <div class="relative z-10 text-center px-10">
-                        <div class="text-[100px] font-black opacity-10 sora uppercase leading-none mb-4">BRAHMAS</div>
+                        <div class="text-[100px] font-black opacity-10 sora uppercase leading-none mb-4 text-white">
+                            BRAHMAS</div>
                         <h3 class="text-3xl font-black sora text-white">Advanced Fleet Management</h3>
                     </div>
                 </div>
@@ -88,14 +127,12 @@
         </div>
     </section>
 
-    <!-- Core Governance Framework (Process Timeline) -->
     <section class="section-pad bg-[#0D1117]">
         <div class="authority-container">
             <div class="text-center mb-24" data-aos="fade-up">
                 <span class="section-label">Operational Framework</span>
                 <h2 class="authority-title">The Strategic Movement Protocol.</h2>
             </div>
-
             <div class="process-stepper max-w-4xl mx-auto">
                 <div class="step-item" data-aos="fade-left">
                     <div class="step-marker"></div>
@@ -129,27 +166,6 @@
         </div>
     </section>
 
-    <!-- Professional Board / Leadership Feel -->
-    <section class="section-pad">
-        <div class="authority-container grid lg:grid-cols-3 gap-12">
-            <div class="protocol-card border-l-4 border-red-500" data-aos="fade-up">
-                <h3 class="text-xl font-black sora mb-4">Board of Directors</h3>
-                <p class="text-gray-500 text-sm italic">Comprised of veterans from maritime, aviation, and terrestrial
-                    logistics sectors with a combined experience of 80+ years.</p>
-            </div>
-            <div class="protocol-card border-l-4 border-red-500" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-xl font-black sora mb-4">Ethics & Compliance</h3>
-                <p class="text-gray-500 text-sm italic">Maintaining the highest standards of regulatory compliance,
-                    environmental sustainability, and labor welfare.</p>
-            </div>
-            <div class="protocol-card border-l-4 border-red-500" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="text-xl font-black sora mb-4">Financial Stability</h3>
-                <p class="text-gray-500 text-sm italic">Robust financial infrastructure allowing us to undertake and
-                    insure large-scale projects without liquidity constraints.</p>
-            </div>
-        </div>
-    </section>
-
     <footer
         class="py-12 bg-[#05080E] border-t border-white/5 text-gray-600 text-[10px] text-center uppercase tracking-widest font-bold">
         © 2025 Brahmas Express | Strategic Logistics Authority
@@ -157,7 +173,13 @@
 
     <script src="assets/js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>AOS.init({ duration: 1000, once: true });</script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('-translate-x-full');
+        }
+    </script>
 </body>
 
 </html>
