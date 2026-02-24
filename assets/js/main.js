@@ -1,37 +1,29 @@
 /**
- * Brahmas Express - Cinematic Redesign JS
+ * Brahmas Express - Premium Polish JS
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    initCursor();
-    initAnimations();
+    initScrollHeader();
+    initMobileMenu();
 });
 
-// Custom Cursor
-function initCursor() {
-    const cursor = document.getElementById('cursor');
-    if (!cursor) return;
+// Sticky Header Transition
+function initScrollHeader() {
+    const header = document.querySelector('.site-header');
 
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
-
-    const interactables = document.querySelectorAll('a, button, .lift-card');
-    interactables.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
-            cursor.style.background = 'rgba(225, 29, 72, 0.1)';
-        });
-        item.addEventListener('mouseleave', () => {
-            cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-            cursor.style.background = 'transparent';
-        });
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
     });
 }
 
-// Simple AOS-like reveal logic if needed, or stick to AOS library
-function initAnimations() {
-    // We can add custom slider logic here if the user wants functional arrows
-    console.log("Cinematic Theme Initialized");
+// Mobile Menu Toggle
+function initMobileMenu() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    window.toggleMenu = () => {
+        mobileMenu.classList.toggle('-translate-x-full');
+    };
 }

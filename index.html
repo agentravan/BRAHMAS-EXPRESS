@@ -5,45 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brahmas Express | Global Relocation & Strategic Logistics Authority</title>
-    <meta name="description"
-        content="Nationwide logistics and relocation infrastructure for enterprises and families. Built on precision, data-led operations, and decades of expertise.">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="bg-[#05080E] text-[#F0F6FC]">
+<body class="bg-[#05080E] text-[#F3F4F6]">
 
     <!-- Custom Cursor -->
     <div id="cursor" class="hidden lg:block"></div>
 
     <!-- Top Status Bar -->
     <div
-        class="bg-[#0D1117] border-b border-white/5 py-2 px-[4%] flex justify-between items-center text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 relative z-[2000]">
+        class="bg-[#0D1117] border-b border-white/5 h-9 px-[4%] flex justify-between items-center text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 fixed top-0 left-0 w-full z-[1001]">
         <div class="flex gap-6">
             <span>Operational Center: New Delhi</span>
             <span class="text-green-500">● Systems Online</span>
         </div>
         <div class="flex gap-6 items-center">
             <span class="text-white">Hotline: 9667084988</span>
-            <a href="contact.html" class="hover:text-red-500 transition">Enterprise Audit</a>
         </div>
     </div>
 
     <!-- Sticky Header Architecture -->
     <header class="site-header">
         <div class="header-inner">
-            <!-- Left: Logo (SVG Mark + Text) -->
+            <!-- Left: Official Logo -->
             <a href="index.html" class="flex items-center gap-4 group">
-                <div
-                    class="relative w-10 h-10 flex items-center justify-center bg-red-600 rounded-xl group-hover:rotate-12 transition-transform duration-500 shadow-lg shadow-red-600/20">
-                    <svg viewBox="0 0 24 24" class="w-6 h-6 text-white" fill="none" stroke="currentColor"
-                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                    </svg>
-                </div>
+                <img src="assets/img/logo.png" alt="Brahmas Express Logo"
+                    class="h-10 w-auto object-contain transition-transform group-hover:scale-105"
+                    onerror="this.onerror=null; this.replaceWith(document.getElementById('fallback-logo').content.cloneNode(true));">
+                <template id="fallback-logo">
+                    <div
+                        class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center text-white font-black sora">
+                        B</div>
+                </template>
                 <div class="flex flex-col">
                     <div class="text-sm font-black text-white tracking-[0.2em] leading-none uppercase sora">Brahmas
                     </div>
@@ -61,13 +56,11 @@
                 <a href="contact.html" class="nav-link">Command Center</a>
             </nav>
 
-
             <!-- Right: Action -->
             <div class="flex items-center gap-6">
                 <a href="contact.html" class="btn-enterprise !py-3 !px-8 !text-xs">
                     CONNECT
                 </a>
-                <!-- Mobile Trigger -->
                 <button class="lg:hidden text-white text-2xl" onclick="toggleMenu()">☰</button>
             </div>
         </div>
@@ -75,8 +68,8 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu"
-        class="fixed inset-0 bg-[#05080E] z-[3000] flex flex-col items-center justify-center gap-8 -translate-x-full transition-transform duration-500 lg:hidden">
-        <button class="absolute top-10 right-10 text-4xl text-white" onclick="toggleMenu()">✕</button>
+        class="fixed inset-0 bg-[#05080E] z-[3000] flex flex-col items-center justify-center gap-8 -translate-x-full transition-transform duration-500 lg:hidden text-center">
+        <button class="absolute top-10 right-10 text-4xl text-white outline-none" onclick="toggleMenu()">✕</button>
         <a href="index.html" class="text-2xl font-bold sora hover:text-red-500">Home</a>
         <a href="about.html" class="text-2xl font-bold sora hover:text-red-500">About</a>
         <a href="services.html" class="text-2xl font-bold sora hover:text-red-500">Services</a>
@@ -90,23 +83,23 @@
         <div class="hero-overlay"></div>
 
         <div class="authority-container relative z-10">
-            <div class="max-w-4xl" data-aos="fade-right">
+            <div class="max-w-3xl" data-aos="fade-right">
                 <span class="section-label">Logistics Infrastructure Authority</span>
                 <h1 class="display-text">
                     Smarter Movement.<br>
                     Global Precision.<br>
                     Nationwide Trust.
                 </h1>
-                <p class="text-xl text-gray-400 mb-12 max-w-2xl leading-relaxed">
+                <p class="text-lg text-gray-400 mb-10 max-w-2xl leading-relaxed">
                     Delivering enterprise-scale relocation and heavy-logistics solutions engineered for stability,
                     speed, and safety. We don't just move assets; we move business forward.
                 </p>
-                <div class="flex flex-wrap gap-8">
-                    <a href="services.html" class="btn-enterprise py-5 px-10 text-base">
+                <div class="flex flex-wrap gap-6">
+                    <a href="services.html" class="btn-enterprise py-4 px-10 text-sm">
                         Explore Specialized Matrix
-                        <span class="bg-white/10 rounded-full w-6 h-6 flex items-center justify-center">→</span>
+                        <span class="bg-white/10 rounded-full w-5 h-5 flex items-center justify-center ml-2">→</span>
                     </a>
-                    <a href="contact.html" class="btn-outline py-5 px-10 text-base">
+                    <a href="contact.html" class="btn-outline py-4 px-10 text-sm">
                         Institutional Inquiry
                     </a>
                 </div>
@@ -115,104 +108,77 @@
 
         <!-- Hero Status Bar -->
         <div class="absolute bottom-0 left-0 w-full border-t border-white/5 bg-white/5 backdrop-blur-md z-10">
-            <div class="authority-container grid grid-cols-2 lg:grid-cols-4 py-8">
+            <div class="authority-container grid grid-cols-2 lg:grid-cols-4 py-6">
                 <div class="stat-box">
-                    <div class="text-xs text-gray-500 font-bold uppercase tracking-widest mb-2">Years of Expertise</div>
-                    <div class="text-4xl font-black sora">25+</div>
+                    <div class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-1">Years of Expertise
+                    </div>
+                    <div class="text-3xl font-black sora">25+</div>
                 </div>
                 <div class="stat-box">
-                    <div class="text-xs text-gray-500 font-bold uppercase tracking-widest mb-2">Successful Operations
-                    </div>
-                    <div class="text-4xl font-black sora">1.2M+</div>
+                    <div class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-1">Successful
+                        Deliveries</div>
+                    <div class="text-3xl font-black sora">1.2M+</div>
                 </div>
                 <div class="stat-box">
-                    <div class="text-xs text-gray-500 font-bold uppercase tracking-widest mb-2">Verified Specialists
-                    </div>
-                    <div class="text-4xl font-black sora">800+</div>
+                    <div class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-1">Destinations PAN
+                        India</div>
+                    <div class="text-3xl font-black sora">800+</div>
                 </div>
                 <div class="stat-box">
-                    <div class="text-xs text-gray-500 font-bold uppercase tracking-widest mb-2">PAN India Locations
+                    <div class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-1">Specialized Fleet
                     </div>
-                    <div class="text-4xl font-black sora">180+</div>
+                    <div class="text-3xl font-black sora">180+</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- [Rest of the sections remain the same] -->
     <!-- Strategic Verticals -->
     <section class="section-pad bg-[#0D1117]">
         <div class="authority-container">
-            <div class="grid lg:grid-cols-2 gap-20 items-end mb-24">
+            <div class="grid lg:grid-cols-2 gap-20 items-end mb-20">
                 <div data-aos="fade-right">
                     <span class="section-label">Operational Verticals</span>
                     <h2 class="authority-title">A Solution Matrix for Every Complexity.</h2>
                 </div>
-                <p class="text-gray-500 text-lg border-l border-red-500/30 pl-8 mb-4 max-w-lg" data-aos="fade-left">
+                <p class="text-gray-500 text-base border-l border-red-500/30 pl-8 mb-4 max-w-md" data-aos="fade-left">
                     Whether it's high-value residential relocation or enterprise-scale IT infrastructure movement, our
                     protocols ensure zero-impact transitions.
                 </p>
             </div>
 
             <div class="data-grid">
-                <!-- Vertical 1 -->
                 <div class="protocol-card" data-aos="fade-up">
-                    <div class="text-3xl mb-8 flex items-center justify-between">
-                        <span>🏠</span>
-                        <span class="text-[10px] font-black text-gray-700 uppercase tracking-widest">Vertical 01</span>
-                    </div>
-                    <h3 class="text-2xl font-bold sora mb-4">Residential Engineering</h3>
+                    <div class="text-2xl mb-6">🏠</div>
+                    <h3 class="text-xl font-bold sora mb-4">Residential Engineering</h3>
                     <p class="text-gray-500 text-sm leading-relaxed mb-8">
                         Beyond simple packing. We utilize military-grade 7-layer protection and climate-controlled
-                        modules for sensitive household assets and personal heirlooms.
+                        modules for sensitive household assets.
                     </p>
-                    <ul class="space-y-3 mb-10 text-xs font-bold text-gray-300">
-                        <li class="flex gap-3">● Anti-Static Electronic Packaging</li>
-                        <li class="flex gap-3">● White-Glove Unpacking & Placement</li>
-                        <li class="flex gap-3">● Real-Time Movement Visualization</li>
-                    </ul>
                     <a href="services.html"
                         class="text-red-500 font-black text-[10px] uppercase tracking-widest flex items-center gap-3 hover:gap-6 transition-all">Audit
-                        This Vertical →</a>
+                        Vertical →</a>
                 </div>
 
-                <!-- Vertical 2 -->
                 <div class="protocol-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-3xl mb-8 flex items-center justify-between">
-                        <span>🏢</span>
-                        <span class="text-[10px] font-black text-gray-700 uppercase tracking-widest">Vertical 02</span>
-                    </div>
-                    <h3 class="text-2xl font-bold sora mb-4">Corporate Continuity</h3>
+                    <div class="text-2xl mb-6">🏢</div>
+                    <h3 class="text-xl font-bold sora mb-4">Corporate Continuity</h3>
                     <p class="text-gray-500 text-sm leading-relaxed mb-8">
-                        Managing business downtime is our core competency. We specialize in weekend/overnight
-                        relocations of server architectures and departmental workstations.
+                        Managing business downtime is our core competency. We specialize in server architectures and
+                        departmental workstations.
                     </p>
-                    <ul class="space-y-3 mb-10 text-xs font-bold text-gray-300">
-                        <li class="flex gap-3">● IT Hardware Restoration Protocol</li>
-                        <li class="flex gap-3">● Document Management & Archiving</li>
-                        <li class="flex gap-3">● Managed Project Coordination</li>
-                    </ul>
                     <a href="services.html"
                         class="text-red-500 font-black text-[10px] uppercase tracking-widest flex items-center gap-3 hover:gap-6 transition-all">Inquire
                         Enterprise Move →</a>
                 </div>
 
-                <!-- Vertical 3 -->
                 <div class="protocol-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-3xl mb-8 flex items-center justify-between">
-                        <span>🚛</span>
-                        <span class="text-[10px] font-black text-gray-700 uppercase tracking-widest">Vertical 03</span>
-                    </div>
-                    <h3 class="text-2xl font-bold sora mb-4">Logistics Architecture</h3>
+                    <div class="text-2xl mb-6">🚛</div>
+                    <h3 class="text-xl font-bold sora mb-4">Logistics Architecture</h3>
                     <p class="text-gray-500 text-sm leading-relaxed mb-8">
                         Nationwide heavy-cargo transport powered by GPS-led fleet management. We manage full-truck-load
-                        and specialized cargo routes with absolute punctuality.
+                        routes with punctuality.
                     </p>
-                    <ul class="space-y-3 mb-10 text-xs font-bold text-gray-300">
-                        <li class="flex gap-3">● Predictive Route Optimization</li>
-                        <li class="flex gap-3">● 24/7 Security Fleet Guarding</li>
-                        <li class="flex gap-3">● Multi-Modal Transit Strategy</li>
-                    </ul>
                     <a href="services.html"
                         class="text-red-500 font-black text-[10px] uppercase tracking-widest flex items-center gap-3 hover:gap-6 transition-all">Request
                         Logistics Plan →</a>
@@ -221,212 +187,71 @@
         </div>
     </section>
 
-    <!-- Operational Trust Section -->
-    <section class="section-pad relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-1/3 h-full bg-red-600/5 -skew-x-12 translate-x-1/4"></div>
-
-        <div class="authority-container grid lg:grid-cols-2 gap-20 items-center">
-            <div data-aos="fade-right">
-                <span class="section-label">Integrity & Protocol</span>
-                <h2 class="authority-title">Stability in Every Kilometer.</h2>
-                <div class="space-y-12 mt-12">
-                    <div class="flex gap-8">
-                        <div
-                            class="w-16 h-16 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center shrink-0 sora text-2xl font-bold text-red-500 shadow-xl">
-                            01</div>
-                        <div>
-                            <h4 class="text-xl font-bold sora mb-3">Risk Assessment Analysis</h4>
-                            <p class="text-gray-500 text-sm leading-relaxed">Prior to any movement, our specialists
-                                conduct a 24-point risk assessment to identify fragile assets, logistical bottlenecks,
-                                and transit challenges.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-8">
-                        <div
-                            class="w-16 h-16 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center shrink-0 sora text-2xl font-bold text-red-500 shadow-xl">
-                            02</div>
-                        <div>
-                            <h4 class="text-xl font-bold sora mb-3">Full-Value Protection</h4>
-                            <p class="text-gray-500 text-sm leading-relaxed">We maintain tier-1 partnerships with
-                                leading global insurers, offering complete peace-of-mind coverage for all transit and
-                                warehouse operations.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-8">
-                        <div
-                            class="w-16 h-16 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center shrink-0 sora text-2xl font-bold text-red-500 shadow-xl">
-                            03</div>
-                        <div>
-                            <h4 class="text-xl font-bold sora mb-3">Certified Personnel Only</h4>
-                            <div class="text-gray-500 text-sm leading-relaxed">Every member of our crew undergoes
-                                mandatory background verification and 120 hours of specialized movement training
-                                annually.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="relative" data-aos="fade-left">
-                <div class="p-12 bg-[#0D1117] border border-white/10 rounded-[3rem] shadow-2xl relative z-10">
-                    <div class="text-[50px] mb-8 font-black opacity-10 sora uppercase absolute -top-4 right-10">
-                        Verification</div>
-                    <h3 class="text-3xl font-bold sora mb-8 text-red-500 border-b border-red-500/20 pb-6">Quality
-                        Control Board</h3>
-                    <div class="space-y-6">
-                        <div class="flex justify-between items-center text-sm font-bold border-b border-white/5 pb-4">
-                            <span>Packing Precision Audit</span>
-                            <span class="text-green-500">Passed</span>
-                        </div>
-                        <div class="flex justify-between items-center text-sm font-bold border-b border-white/5 pb-4">
-                            <span>Fleet Safety Inspection</span>
-                            <span class="text-green-500">Passed</span>
-                        </div>
-                        <div class="flex justify-between items-center text-sm font-bold border-b border-white/5 pb-4">
-                            <span>Background Verification</span>
-                            <span class="text-green-500">Passed</span>
-                        </div>
-                        <div
-                            class="flex justify-between items-center text-sm font-bold border-b border-white/5 pb-4 text-gray-400">
-                            <span>ISO Certification Status</span>
-                            <span class="text-gray-400 font-black">Active - 2025</span>
-                        </div>
-                        <div class="p-6 bg-red-600/5 rounded-2xl border border-red-500/10 mt-8">
-                            <div class="text-[10px] font-black uppercase text-red-500 mb-2">Notice of Compliance</div>
-                            <div class="text-xs text-gray-400 leading-relaxed italic">"Brahmas Express operates under
-                                strict adherence to NDL protocols and national safety standards for heavy cargo
-                                movement."</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-red-600/20 rounded-full blur-[80px]"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Global Network Section -->
-    <section class="section-pad bg-[#0D1117]">
+    <!-- Global Footer Architecture -->
+    <footer class="py-20 bg-[#05080E] border-t border-white/5">
         <div class="authority-container">
-            <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
-                <span class="section-label">Infrastructure Reach</span>
-                <h2 class="authority-title">A Network Beyond Geography.</h2>
-                <p class="text-gray-500">Brahmas Express manages 180+ strategic hubs across PAN India, ensuring that no
-                    destination is out of reach.</p>
-            </div>
-
-            <div class="h-[500px] border border-white/5 bg-white/5 rounded-[4rem] flex items-center justify-center relative overflow-hidden"
-                data-aos="zoom-in">
-                <!-- Map Visualization -->
-                <div class="text-8xl font-black text-white/5 uppercase select-none sora">Infrastructure Map</div>
-                <div class="absolute inset-0 flex items-center justify-center px-20">
-                    <div class="grid grid-cols-3 gap-20 text-center">
-                        <div>
-                            <div class="text-2xl font-bold sora text-white">NORTH HUB</div>
-                            <p class="text-[10px] text-red-500 font-black uppercase tracking-widest mt-2">Specialized HQ
-                                - Delhi</p>
-                        </div>
-                        <div>
-                            <div class="text-2xl font-bold sora text-white">WEST HUB</div>
-                            <p class="text-[10px] text-red-500 font-black uppercase tracking-widest mt-2">Logistics Node
-                                - Mumbai</p>
-                        </div>
-                        <div>
-                            <div class="text-2xl font-bold sora text-white">SOUTH HUB</div>
-                            <p class="text-[10px] text-red-500 font-black uppercase tracking-widest mt-2">IT Vertical
-                                Hub - Bangalore</p>
-                        </div>
+            <div class="grid md:grid-cols-4 gap-16 mb-20">
+                <div class="col-span-1 lg:col-span-1">
+                    <a href="index.html"
+                        class="flex items-center gap-4 mb-8 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition">
+                        <img src="assets/img/logo.png" alt="Logo" class="h-10 w-auto object-contain"
+                            onerror="this.src='https://via.placeholder.com/40x40/E11D48/FFFFFF?text=B'">
+                        <div class="text-xl font-black text-white tracking-tighter sora uppercase">Brahmas</div>
+                    </a>
+                    <p class="text-xs text-gray-500 leading-relaxed font-bold italic">
+                        "We redefine logistics through engineering precision and unwavering ethics. Your assets, our
+                        mandate."
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white sora font-black text-[10px] uppercase tracking-widest mb-8">Strategic Matrix
+                    </h4>
+                    <ul class="space-y-4 text-gray-500 text-[10px] font-bold uppercase tracking-widest">
+                        <li><a href="services.html" class="hover:text-red-500 transition">Family Relocation</a></li>
+                        <li><a href="services.html" class="hover:text-red-500 transition">Corporate Transit</a></li>
+                        <li><a href="services.html" class="hover:text-red-500 transition">Heavy Logistics</a></li>
+                        <li><a href="services.html" class="hover:text-red-500 transition">Warehousing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white sora font-black text-[10px] uppercase tracking-widest mb-8">The Authority</h4>
+                    <ul class="space-y-4 text-gray-500 text-[10px] font-bold uppercase tracking-widest">
+                        <li><a href="about.html" class="hover:text-red-500 transition">Board of Directors</a></li>
+                        <li><a href="about.html" class="hover:text-red-500 transition">Compliance Board</a></li>
+                        <li><a href="about.html" class="hover:text-red-500 transition">Geographic Reach</a></li>
+                        <li><a href="contact.html" class="hover:text-red-500 transition">Operational Status</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white sora font-black text-[10px] uppercase tracking-widest mb-8">Command Center
+                    </h4>
+                    <div class="text-2xl font-black sora text-white mb-2">9667084988</div>
+                    <p class="text-[9px] text-gray-600 font-bold uppercase tracking-widest mb-8">Serving 250+ Cities PAN
+                        India</p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-red-500 transition text-[10px] font-black">FB</a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-red-500 transition text-[10px] font-black">TW</a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-red-500 transition text-[10px] font-black">IN</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Enterprise CTA -->
-    <section class="section-pad bg-red-600 text-white relative z-10 overflow-hidden">
-        <div class="absolute top-0 right-0 w-1/2 h-full bg-white/10 skew-x-[-30deg] translate-x-1/2"></div>
-        <div class="authority-container relative z-10 text-center lg:text-left grid lg:grid-cols-2 gap-12 items-center">
-            <div data-aos="fade-right">
-                <h2 class="text-5xl font-black sora mb-6">Ready for a Seamless Transition?</h2>
-                <p class="text-xl font-bold opacity-80 leading-relaxed italic max-w-xl">"Connect with our command center
-                    today for a comprehensive operational audit and fixed-tier pricing model."</p>
-            </div>
-            <div class="flex flex-col lg:items-end gap-6" data-aos="fade-left">
-                <a href="contact.html"
-                    class="bg-white text-red-600 sora px-12 py-6 rounded-2xl font-black text-lg hover:bg-black hover:text-white transition shadow-2xl flex items-center gap-4 group">
-                    Book Operational Audit
-                    <span class="group-hover:translate-x-3 transition-transform">→</span>
-                </a>
-                <div class="text-xs font-black uppercase tracking-widest opacity-60">Verified Response within 60 Minutes
+            <div
+                class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] font-bold uppercase tracking-widest text-gray-600">
+                <div>© 2025 Brahmas Express Logistics. All Regulatory Standards Met.</div>
+                <div class="flex gap-10">
+                    <a href="#" class="hover:text-white transition">Quality Policy</a>
+                    <a href="#" class="hover:text-white transition">Privacy Management</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Detailed Footer -->
-    <footer class="py-24 bg-[#05080E] border-t border-white/5">
-        <div class="authority-container grid md:grid-cols-4 gap-16">
-            <div class="col-span-1 lg:col-span-1">
-                <div class="flex items-center gap-4 mb-8 grayscale opacity-50">
-                    <div class="w-10 h-10 bg-white flex items-center justify-center rounded-lg">
-                        <svg viewBox="0 0 24 24" class="w-6 h-6 text-black" fill="none" stroke="currentColor"
-                            stroke-width="3">
-                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                        </svg>
-                    </div>
-                    <div class="text-xl font-black text-white tracking-tighter sora uppercase">Brahmas</div>
-                </div>
-
-                <p class="text-sm text-gray-500 leading-relaxed font-bold italic">
-                    "We redefine logistics through engineering precision and unwavering ethics. Your assets, our
-                    mandate."
-                </p>
-            </div>
-            <div>
-                <h4 class="text-white sora font-black text-xs uppercase tracking-widest mb-10">Strategic Matrix</h4>
-                <ul class="space-y-4 text-gray-500 text-[11px] font-bold uppercase tracking-widest">
-                    <li><a href="services.html" class="hover:text-red-500 transition">Family Relocation</a></li>
-                    <li><a href="services.html" class="hover:text-red-500 transition">Corporate Transit</a></li>
-                    <li><a href="services.html" class="hover:text-red-500 transition">Heavy Logistics</a></li>
-                    <li><a href="services.html" class="hover:text-red-500 transition">Warehousing</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white sora font-black text-xs uppercase tracking-widest mb-10">The Authority</h4>
-                <ul class="space-y-4 text-gray-500 text-[11px] font-bold uppercase tracking-widest">
-                    <li><a href="about.html" class="hover:text-red-500 transition">Board of Directors</a></li>
-                    <li><a href="about.html" class="hover:text-red-500 transition">Compliance Board</a></li>
-                    <li><a href="about.html" class="hover:text-red-500 transition">Geographic Reach</a></li>
-                    <li><a href="contact.html" class="hover:text-red-500 transition">Operational Status</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white sora font-black text-xs uppercase tracking-widest mb-10">Command Center</h4>
-                <div class="text-2xl font-black sora text-white mb-2">9667084988</div>
-                <p class="text-[10px] text-gray-600 font-bold uppercase tracking-widest mb-10">Serving 250+ Cities PAN
-                    India</p>
-                <div class="flex gap-4">
-                    <a href="#"
-                        class="w-10 h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-red-500 transition text-[10px] font-black">FB</a>
-                    <a href="#"
-                        class="w-10 h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-red-500 transition text-[10px] font-black">TW</a>
-                    <a href="#"
-                        class="w-10 h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-red-500 transition text-[10px] font-black">IN</a>
-                </div>
-            </div>
-        </div>
-        <div
-            class="authority-container mt-24 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-600">
-            <div>© 2025 Brahmas Express Logistics. All Regulatory Standards Met.</div>
-            <div class="flex gap-10">
-                <a href="#" class="hover:text-white transition">Quality Policy</a>
-                <a href="#" class="hover:text-white transition">Privacy Management</a>
-                <a href="#" class="hover:text-white transition">CSR Initiatives</a>
             </div>
         </div>
     </footer>
 
-    <!-- Fixed Leading Element -->
+    <!-- Fixed WhatsApp -->
     <a href="https://wa.me/919667084988"
-        class="fixed bottom-10 right-10 bg-green-600 text-white w-20 h-20 rounded-full shadow-2xl flex items-center justify-center text-4xl hover:scale-110 transition duration-300 z-[2000] border-4 border-[#05080E] animate-bounce">
+        class="fixed bottom-10 right-10 bg-green-600 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:scale-110 transition duration-300 z-[2000] border-4 border-[#05080E]">
         💬
     </a>
 
@@ -434,16 +259,7 @@
     <script src="assets/js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            easing: 'ease-out-cubic'
-        });
-
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('-translate-x-full');
-        }
+        AOS.init({ duration: 1000, once: true, easing: 'ease-out-cubic' });
     </script>
 </body>
 
