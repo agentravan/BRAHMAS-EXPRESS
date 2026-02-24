@@ -4,183 +4,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strategic History | BRAHMAS EXPRESS - Future Infrastructure</title>
+    <title>Strategic History | Brahmas Express - Institutional Infrastructure</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            background-color: #040A14;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            overflow-x: hidden;
+        }
+    </style>
 </head>
 
-<body class="bg-[#020408]">
+<body class="bg-[#040A14] text-white">
 
-    <!-- Futuristic Header -->
-    <header class="site-header">
-        <div class="header-inner">
-            <a href="index.html" class="flex items-center gap-5 group">
-                <div class="relative w-12 h-12 flex items-center justify-center">
-                    <div
-                        class="absolute inset-0 bg-red-600/20 blur-xl group-hover:bg-red-600/40 transition-all duration-500 rounded-full">
-                    </div>
-                    <img src="assets/img/logo.png" alt="BRAHMAS Logo" class="relative z-10 w-full h-full object-contain"
-                        onerror="this.src='https://via.placeholder.com/48/FF003C/FFFFFF?text=B'">
+    <!-- Premium Loader -->
+    <div id="loader" class="fixed inset-0 bg-[#040A14] flex items-center justify-center z-[100]">
+        <div class="relative text-center">
+            <div class="w-16 h-16 bg-[#D4AF37] rounded-lg mx-auto mb-6 flex items-center justify-center">
+                <span class="text-black font-black text-2xl sora">B</span>
+            </div>
+            <div class="w-40 h-1 bg-gray-800 mx-auto overflow-hidden">
+                <div class="h-full bg-[#D4AF37] animate-pulse"></div>
+            </div>
+            <p class="text-gray-400 text-xs mt-4 tracking-[3px] uppercase">Initializing Command Network</p>
+        </div>
+    </div>
+
+    <!-- Command Header -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-black/60 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-10 py-6">
+            <a href="./index.html" class="flex items-center gap-3">
+                <div class="h-10 w-10 bg-[#D4AF37] rounded-md flex items-center justify-center">
+                    <span class="text-black font-black text-lg sora">B</span>
                 </div>
-                <div class="flex flex-col">
-                    <span
-                        class="text-xl font-black text-white tracking-[0.3em] uppercase sora leading-none">BRAHMAS</span>
-                    <span
-                        class="text-xs font-bold text-red-500 tracking-[0.6em] uppercase mt-1 opacity-80">EXPRESS</span>
+                <div class="text-white tracking-[6px] text-sm uppercase font-bold">
+                    Brahmas <span class="text-[#D4AF37]">Express</span>
                 </div>
             </a>
-
-            <nav class="hidden lg:flex items-center gap-12">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link active">History</a>
-                <a href="services.html" class="nav-link">Matrix</a>
-                <a href="pricing.html" class="nav-link">Tiers</a>
-                <a href="contact.html" class="nav-link">Node</a>
+            <nav class="hidden md:flex gap-12 text-gray-300 uppercase text-xs tracking-[3px]">
+                <a href="./index.html" class="hover:text-[#D4AF37] transition relative group">
+                    Home
+                    <span
+                        class="absolute bottom-[-6px] left-0 w-0 h-[2px] bg-[#D4AF37] transition-all group-hover:w-full"></span>
+                </a>
+                <a href="./about.html" class="hover:text-[#D4AF37] transition relative group">
+                    About
+                    <span class="absolute bottom-[-6px] left-0 w-full h-[2px] bg-[#D4AF37]"></span>
+                </a>
+                <a href="./services.html" class="hover:text-[#D4AF37] transition relative group">
+                    Services
+                    <span
+                        class="absolute bottom-[-6px] left-0 w-0 h-[2px] bg-[#D4AF37] transition-all group-hover:w-full"></span>
+                </a>
+                <a href="./contact.html" class="hover:text-[#D4AF37] transition relative group">
+                    Contact
+                    <span
+                        class="absolute bottom-[-6px] left-0 w-0 h-[2px] bg-[#D4AF37] transition-all group-hover:w-full"></span>
+                </a>
             </nav>
-
-            <a href="contact.html" class="btn-futuristic hidden sm:flex">
-                STABILIZE CONNECTION
-                <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+            <a href="./contact.html"
+                class="border border-[#D4AF37] text-[#D4AF37] px-6 py-3 rounded-md text-xs tracking-[3px] uppercase hover:bg-[#D4AF37] hover:text-black transition font-bold">
+                Request Quote
             </a>
         </div>
     </header>
 
-    <!-- Authority Header -->
-    <section class="py-48 px-[8%] relative overflow-hidden">
-        <div class="neon-glow top-0 right-0"></div>
-        <div class="max-w-4xl relative z-10">
-            <span class="section-label" data-aos-futuristic>Legacy Decryption</span>
-            <h1 class="display-text text-white">The <span>Strategic</span> Genesis.</h1>
-            <p class="text-xl text-gray-400 font-light leading-relaxed max-w-2xl italic">
-                "We didn't just build a logistics company; we engineered a protocol for the seamless transition of human
-                endeavor."
+    <section class="py-48 px-[8%] relative overflow-hidden bg-[#0D1117]/50 border-b border-white/5">
+        <div class="max-w-4xl relative z-10" data-aos="fade-up">
+            <span class="text-[#D4AF37] uppercase tracking-[4px] text-xs font-bold mb-4 block">Institutional
+                Legacy</span>
+            <h1 class="text-5xl md:text-6xl font-black sora text-white mb-8">Decades of Logistical Governance.</h1>
+            <p class="text-xl text-gray-400 leading-relaxed italic max-w-2xl">
+                "Leadership in logistics is not defined by the speed of the fleet, but by the integrity of the
+                operational protocol."
             </p>
         </div>
     </section>
 
-    <!-- Detailed Content Expansion -->
-    <section class="section-pad bg-black/40">
-        <div class="authority-container">
-            <div class="grid lg:grid-cols-2 gap-24 items-center mb-40">
-                <div data-aos-futuristic>
-                    <h2 class="text-5xl font-black sora text-white mb-8">Computational Reliability.</h2>
-                    <p class="text-gray-400 text-lg mb-10 leading-relaxed">
-                        Founded 25 years ago on the edge of the digital revolution, Brahmas Express has transitioned
-                        from industrial transport into a high-density logistics intelligence network. Our history is a
-                        timeline of technological absorption.
+    <section class="py-32 bg-transparent">
+        <div class="max-w-7xl mx-auto px-10">
+            <div class="grid lg:grid-cols-2 gap-24 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl font-black sora text-white mb-8">Stability Through Experience.</h2>
+                    <p class="text-gray-400 leading-relaxed text-base mb-10 font-light">
+                        Founded on the principles of industrial-grade precision, Brahmas Express has transitioned from
+                        industrial transport into a high-density logistics intelligence network. Our journey is paved
+                        with high-complexity projects across the subcontinent.
                     </p>
-                    <div class="grid grid-cols-2 gap-10 border-t border-white/5 pt-12">
+                    <div class="grid grid-cols-2 gap-8 border-t border-white/5 pt-12">
                         <div>
-                            <div class="text-red-500 font-black mb-2 uppercase tracking-widest text-[10px]">Architecture
+                            <div class="text-[#D4AF37] font-black uppercase text-[10px] tracking-widest mb-2">Compliance
                             </div>
-                            <h4 class="text-white font-bold sora uppercase">Secure-Core</h4>
+                            <h4 class="text-base font-bold sora text-white">ISO 9001:2015 SECURED</h4>
                         </div>
                         <div>
-                            <div class="text-red-500 font-black mb-2 uppercase tracking-widest text-[10px]">Uptime</div>
-                            <h4 class="text-white font-bold sora uppercase">99.99% Operational</h4>
+                            <div class="text-[#D4AF37] font-black uppercase text-[10px] tracking-widest mb-2">Security
+                            </div>
+                            <h4 class="text-base font-bold sora text-white">24/7 COMMAND OPS</h4>
                         </div>
                     </div>
                 </div>
-                <div class="relative rounded-[4rem] overflow-hidden border border-white/5 h-[600px]">
+                <div class="p-12 border border-white/5 bg-white/5 rounded-[3rem] relative overflow-hidden h-[500px]"
+                    data-aos="fade-left">
                     <img src="https://images.unsplash.com/photo-1558444479-c8f010b4910d?auto=format&fit=crop&q=80&w=1500"
-                        class="absolute inset-0 w-full h-full object-cover grayscale transition duration-1000 hover:grayscale-0">
-                </div>
-            </div>
-
-            <!-- New Section: The Epochs -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
-                <div class="module-card">
-                    <span class="text-red-500 font-black text-xs uppercase tracking-widest mb-4 block">Stage 01</span>
-                    <h3 class="text-2xl font-black text-white mb-6">THE FOUNDATION</h3>
-                    <p class="text-sm text-gray-500">Establishing the initial ground-transit grid across key industrial
-                        zones. Precision over scale.</p>
-                </div>
-                <div class="module-card">
-                    <span class="text-red-500 font-black text-xs uppercase tracking-widest mb-4 block">Stage 02</span>
-                    <h3 class="text-2xl font-black text-white mb-6">INTELLIGENCE SYNC</h3>
-                    <p class="text-sm text-gray-500">Integrating cloud telemetry and real-time asset tracking. The birth
-                        of the Brahmas Matrix.</p>
-                </div>
-                <div class="module-card">
-                    <span class="text-red-500 font-black text-xs uppercase tracking-widest mb-4 block">Stage 03</span>
-                    <h3 class="text-2xl font-black text-white mb-6">FUTURE GOVERNANCE</h3>
-                    <p class="text-sm text-gray-500">Pioneering the 2030 autonomous hub network. We are the architects
-                        of what's next.</p>
+                        class="absolute inset-0 w-full h-full object-cover grayscale opacity-30">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Futuristic Footer -->
-    <footer class="futuristic-footer">
-        <div class="authority-container">
-            <div class="footer-grid mb-32">
-                <div>
-                    <div class="flex items-center gap-4 mb-10">
-                        <img src="assets/img/logo.png" class="h-12"
-                            onerror="this.src='https://via.placeholder.com/48/FF003C/FFFFFF?text=B'">
-                        <span
-                            class="text-3xl font-black sora text-white italic tracking-tighter uppercase">BRAHMAS</span>
+    <!-- Footer -->
+    <footer class="py-20 bg-black border-t border-white/10 relative">
+        <div class="max-w-7xl mx-auto px-10">
+            <div class="grid md:grid-cols-4 gap-16 mb-20">
+                <div class="col-span-1">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="h-8 w-8 bg-[#D4AF37] rounded flex items-center justify-center">
+                            <span class="text-black font-black text-sm sora">B</span>
+                        </div>
+                        <div class="text-white tracking-[4px] text-xs uppercase font-bold">
+                            Brahmas <span class="text-[#D4AF37]">Express</span>
+                        </div>
                     </div>
-                    <p class="text-gray-500 font-medium text-sm leading-relaxed max-w-xs">
-                        The definitive authority in global asset transition. We engineering the future of movement.
+                    <p class="text-xs text-gray-500 leading-relaxed italic">
+                        "Engineering the future of movement with absolute command and control."
                     </p>
                 </div>
                 <div>
                     <h4 class="text-white text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Systems</h4>
-                    <a href="services.html" class="footer-link">Relocation Hub</a>
-                    <a href="services.html" class="footer-link">Logistics Matrix</a>
-                    <a href="services.html" class="footer-link">Secure Vault</a>
+                    <ul class="space-y-4 text-gray-500 text-[10px] font-bold uppercase tracking-widest">
+                        <li><a href="services.html" class="hover:text-[#D4AF37] transition">Relocation Matrix</a></li>
+                        <li><a href="services.html" class="hover:text-[#D4AF37] transition">Logistics Node</a></li>
+                    </ul>
                 </div>
                 <div>
-                    <h4 class="text-white text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Network</h4>
-                    <a href="about.html" class="footer-link">Global Nodes</a>
-                    <a href="about.html" class="footer-link">Legacy Intel</a>
-                    <a href="contact.html" class="footer-link">Node Status</a>
+                    <h4 class="text-white text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Authority</h4>
+                    <ul class="space-y-4 text-gray-500 text-[10px] font-bold uppercase tracking-widest">
+                        <li><a href="about.html" class="hover:text-[#D4AF37] transition">History</a></li>
+                        <li><a href="contact.html" class="hover:text-[#D4AF37] transition">Status</a></li>
+                    </ul>
                 </div>
                 <div>
-                    <h4 class="text-white text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Hotline</h4>
-                    <div class="text-4xl font-black text-red-500 sora mb-4 tracking-tighter">9667084988</div>
-                    <p class="text-[9px] text-gray-600 font-black uppercase tracking-[0.4em]">Propelled by Brahmas
-                        Express 2025</p>
+                    <h4 class="text-white text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Command Center</h4>
+                    <div class="text-3xl font-black text-[#D4AF37] sora mb-2 tracking-tighter">9667084988</div>
+                    <p class="text-[9px] text-gray-600 font-black uppercase tracking-[0.4em]">Operational 24/7</p>
                 </div>
             </div>
             <div
-                class="pt-12 border-t border-white/5 flex justify-between items-center text-[9px] font-bold uppercase tracking-widest text-gray-700">
-                <div>© 2025 BRAHMAS EXPRESS. SYSTEM SECURE.</div>
-                <div class="flex gap-10">
-                    <a href="#" class="hover:text-red-500 transition">Node Privacy</a>
-                    <a href="#" class="hover:text-red-500 transition">Legal Protocols</a>
-                </div>
+                class="pt-12 border-t border-white/5 text-center text-[9px] font-black uppercase tracking-widest text-gray-700">
+                © 2025 Brahmas Express. All Regulatory Standards Met. System Secure.
             </div>
         </div>
     </footer>
 
     <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.utils.toArray('section, .module-card').forEach(el => {
-            gsap.from(el, {
-                scrollTrigger: {
-                    trigger: el,
-                    start: "top 90%",
-                },
-                y: 30,
-                opacity: 0,
-                duration: 1,
-                ease: "power2.out"
-            });
-        });
-
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.site-header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
+        window.addEventListener("load", function () {
+            const loader = document.getElementById("loader");
+            loader.style.opacity = "0";
+            loader.style.transition = "opacity 0.5s ease";
+            setTimeout(() => loader.style.display = "none", 500);
         });
     </script>
 </body>

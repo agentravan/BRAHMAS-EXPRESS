@@ -1,16 +1,13 @@
-/* BRAHMAS EXPRESS - FUTURISTIC PORTFOLIO DESIGN SYSTEM */
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+/* BRAHMAS EXPRESS - HYBRID COMMAND SYSTEM DESIGN */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --neon-red: #FF003C;
-    --neon-red-glow: rgba(255, 0, 60, 0.4);
-    --cyber-black: #020408;
-    --deep-midnight: #05080E;
-    --navy-dark: #0D1117;
-    --border-glow: rgba(255, 255, 255, 0.03);
-    --text-ghost: #848D97;
-    --text-bright: #F0F6FC;
-    --futuristic-font: 'Space Grotesk', sans-serif;
+    --command-gold: #D4AF37;
+    --navy-base: #040A14;
+    --navy-light: #0D1424;
+    --text-main: #F3F4F6;
+    --text-dim: #9CA3AF;
+    --border-soft: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -19,36 +16,16 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-    background-color: var(--cyber-black);
-}
-
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--cyber-black);
-    color: var(--text-bright);
-    overflow-x: hidden;
-    line-height: 1.6;
+    background-color: var(--navy-base);
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-    background-size: 50px 50px;
-}
-
-/* Digital Scanline Overlay */
-body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
-    background-size: 100% 2px, 3px 100%;
-    pointer-events: none;
-    z-index: 9999;
-    opacity: 0.3;
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    overflow-x: hidden;
+    line-height: 1.5;
 }
 
 h1,
@@ -57,298 +34,108 @@ h3,
 h4,
 .sora {
     font-family: 'Sora', sans-serif;
-    letter-spacing: -0.02em;
 }
 
-/* --- Layout Architecture --- */
-.authority-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 6%;
+/* --- Loader --- */
+#loader {
+    transition: opacity 0.5s ease;
 }
 
-/* --- Futuristic Sticky Header --- */
-.site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    height: 90px;
-    background: rgba(2, 4, 8, 0.7);
-    backdrop-filter: blur(25px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-.site-header.scrolled {
-    height: 70px;
-    background: rgba(2, 4, 8, 0.95);
-    border-bottom-color: var(--neon-red-glow);
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .5;
+    }
 }
 
-.header-inner {
-    max-width: 1600px;
-    margin: 0 auto;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 4%;
+/* --- Navigation --- */
+nav a {
+    transition: all 0.3s ease;
 }
 
-.nav-link {
-    font-size: 10px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--text-ghost);
-    transition: all 0.4s ease;
-    padding: 30px 0;
-    position: relative;
-    font-family: var(--futuristic-font);
-}
-
-.nav-link:hover,
-.nav-link.active {
-    color: var(--neon-red);
-}
-
-.nav-link::after {
-    content: '';
+.nav-active-indicator {
     position: absolute;
-    bottom: 0;
-    left: 50%;
+    bottom: -6px;
+    left: 0;
     width: 0;
     height: 2px;
-    background: var(--neon-red);
-    box-shadow: 0 0 10px var(--neon-red);
-    transition: all 0.4s ease;
-    transform: translateX(-50%);
+    background: var(--command-gold);
+    transition: all 0.3s ease;
 }
 
-.nav-link.active::after,
-.nav-link:hover::after {
+.group:hover .nav-active-indicator {
     width: 100%;
 }
 
-/* --- Floating Neon Elements --- */
-.neon-glow {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, var(--neon-red-glow) 0%, transparent 70%);
-    z-index: -1;
-    filter: blur(80px);
-    pointer-events: none;
+/* --- Hero Architecture --- */
+.hero-gradient-overlay {
+    background: linear-gradient(90deg, #040A14 0%, rgba(4, 10, 20, 0.8) 50%, transparent 100%);
 }
 
-/* --- Global Components --- */
-.btn-futuristic {
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: white;
-    padding: 18px 40px;
-    font-family: var(--futuristic-font);
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.4s ease;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
+/* --- Utility Components --- */
+.max-w-7xl {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.btn-futuristic::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transition: all 0.6s ease;
-    transform: translateY(-50%) skewX(-15deg);
+.btn-command-gold {
+    background-color: var(--command-gold);
+    color: #000;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+    display: inline-block;
 }
 
-.btn-futuristic:hover {
-    border-color: var(--neon-red);
-    box-shadow: 0 0 30px rgba(255, 0, 60, 0.2);
+.btn-command-gold:hover {
+    transform: scale(1.05);
 }
 
-.btn-futuristic:hover::before {
-    left: 100%;
+.btn-outline {
+    border: 1px solid white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
-.btn-neon {
-    background: var(--neon-red);
-    color: white;
-    padding: 18px 40px;
-    font-family: var(--futuristic-font);
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    border: none;
-    box-shadow: 0 10px 30px rgba(255, 0, 60, 0.3);
-    transition: all 0.4s ease;
+.btn-outline:hover {
+    background-color: white;
+    color: black;
 }
 
-.btn-neon:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(255, 0, 60, 0.5);
+/* --- Sections --- */
+.section-pad {
+    padding: 120px 0;
 }
 
-/* --- Hero Section --- */
-.hero-futuristic {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding-top: 100px;
-    overflow: hidden;
+/* --- Responsive Pricing / Modules --- */
+.module-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
 }
 
-.hero-video-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
-    filter: brightness(0.3) contrast(1.2) grayscale(0.5);
-}
-
-.display-text {
-    font-size: clamp(3rem, 10vw, 7rem);
-    font-weight: 800;
-    line-height: 0.95;
-    letter-spacing: -0.05em;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-}
-
-.display-text span {
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
-}
-
-/* --- Module Cards --- */
 .module-card {
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 60px;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    position: relative;
-    overflow: hidden;
-}
-
-.module-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2px;
-    height: 0;
-    background: var(--neon-red);
-    transition: all 0.4s ease;
+    border: 1px solid var(--border-soft);
+    padding: 3rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
 }
 
 .module-card:hover {
-    background: rgba(255, 255, 255, 0.04);
-    border-color: rgba(255, 255, 255, 0.1);
-    transform: translateY(-10px);
-}
-
-.module-card:hover::before {
-    height: 100%;
-}
-
-.section-label {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-family: var(--futuristic-font);
-    font-size: 10px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.4em;
-    color: var(--neon-red);
-    margin-bottom: 2rem;
-}
-
-.section-label::before {
-    content: '';
-    width: 40px;
-    height: 1px;
-    background: var(--neon-red);
-}
-
-/* --- Specialized Sections --- */
-.section-pad {
-    padding: 160px 0;
-}
-
-.grid-cols-module {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2px;
-    /* Digital separation */
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* --- Footer --- */
-.futuristic-footer {
-    background: #000;
-    padding: 100px 0 50px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    position: relative;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    gap: 80px;
-}
-
-.footer-link {
-    color: var(--text-ghost);
-    text-decoration: none;
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    transition: all 0.3s ease;
-    display: block;
-    margin-bottom: 15px;
-    font-family: var(--futuristic-font);
-}
-
-.footer-link:hover {
-    color: white;
-    padding-left: 10px;
-}
-
-/* --- Responsive --- */
-@media (max-width: 1024px) {
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-    }
-}
-
-@media (max-width: 768px) {
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .display-text {
-        font-size: 3.5rem;
-    }
+    border-color: var(--command-gold);
+    background: rgba(212, 175, 55, 0.03);
 }
