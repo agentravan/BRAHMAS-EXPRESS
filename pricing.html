@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans | Brahmas Express - Logistics & Relocation</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0B1F3A',
+                        gold: '#D4AF37',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="glass-nav sticky top-0 z-50 px-6 sm:px-12 py-4 flex justify-between items-center shadow-sm">
+        <div class="flex items-center gap-2">
+            <img src="assets/img/logo.png" alt="Brahmas Express" class="h-10">
+            <span class="text-navy font-bold text-xl uppercase hidden lg:block">Brahmas Express</span>
+        </div>
+        <div class="hidden md:flex gap-8 font-medium text-navy">
+            <a href="index.html" class="hover:text-gold transition">Home</a>
+            <a href="about.html" class="hover:text-gold transition">About</a>
+            <a href="services.html" class="hover:text-gold transition">Services</a>
+            <a href="pricing.html" class="text-gold">Pricing</a>
+            <a href="contact.html" class="hover:text-gold transition">Contact</a>
+        </div>
+        <a href="contact.html"
+            class="bg-navy text-white px-5 py-2 rounded-md font-semibold hover:bg-gold hover:text-navy transition">Get
+            Quote</a>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-navy text-white py-20 px-6 text-center animate-fade-up">
+        <h1 class="text-4xl lg:text-5xl font-bold mb-4 uppercase">Flexible Pricing Plans</h1>
+        <p class="text-gray-400 max-w-2xl mx-auto">Providing structured and transparent pricing designed around your
+            unique relocation needs.</p>
+    </header>
+
+    <!-- Pricing Grid -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+
+            <!-- Basic -->
+            <div class="bg-white p-10 rounded-2xl shadow-lg border border-gray-100 flex flex-col">
+                <h3 class="text-xl font-bold text-navy mb-2">Basic</h3>
+                <p class="text-gray-500 text-sm mb-6">Ideal for local studio/1BHK moves.</p>
+                <div class="text-3xl font-bold text-navy mb-8">Custom Quote</div>
+                <ul class="space-y-4 mb-10 flex-grow">
+                    <li class="flex items-center gap-2 text-sm text-gray-600">✓ Standard packing materials</li>
+                    <li class="flex items-center gap-2 text-sm text-gray-600">✓ Loading & Unloading</li>
+                    <li class="flex items-center gap-2 text-sm text-gray-600">✓ Small truck transport</li>
+                    <li class="flex items-center gap-2 text-sm text-gray-600 opacity-40">✗ Premium bubble wrap</li>
+                    <li class="flex items-center gap-2 text-sm text-gray-600 opacity-40">✗ Furniture dismantling</li>
+                </ul>
+                <a href="contact.html"
+                    class="w-full text-center py-3 border-2 border-navy text-navy font-bold rounded-md hover:bg-navy hover:text-white transition">Inquire
+                    Now</a>
+            </div>
+
+            <!-- Standard -->
+            <div
+                class="bg-navy p-10 rounded-2xl shadow-xl border-4 border-gold flex flex-col transform scale-105 relative">
+                <div
+                    class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold text-navy text-xs font-bold px-4 py-1 rounded-full uppercase">
+                    Most Popular</div>
+                <h3 class="text-xl font-bold text-gold mb-2">Standard</h3>
+                <p class="text-gray-400 text-sm mb-6">Perfect for 2-3BHK family homes.</p>
+                <div class="text-3xl font-bold text-white mb-8">Custom Quote</div>
+                <ul class="space-y-4 mb-10 flex-grow text-white">
+                    <li class="flex items-center gap-2 text-sm">✓ High-grade packing</li>
+                    <li class="flex items-center gap-2 text-sm">✓ Furniture dismantling</li>
+                    <li class="flex items-center gap-2 text-sm">✓ GPS tracked vehicle</li>
+                    <li class="flex items-center gap-2 text-sm">✓ Secure loading/unloading</li>
+                    <li class="flex items-center gap-2 text-sm opacity-50">✗ Unpacking & assembly</li>
+                </ul>
+                <a href="contact.html"
+                    class="w-full text-center py-3 bg-gold text-navy font-bold rounded-md hover:bg-white transition">Get
+                    Started</a>
+            </div>
+
+            <!-- Premium -->
+            <div class="bg-white p-10 rounded-2xl shadow-lg border border-gray-100 flex flex-col">
+                <h3 class="text-xl font-bold text-navy mb-2">Premium</h3>
+                <p class="text-gray-500 text-sm mb-6">Complete end-to-end relocation.</p>
+                <div class="text-3xl font-bold text-navy mb-8">Custom Quote</div>
+                <ul class="space-y-4 mb-10 flex-grow">
+                    <li class="flex items-center gap-2 text-sm text-gray-600">✓ 5-layer premium packing</li>
+                    <li class="flex items-center gap-2 text-sm text-gray-600">✓ Dedicated moving manager</li>
+                    <li class="flex items-center gap-2 text-sm text-gray-600">✓ Unpacking & setup</li>
+                    <li class="flex items-center gap-2 text-sm text-gray-600">✓ Electronics reconnection</li>
+                    <li class="flex items-center gap-2 text-sm text-gray-600">✓ Transit insurance assistance</li>
+                </ul>
+                <a href="contact.html"
+                    class="w-full text-center py-3 border-2 border-navy text-navy font-bold rounded-md hover:bg-navy hover:text-white transition">Inquire
+                    Now</a>
+            </div>
+
+        </div>
+
+        <div class="mt-20 text-center container mx-auto px-6 p-12 bg-navy text-white rounded-3xl">
+            <h4 class="text-2xl font-bold mb-4">Need a Custom Enterprise Quote?</h4>
+            <p class="text-gray-400 mb-8 max-w-xl mx-auto">For large corporate offices, warehouses, or industrial
+                machinery relocation, we provide specialized bulk rates.</p>
+            <a href="tel:9667084988" class="text-gold font-bold text-xl hover:underline">📞 Click to Call:
+                9667084988</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white text-center py-6 border-t border-white/10">
+        <p class="text-sm opacity-50 text-gold">© 2025 Brahmas Express. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+/* Custom Styles for Brahmas Express */
+
+:root {
+    --primary-navy: #0B1F3A;
+    --gold-accent: #D4AF37;
+    --sky-blue: #0E4DA4;
+    --bg-light: #F8FAFC;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Glassmorphism */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Gold Glow Effect */
+.gold-glow:hover {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Service Cards */
+.service-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+    background: var(--primary-navy);
+    color: white;
+}
+
+.service-card:hover h3 {
+    color: var(--gold-accent);
+}
+
+/* Custom Utilities */
+.text-gold { color: var(--gold-accent); }
+.bg-navy { background-color: var(--primary-navy); }
+.border-gold { border-color: var(--gold-accent); }

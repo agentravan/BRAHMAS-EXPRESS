@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Brahmas Express - Nationwide Logistics</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0B1F3A',
+                        gold: '#D4AF37',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="glass-nav sticky top-0 z-50 px-6 sm:px-12 py-4 flex justify-between items-center shadow-sm">
+        <div class="flex items-center gap-2">
+            <img src="assets/img/logo.png" alt="Brahmas Express" class="h-10">
+            <span class="text-navy font-bold text-xl uppercase hidden lg:block">Brahmas Express</span>
+        </div>
+        <div class="hidden md:flex gap-8 font-medium text-navy">
+            <a href="index.html" class="hover:text-gold transition">Home</a>
+            <a href="about.html" class="hover:text-gold transition">About</a>
+            <a href="services.html" class="hover:text-gold transition">Services</a>
+            <a href="pricing.html" class="hover:text-gold transition">Pricing</a>
+            <a href="contact.html" class="text-gold">Contact</a>
+        </div>
+        <a href="tel:9667084988"
+            class="bg-gold text-navy px-5 py-2 rounded-md font-semibold hover:bg-navy hover:text-white transition">Call
+            Now</a>
+    </nav>
+
+    <section class="py-20 animate-fade-up">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16">
+
+            <!-- Contact Details -->
+            <div>
+                <h1 class="text-4xl lg:text-5xl font-bold text-navy mb-8 uppercase">Let's Talk About <br><span
+                        class="text-gold">Your Move</span></h1>
+                <p class="text-gray-600 mb-12">Whether moving across the street or across the country, our team is ready
+                    to provide the professional assistance you need.</p>
+
+                <div class="space-y-8">
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 bg-navy flex items-center justify-center rounded-lg text-gold text-xl shrink-0">
+                            📞</div>
+                        <div>
+                            <h4 class="font-bold text-navy">Phone Support</h4>
+                            <p class="text-gray-500">Sales: <a href="tel:9667084988"
+                                    class="hover:text-gold transition">9667084988</a></p>
+                            <p class="text-gray-500">Support: 24/7 Priority Hotline</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 bg-navy flex items-center justify-center rounded-lg text-gold text-xl shrink-0">
+                            📍</div>
+                        <div>
+                            <h4 class="font-bold text-navy">Operational Hub</h4>
+                            <p class="text-gray-500">Head Office: New Delhi, India</p>
+                            <p class="text-gray-500">Branch Offices: All Major Indian Metro Cities</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 bg-navy flex items-center justify-center rounded-lg text-gold text-xl shrink-0">
+                            💬</div>
+                        <div>
+                            <h4 class="font-bold text-navy">Chat With Us</h4>
+                            <a href="https://wa.me/9667084988" class="text-green-600 font-bold hover:underline">Instant
+                                WhatsApp Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="mt-12 bg-gray-50 h-[300px] rounded-2xl border border-gray-200 flex items-center justify-center text-gray-400 font-bold italic">
+                    Google Maps Integration Placeholder
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-2xl border border-gray-100">
+                <h3 class="text-2xl font-bold text-navy mb-8">Request a Free Quote</h3>
+                <form class="space-y-6">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase text-gray-400">Your Name</label>
+                            <input type="text" placeholder="John Doe"
+                                class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-lg focus:outline-none focus:border-gold transition">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase text-gray-400">Phone Number</label>
+                            <input type="tel" placeholder="9667084988"
+                                class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-lg focus:outline-none focus:border-gold transition">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase text-gray-400">Service Required</label>
+                        <select
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-lg focus:outline-none focus:border-gold transition">
+                            <option>Residential Relocation</option>
+                            <option>Corporate Office Shifting</option>
+                            <option>Packing & Storage</option>
+                            <option>Vehicle Transportation</option>
+                            <option>Other / Enterprise</option>
+                        </select>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase text-gray-400">Message / Requirement Details</label>
+                        <textarea rows="4" placeholder="Tell us about your moving needs..."
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-lg focus:outline-none focus:border-gold transition"></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full py-4 bg-navy text-white font-bold rounded-lg hover:bg-gold hover:text-navy transition shadow-lg gold-glow">Send
+                        Inquiry Now</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white text-center py-6 border-t border-white/10">
+        <p class="text-sm opacity-50 text-gold">© 2025 Brahmas Express. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
