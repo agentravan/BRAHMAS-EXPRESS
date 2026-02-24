@@ -1,4 +1,4 @@
-/* Custom Styles for Brahmas Express */
+/* Premium Styles for Brahmas Express */
 
 :root {
     --primary-navy: #0B1F3A;
@@ -7,61 +7,116 @@
     --bg-light: #F8FAFC;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
+html {
     scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Glassmorphism */
-.glass-nav {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+/* Custom Cursor */
+#cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--gold-accent);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease, width 0.3s ease, height 0.3s ease;
+    z-index: 9999;
 }
 
-/* Gold Glow Effect */
-.gold-glow:hover {
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-    transform: translateY(-2px);
-    transition: all 0.3s ease;
+.cursor-hover {
+    width: 40px;
+    height: 40px;
+    background: rgba(212, 175, 55, 0.2);
 }
 
-/* Animations */
-@keyframes fadeInUp {
-    from {
+/* Loader */
+#loader {
+    display: flex;
+    z-index: 100;
+}
+
+.logo-animate {
+    animation: reveal 1.5s ease-out forwards;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+@keyframes reveal {
+    0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: scale(0.8);
     }
-    to {
+
+    100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: scale(1);
     }
 }
 
-.animate-fade-up {
-    animation: fadeInUp 0.8s ease-out forwards;
+/* Glassmorphism Navbar */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* Service Cards */
-.service-card {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+/* Parallax Hero */
+.parallax-section {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.service-card:hover {
-    background: var(--primary-navy);
-    color: white;
+/* 3D Lift Cards */
+.lift-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.service-card:hover h3 {
-    color: var(--gold-accent);
+.lift-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(11, 31, 58, 0.15);
 }
 
-/* Custom Utilities */
-.text-gold { color: var(--gold-accent); }
-.bg-navy { background-color: var(--primary-navy); }
-.border-gold { border-color: var(--gold-accent); }
+/* Gold Glow */
+.gold-glow:hover {
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+}
+
+/* Typing Caret */
+#typing::after {
+    content: '|';
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Mobile Menu Slide */
+#mobile-menu {
+    transition: transform 0.5s ease;
+    transform: translateX(100%);
+}
+
+#mobile-menu.active {
+    transform: translateX(0);
+}
