@@ -1,10 +1,11 @@
-/* Premium Styles for Brahmas Express */
+/* Cinematic Premium Styles - Transvex Inspired */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-    --primary-navy: #0B1F3A;
-    --gold-accent: #D4AF37;
-    --sky-blue: #0E4DA4;
-    --bg-light: #F8FAFC;
+    --primary-red: #E11D48;
+    --deep-midnight: #0A0B10;
+    --navy-grey: #12141D;
+    --glass-white: rgba(255, 255, 255, 0.05);
 }
 
 html {
@@ -12,111 +13,211 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--deep-midnight);
+    color: #F8FAFC;
     overflow-x: hidden;
 }
 
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
-    font-family: 'Montserrat', sans-serif;
+.sora {
+    font-family: 'Sora', sans-serif;
+}
+
+/* Curved Header Architecture */
+.curved-header-container {
+    padding: 20px 40px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 50;
+    width: 100%;
+}
+
+.nav-box {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 10px 30px;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.logo-curved-cutout {
+    background: white;
+    padding: 15px 45px 25px 45px;
+    border-radius: 0 0 50px 50px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+}
+
+/* Cinematic Hero */
+.hero-cinematic {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    margin-top: -120px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            rgba(10, 11, 16, 0.95) 0%,
+            rgba(10, 11, 16, 0.6) 40%,
+            rgba(10, 11, 16, 0.85) 100%);
+    z-index: 10;
+}
+
+/* Typography Scale */
+.display-text {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+/* Premium Buttons */
+.btn-red {
+    background-color: var(--primary-red);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-red:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(225, 29, 72, 0.5);
+    background-color: #f43f5e;
+}
+
+.btn-glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Slider Controls */
+.slider-nav {
+    position: absolute;
+    bottom: 60px;
+    right: 8%;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    z-index: 20;
+}
+
+.slider-line {
+    width: 60px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.slider-line-active {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 40%;
+    background: var(--primary-red);
+}
+
+/* Stats Row */
+.stats-cinematic {
+    position: absolute;
+    bottom: 80px;
+    left: 8%;
+    z-index: 20;
+    display: flex;
+    gap: 60px;
+}
+
+.stat-item h4 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.stat-item p {
+    font-size: 0.85rem;
+    color: #94A3B8;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 1024px) {
+    .curved-header-container {
+        padding: 20px;
+    }
+
+    .nav-box {
+        display: none;
+    }
+
+    .display-text {
+        font-size: 3rem;
+    }
+
+    .stats-cinematic {
+        flex-direction: column;
+        gap: 20px;
+        bottom: 40px;
+    }
 }
 
 /* Custom Cursor */
 #cursor {
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--gold-accent);
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--primary-red);
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: transform 0.1s ease, width 0.3s ease, height 0.3s ease;
+    transition: transform 0.1s ease;
     z-index: 9999;
-}
-
-.cursor-hover {
-    width: 40px;
-    height: 40px;
-    background: rgba(212, 175, 55, 0.2);
-}
-
-/* Loader */
-#loader {
-    display: flex;
-    z-index: 100;
-}
-
-.logo-animate {
-    animation: reveal 1.5s ease-out forwards;
-    opacity: 0;
-    transform: scale(0.8);
-}
-
-@keyframes reveal {
-    0% {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* Glassmorphism Navbar */
-.glass-nav {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-/* Parallax Hero */
-.parallax-section {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* 3D Lift Cards */
-.lift-card {
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.lift-card:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(11, 31, 58, 0.15);
-}
-
-/* Gold Glow */
-.gold-glow:hover {
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
-}
-
-/* Typing Caret */
-#typing::after {
-    content: '|';
-    animation: blink 0.8s infinite;
-}
-
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
-}
-
-/* Mobile Menu Slide */
-#mobile-menu {
-    transition: transform 0.5s ease;
-    transform: translateX(100%);
-}
-
-#mobile-menu.active {
-    transform: translateX(0);
 }

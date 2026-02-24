@@ -1,14 +1,10 @@
 /**
- * Brahmas Express - Premium Main JS
+ * Brahmas Express - Cinematic Redesign JS
  */
 
 document.addEventListener('DOMContentLoaded', () => {
     initCursor();
-    initLoader();
-    initMobileMenu();
-    initTypingEffect();
-    // Three.js animation is initialized inside index.html specifically if needed, 
-    // or we can centralize it here.
+    initAnimations();
 });
 
 // Custom Cursor
@@ -21,65 +17,21 @@ function initCursor() {
         cursor.style.top = e.clientY + 'px';
     });
 
-    const links = document.querySelectorAll('a, button, select, input, .lift-card');
-    links.forEach(link => {
-        link.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
-        link.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
+    const interactables = document.querySelectorAll('a, button, .lift-card');
+    interactables.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            cursor.style.background = 'rgba(225, 29, 72, 0.1)';
+        });
+        item.addEventListener('mouseleave', () => {
+            cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+            cursor.style.background = 'transparent';
+        });
     });
 }
 
-// Loader Logic
-function initLoader() {
-    const loader = document.getElementById('loader');
-    if (!loader) return;
-
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            loader.style.opacity = '0';
-            loader.style.transition = 'opacity 0.6s ease';
-            setTimeout(() => {
-                loader.style.display = 'none';
-            }, 600);
-        }, 1500); // 1.5s delay for logo reveal
-    });
-}
-
-// Typing Effect
-function initTypingEffect() {
-    const target = document.getElementById('typing');
-    if (!target) return;
-
-    const text = target.getAttribute('data-text') || "Seamless Relocation. Powerful Logistics. Nationwide Trust.";
-    let i = 0;
-
-    function typeWriter() {
-        if (i < text.length) {
-            target.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 50);
-        }
-    }
-
-    typeWriter();
-}
-
-// Mobile Menu
-function initMobileMenu() {
-    const btn = document.getElementById('mobile-menu-btn');
-    const closeBtn = document.getElementById('close-menu-btn');
-    const menu = document.getElementById('mobile-menu');
-
-    if (btn && menu) {
-        btn.addEventListener('click', () => {
-            menu.classList.add('active');
-            menu.classList.remove('hidden');
-        });
-    }
-
-    if (closeBtn && menu) {
-        closeBtn.addEventListener('click', () => {
-            menu.classList.remove('active');
-            setTimeout(() => menu.classList.add('hidden'), 500);
-        });
-    }
+// Simple AOS-like reveal logic if needed, or stick to AOS library
+function initAnimations() {
+    // We can add custom slider logic here if the user wants functional arrows
+    console.log("Cinematic Theme Initialized");
 }

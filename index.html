@@ -4,307 +4,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brahmas Express | Seamless Relocation & Powerful Logistics</title>
+    <title>Brahmas Express | Tech-Driven Logistics & Relocation</title>
     <meta name="description"
-        content="Brahmas Express delivers enterprise-grade relocation and logistics solutions across India. Secure, professional, and time-bound.">
+        content="Smarter transport. Faster deliveries. Nationwide reach. Brahmas Express delivers technology-driven logistics solutions.">
 
     <!-- Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500&display=swap"
-        rel="stylesheet">
-
-    <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navy: '#0B1F3A',
-                        gold: '#D4AF37',
-                        sky: '#0E4DA4',
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 
-<body class="bg-white text-gray-800">
-
-    <!-- Loader -->
-    <div id="loader" class="fixed inset-0 bg-white flex items-center justify-center z-[100]">
-        <div class="text-center">
-            <img src="assets/logo.png" alt="Logo" class="h-24 logo-animate mb-4">
-            <div class="w-48 h-1 bg-gray-100 mx-auto rounded-full overflow-hidden">
-                <div class="h-full bg-gold animate-[loading_2s_ease-in-out]"></div>
-            </div>
-        </div>
-    </div>
+<body class="bg-[#0A0B10] text-white">
 
     <!-- Custom Cursor -->
     <div id="cursor"></div>
 
-    <!-- Top Contact Strip -->
-    <div class="bg-navy text-white text-sm py-2 px-6 sm:px-12 flex justify-between items-center relative z-50">
+    <!-- Header Architecture -->
+    <header class="curved-header-container">
+        <!-- Left Nav -->
+        <div class="nav-box sora text-xs uppercase tracking-widest font-bold">
+            <a href="index.html" class="text-white">Home</a>
+            <a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a>
+            <a href="services.html" class="text-gray-400 hover:text-white transition">Services</a>
+            <a href="pricing.html" class="text-gray-400 hover:text-white transition">Pricing</a>
+            <a href="contact.html" class="text-gray-400 hover:text-white transition">Careers</a>
+        </div>
+
+        <!-- Central Logo Cutout -->
+        <div class="logo-curved-cutout">
+            <div class="flex flex-col items-center">
+                <img src="assets/logo.png" alt="Brahmas Express" class="h-10">
+                <div class="text-[10px] font-black text-[#0A0B10] tracking-tighter mt-1 uppercase">Brahmas Express</div>
+            </div>
+        </div>
+
+        <!-- Right Nav -->
         <div class="flex items-center gap-4">
-            <a href="tel:9667084988" class="hover:text-gold transition flex items-center gap-2">
-                <span>📞</span> 9667084988
+            <div
+                class="nav-box sora text-xs font-bold uppercase tracking-widest py-3 hover:bg-white/10 transition cursor-pointer">
+                <span>Tracking Package</span>
+                <span class="bg-white/20 rounded-full w-5 h-5 flex items-center justify-center text-[10px]">↗</span>
+            </div>
+            <a href="contact.html" class="btn-red sora text-xs uppercase tracking-widest">
+                Get in touch with us
+                <span class="bg-white/20 rounded-full w-5 h-5 flex items-center justify-center text-[10px]">↗</span>
             </a>
         </div>
-        <div class="hidden sm:block font-medium">
-            PAN India Logistics & Relocation Services
-        </div>
-    </div>
+    </header>
 
-    <!-- Navbar -->
-    <nav class="glass-nav sticky top-0 z-50 px-6 sm:px-12 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-2">
-            <img src="assets/logo.png" alt="Brahmas Express" class="h-10 sm:h-12">
-            <span class="text-navy font-bold text-xl hidden lg:block uppercase tracking-tight">BRAHMAS EXPRESS</span>
-        </div>
+    <!-- Cinematic Hero -->
+    <section class="hero-cinematic"
+        style="background-image: url('https://images.unsplash.com/photo-1519003722824-192d992a6059?auto=format&fit=crop&q=80&w=2000');">
+        <div class="hero-overlay"></div>
 
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex gap-8 font-medium text-navy text-sm uppercase tracking-widest">
-            <a href="index.html" class="hover:text-gold transition border-b-2 border-gold pb-1">Home</a>
-            <a href="about.html"
-                class="hover:text-gold transition border-b-2 border-transparent hover:border-gold pb-1">About</a>
-            <a href="services.html"
-                class="hover:text-gold transition border-b-2 border-transparent hover:border-gold pb-1">Services</a>
-            <a href="pricing.html"
-                class="hover:text-gold transition border-b-2 border-transparent hover:border-gold pb-1">Pricing</a>
-            <a href="contact.html"
-                class="hover:text-gold transition border-b-2 border-transparent hover:border-gold pb-1">Contact</a>
+        <div class="container relative z-20 max-w-4xl">
+            <h1 class="display-text mb-8" data-aos="fade-right">
+                Smarter Transport.<br>
+                Faster Deliveries.<br>
+                Nationwide Reach.
+            </h1>
+            <p class="text-lg text-gray-400 mb-10 max-w-xl leading-relaxed" data-aos="fade-right" data-aos-delay="100">
+                Experience technology-driven transport solutions built for speed, safety, and efficiency — from freight
+                and logistics to last-mile delivery.
+            </p>
+            <button class="btn-glass sora text-xs uppercase tracking-widest" data-aos="fade-right" data-aos-delay="200">
+                See How It Works
+                <span class="bg-white/20 rounded-full w-5 h-5 flex items-center justify-center text-[10px]">↗</span>
+            </button>
         </div>
 
-        <div class="flex items-center gap-4">
-            <a href="contact.html"
-                class="bg-navy text-white px-6 py-2.5 rounded-md font-bold transition transform hover:scale-105 gold-glow hidden sm:block">
-                Get Free Quote
-            </a>
-            <button id="mobile-menu-btn" class="md:hidden text-navy text-3xl">☰</button>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu"
-        class="hidden fixed inset-0 bg-navy z-[60] flex flex-col items-center justify-center gap-8 text-white text-2xl">
-        <button id="close-menu-btn" class="absolute top-8 right-8 text-4xl">✕</button>
-        <a href="index.html" class="hover:text-gold transition">Home</a>
-        <a href="about.html" class="hover:text-gold transition">About</a>
-        <a href="services.html" class="hover:text-gold transition">Services</a>
-        <a href="pricing.html" class="hover:text-gold transition">Pricing</a>
-        <a href="contact.html" class="hover:text-gold transition">Contact</a>
-    </div>
-
-    <!-- Parallax Hero Section -->
-    <section
-        class="relative min-h-[90vh] flex items-center parallax-section overflow-hidden bg-gradient-to-br from-[#F8FAFC] to-[#E6EDF5] bg-fixed bg-center bg-cover"
-        style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2000');">
-
-        <!-- Animated Overlay -->
-        <div class="absolute inset-0 bg-navy/80"></div>
-        <div class="absolute right-0 top-0 w-1/2 h-full bg-gold/5 skew-x-[-15deg]"></div>
-
-        <div class="container mx-auto px-6 sm:px-12 grid md:grid-cols-2 gap-12 items-center relative z-10 text-white">
-            <div data-aos="fade-right" class="drop-shadow-lg">
-                <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-8">
-                    <span id="typing" data-text="Seamless Relocation. Powerful Logistics. Nationwide Trust."></span>
-                </h1>
-                <p class="text-xl text-gray-300 mb-10 max-w-lg leading-relaxed">
-                    Brahmas Express delivers enterprise-grade relocation and logistics solutions designed for modern
-                    businesses and households across India.
-                </p>
-                <div class="flex flex-wrap gap-6">
-                    <a href="contact.html"
-                        class="bg-gold text-navy px-10 py-4 rounded-md font-bold text-lg hover:bg-white transition transform hover:scale-105 gold-glow shadow-xl">
-                        Get Free Quote
-                    </a>
-                    <a href="tel:9667084988"
-                        class="border-2 border-white text-white px-10 py-4 rounded-md font-bold text-lg hover:bg-white hover:text-navy transition shadow-lg">
-                        Call Now
-                    </a>
-                </div>
+        <!-- Bottom Left Stats -->
+        <div class="stats-cinematic sora" data-aos="fade-up">
+            <div class="stat-item">
+                <h4>25+</h4>
+                <p>Years of Logistics<br>Expertise</p>
             </div>
+            <div class="stat-item">
+                <h4>1.2M+</h4>
+                <p>Successful<br>Deliveries</p>
+            </div>
+            <div class="stat-item">
+                <h4>180+</h4>
+                <p>Global Shipping<br>Destinations</p>
+            </div>
+        </div>
 
-            <div id="three-container" class="h-[450px] lg:h-[600px] w-full" data-aos="fade-left">
-                <!-- Three.js Canvas -->
+        <!-- Bottom Right Slider Nav -->
+        <div class="slider-nav sora" data-aos="fade-left">
+            <div class="flex gap-4">
+                <button
+                    class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white/10 transition">←</button>
+                <button
+                    class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white/10 transition">→</button>
+            </div>
+            <div class="slider-line">
+                <div class="slider-line-active"></div>
+            </div>
+            <div class="text-3xl font-bold opacity-30">01</div>
+        </div>
+    </section>
+
+    <!-- Services / Feature Grid (Cinematic Style) -->
+    <section class="py-32 px-[8%]">
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="stat-item" data-aos="fade-up">
+                <h3 class="text-3xl font-bold mb-4">Real-Time GPS Tracking</h3>
+                <p class="text-gray-500 leading-relaxed">Advanced fleet monitoring ensures your cargo is exactly where
+                    it needs to be, with minute-by-minute updates.</p>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-3xl font-bold mb-4">Secure Transit Hubs</h3>
+                <p class="text-gray-500 leading-relaxed">Strategically placed consolidation centers nationwide to
+                    maximize speed and minimize downtime.</p>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-3xl font-bold mb-4">Enterprise APIs</h3>
+                <p class="text-gray-500 leading-relaxed">Seamlessly integrate our logistics engine with your existing
+                    business ERP or e-commerce platform.</p>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="py-16 bg-white relative z-20 -mt-10 shadow-2xl mx-12 rounded-2xl border border-gray-100">
-        <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-5 gap-8 text-center" data-aos="zoom-in">
-            <div>
-                <div class="text-4xl font-bold text-navy">10,000+</div>
-                <div class="text-xs text-gold font-bold uppercase tracking-widest mt-2">Moves Completed</div>
-            </div>
-            <div>
-                <div class="text-4xl font-bold text-navy">24/7</div>
-                <div class="text-xs text-gold font-bold uppercase tracking-widest mt-2">Expert Support</div>
-            </div>
-            <div>
-                <div class="text-4xl font-bold text-navy">100%</div>
-                <div class="text-xs text-gold font-bold uppercase tracking-widest mt-2">Verified Pros</div>
-            </div>
-            <div>
-                <div class="text-4xl font-bold text-navy">Secure</div>
-                <div class="text-xs text-gold font-bold uppercase tracking-widest mt-2">Insured Ops</div>
-            </div>
-            <div class="col-span-2 md:col-span-1 border-navy/10 md:border-l pl-4">
-                <div class="text-4xl font-bold text-navy">All India</div>
-                <div class="text-xs text-gold font-bold uppercase tracking-widest mt-2">Fleet Network</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Preview -->
-    <section class="py-24 bg-gray-50 overflow-hidden">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-20" data-aos="fade-up">
-                <span class="text-gold font-bold uppercase tracking-widest text-sm">Professional Excellence</span>
-                <h2 class="text-4xl lg:text-5xl font-bold text-navy mt-4">Core Logistics Solutions</h2>
-                <div class="w-24 h-1.5 bg-gold mx-auto mt-6 rounded-full"></div>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-                <!-- Service 1 -->
-                <div class="lift-card p-10 rounded-2xl bg-white shadow-xl border border-gray-100 flex flex-col group"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-5xl mb-8 group-hover:scale-110 transition duration-300">🏠</div>
-                    <h3 class="text-2xl font-bold mb-4 text-navy group-hover:text-gold">Residential Relocation</h3>
-                    <p class="text-gray-500 mb-8 flex-grow leading-relaxed italic">"Moving families with precision,
-                        safeguarding every memory and asset."</p>
-                    <a href="services.html"
-                        class="text-navy font-bold flex items-center gap-2 group-hover:gap-4 transition-all">Explore
-                        Service <span>→</span></a>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="lift-card p-10 rounded-2xl bg-white shadow-xl border border-gray-100 flex flex-col group"
-                    data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-5xl mb-8 group-hover:scale-110 transition duration-300">🏢</div>
-                    <h3 class="text-2xl font-bold mb-4 text-navy group-hover:text-gold">Corporate Shifting</h3>
-                    <p class="text-gray-500 mb-8 flex-grow leading-relaxed italic">"Enterprise-grade IT equipment
-                        movement with zero business downtime."</p>
-                    <a href="services.html"
-                        class="text-navy font-bold flex items-center gap-2 group-hover:gap-4 transition-all">Explore
-                        Service <span>→</span></a>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="lift-card p-10 rounded-2xl bg-white shadow-xl border border-gray-100 flex flex-col group"
-                    data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-5xl mb-8 group-hover:scale-110 transition duration-300">📦</div>
-                    <h3 class="text-2xl font-bold mb-4 text-navy group-hover:text-gold">Packing & Storage</h3>
-                    <p class="text-gray-500 mb-8 flex-grow leading-relaxed italic">"Damage-protected packing and secure
-                        monitored warehousing."</p>
-                    <a href="services.html"
-                        class="text-navy font-bold flex items-center gap-2 group-hover:gap-4 transition-all">Explore
-                        Service <span>→</span></a>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="lift-card p-10 rounded-2xl bg-white shadow-xl border border-gray-100 flex flex-col group"
-                    data-aos="fade-up" data-aos-delay="400">
-                    <div class="text-5xl mb-8 group-hover:scale-110 transition duration-300">🚛</div>
-                    <h3 class="text-2xl font-bold mb-4 text-navy group-hover:text-gold">Fleet Logistics</h3>
-                    <p class="text-gray-500 mb-8 flex-grow leading-relaxed italic">"Nationwide heavy-cargo transport
-                        with real-time GPS tracking."</p>
-                    <a href="services.html"
-                        class="text-navy font-bold flex items-center gap-2 group-hover:gap-4 transition-all">Explore
-                        Service <span>→</span></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/919667084988"
-        class="fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:scale-110 transition duration-300 z-[90] animate-bounce">
-        📱
-    </a>
-
-    <!-- Further Content (Process, CTA, Footer) maintained from previous version with AOS tags -->
-    <section class="py-24 bg-navy text-white text-center" data-aos="zoom-in">
-        <h2 class="text-4xl lg:text-5xl font-bold mb-10">Planning a Move? Let’s Make It Effortless.</h2>
-        <a href="contact.html"
-            class="bg-gold text-navy px-12 py-5 rounded-md font-bold text-xl hover:bg-white transition-all transform hover:scale-105 shadow-2xl gold-glow inline-block">
-            Request Free Quote Now
-        </a>
-    </section>
-
-    <!-- Footer remains consistent but with premium touches -->
-    <footer class="bg-navy text-white pt-24 pb-12 border-t border-white/5 relative z-10">
-        <div class="container mx-auto px-6 grid md:grid-cols-4 gap-16">
-            <div>
-                <img src="assets/logo.png" alt="Logo" class="h-12 mb-6 brightness-0 invert">
-                <p class="text-gray-400 leading-relaxed font-light italic">"Your trust, our responsibility. Delivering
-                    peace of mind across every kilometer."</p>
-            </div>
-            <div>
-                <h4 class="text-gold font-bold mb-8 uppercase tracking-widest text-sm">Company</h4>
-                <ul class="space-y-4 text-gray-400 font-medium">
-                    <li><a href="about.html" class="hover:text-white transition">The Brahmas Story</a></li>
-                    <li><a href="services.html" class="hover:text-white transition">Network Coverage</a></li>
-                    <li><a href="pricing.html" class="hover:text-white transition">Transparency Policy</a></li>
-                    <li><a href="contact.html" class="hover:text-white transition">Inquiry Board</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-gold font-bold mb-8 uppercase tracking-widest text-sm">Services</h4>
-                <ul class="space-y-4 text-gray-400 font-medium font-bold">
-                    <li>Residential Moving</li>
-                    <li>IT Office Shifting</li>
-                    <li>Safe Warehousing</li>
-                    <li>Vehicle Logistics</li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-gold font-bold mb-8 uppercase tracking-widest text-sm">Connect</h4>
-                <p class="text-white font-bold text-xl mb-4">📞 9667084988</p>
-                <p class="text-gray-400 mb-8">Serving 250+ Cities PAN India</p>
-                <div class="flex gap-4">
-                    <span
-                        class="w-10 h-10 border border-white/10 flex items-center justify-center rounded-full hover:bg-gold transition cursor-pointer">f</span>
-                    <span
-                        class="w-10 h-10 border border-white/10 flex items-center justify-center rounded-full hover:bg-gold transition cursor-pointer">t</span>
-                    <span
-                        class="w-10 h-10 border border-white/10 flex items-center justify-center rounded-full hover:bg-gold transition cursor-pointer">i</span>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-20 pt-8 border-t border-white/5 text-gray-600 text-sm">
-            © 2025 Brahmas Express Logistics. All Rights Reserved.
+    <footer
+        class="py-12 px-[8%] border-t border-white/5 text-gray-600 flex justify-between items-center text-xs uppercase tracking-widest font-bold">
+        <div>© 2025 Brahmas Express Operations</div>
+        <div class="flex gap-8">
+            <a href="#" class="hover:text-white transition">Privacy Policy</a>
+            <a href="#" class="hover:text-white transition">Terms of Service</a>
         </div>
     </footer>
 
-    <!-- AOS Script -->
+    <script src="assets/js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            easing: 'ease-out-cubic'
-        });
-    </script>
-
-    <!-- Main Script -->
-    <script src="assets/js/main.js"></script>
-
-    <!-- Specific 3D Initialization -->
-    <script>
-        // Repurpose the main.js logic for Three-container if not already globalized
-        // (Handled in main.js now, but ensuring the container is ready)
+        AOS.init({ duration: 1000, once: true });
     </script>
 </body>
 

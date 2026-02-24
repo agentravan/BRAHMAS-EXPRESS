@@ -4,145 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Brahmas Express - Logistics & Relocation Leaders</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500&display=swap"
-        rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <title>About Us | Brahmas Express - Cinematic Logistics</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navy: '#0B1F3A',
-                        gold: '#D4AF37',
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 
-<body class="bg-white text-gray-800">
+<body class="bg-[#0A0B10] text-white">
 
-    <!-- Loader -->
-    <div id="loader" class="fixed inset-0 bg-white flex items-center justify-center z-[100]">
-        <div class="text-center">
-            <img src="assets/logo.png" alt="Logo" class="h-24 logo-animate">
-        </div>
-    </div>
-
-    <!-- Custom Cursor -->
     <div id="cursor"></div>
 
-    <!-- Navbar -->
-    <nav class="glass-nav sticky top-0 z-50 px-6 sm:px-12 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-2">
-            <img src="assets/logo.png" alt="Brahmas Express" class="h-10">
-            <span class="text-navy font-bold text-xl hidden lg:block uppercase">Brahmas Express</span>
+    <!-- Header Architecture -->
+    <header class="curved-header-container">
+        <div class="nav-box sora text-xs uppercase tracking-widest font-bold">
+            <a href="index.html" class="text-gray-400 hover:text-white transition">Home</a>
+            <a href="about.html" class="text-white">About Us</a>
+            <a href="services.html" class="text-gray-400 hover:text-white transition">Services</a>
+            <a href="pricing.html" class="text-gray-400 hover:text-white transition">Pricing</a>
+            <a href="contact.html" class="text-gray-400 hover:text-white transition">Careers</a>
         </div>
-        <div class="hidden md:flex gap-8 font-medium text-navy text-sm uppercase tracking-widest">
-            <a href="index.html" class="hover:text-gold transition">Home</a>
-            <a href="about.html" class="text-gold border-b-2 border-gold pb-1">About</a>
-            <a href="services.html" class="hover:text-gold transition pb-1">Services</a>
-            <a href="pricing.html" class="hover:text-gold transition pb-1">Pricing</a>
-            <a href="contact.html" class="hover:text-gold transition pb-1">Contact</a>
+        <div class="logo-curved-cutout">
+            <div class="flex flex-col items-center">
+                <img src="assets/logo.png" alt="Brahmas Express" class="h-10">
+                <div class="text-[10px] font-black text-[#0A0B10] tracking-tighter mt-1 uppercase">Brahmas Express</div>
+            </div>
         </div>
-        <a href="contact.html"
-            class="bg-navy text-white px-5 py-2 rounded-md font-semibold hover:bg-gold hover:text-navy transition gold-glow">Get
-            Quote</a>
-    </nav>
-
-    <!-- Page Header -->
-    <header class="bg-navy text-white py-24 px-6 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gold/5 skew-x-[-20deg] translate-x-1/2"></div>
-        <div class="container mx-auto text-center relative z-10" data-aos="fade-up">
-            <h1 class="text-5xl lg:text-7xl font-bold mb-6 tracking-tighter uppercase">Our Legacy</h1>
-            <p class="text-xl text-gray-400 max-w-2xl mx-auto font-light italic">"Engineered for trust. Driven by
-                precision."</p>
+        <div class="flex items-center gap-4">
+            <a href="contact.html" class="btn-red sora text-xs uppercase tracking-widest">Inquire Now</a>
         </div>
     </header>
 
-    <!-- Content Sections -->
-    <section class="py-24">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+    <!-- Content -->
+    <section class="py-32 px-[8%]">
+        <div class="max-w-4xl mx-auto text-center mb-24" data-aos="fade-up">
+            <h1 class="display-text mb-8">Decades of Precision.</h1>
+            <p class="text-xl text-gray-500 leading-relaxed italic">"Logistics is not just moving cargo; it’s moving
+                trust across borders."</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-20 items-center">
             <div data-aos="fade-right">
-                <span class="text-gold font-bold uppercase tracking-widest text-sm">Established Excellence</span>
-                <h2 class="text-4xl font-bold text-navy mt-4 mb-8">Structured Movement, <br>Total Accountability.</h2>
-                <p class="text-gray-600 mb-8 leading-relaxed text-lg">
-                    Brahmas Express was built on three core pillars: Operational Excellence, Customer Trust, and
-                    Professional Execution. We combine trained manpower, modern fleet infrastructure, and
-                    technology-driven coordination.
-                </p>
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="p-6 bg-gray-50 border-r-4 border-gold lift-card font-bold">
-                        <h4 class="text-navy text-xl">100% Secure</h4>
-                        <p class="text-xs text-gray-500 uppercase mt-2">Asset Protection</p>
+                <h2 class="text-4xl font-bold sora mb-8">Our Heritage</h2>
+                <p class="text-gray-400 leading-relaxed mb-8">From humble beginnings to a nationwide network, Brahmas
+                    Express has always prioritized one thing: The Client. Our operational architecture is built on
+                    real-time data and absolute transparency.</p>
+                <div class="flex gap-10">
+                    <div>
+                        <div class="text-3xl font-bold text-red-500">100%</div>
+                        <div class="text-[10px] uppercase font-bold tracking-widest text-gray-600 mt-2">Safety Record
+                        </div>
                     </div>
-                    <div class="p-6 bg-navy text-white border-r-4 border-gold lift-card font-bold">
-                        <h4 class="text-gold text-xl">Nationwide</h4>
-                        <p class="text-xs text-gray-400 uppercase mt-2">PAN India Ops</p>
+                    <div>
+                        <div class="text-3xl font-bold text-red-500">PAN India</div>
+                        <div class="text-[10px] uppercase font-bold tracking-widest text-gray-600 mt-2">Network Reach
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="relative" data-aos="fade-left">
-                <div class="absolute -inset-4 bg-gold/10 rounded-3xl -z-10 animate-pulse"></div>
-                <div
-                    class="bg-gray-100 h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100 flex items-center justify-center font-bold text-navy/5 text-8xl uppercase tracking-tighter">
-                    Brahmas</div>
+            <div class="h-[400px] border border-white/5 bg-white/5 rounded-[3rem] overflow-hidden" data-aos="fade-left">
+                <!-- Abstract Image or Video Placeholder -->
+                <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1000"
+                    class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition duration-1000">
             </div>
         </div>
     </section>
 
-    <!-- Vision & Mission -->
-    <section class="py-24 bg-[#0B1F3A] text-white overflow-hidden">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16">
-                <!-- Vision -->
-                <div class="bg-white/5 p-12 rounded-3xl border border-white/10 hover:border-gold/50 transition duration-500"
-                    data-aos="flip-up">
-                    <div
-                        class="w-16 h-16 bg-gold/20 flex items-center justify-center rounded-2xl text-gold text-3xl mb-8">
-                        👁️</div>
-                    <h3 class="text-3xl font-bold mb-6">Our Vision</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed">
-                        To become India’s most trusted logistics and relocation brand by setting higher standards in
-                        safety, service quality, and execution discipline.
-                    </p>
-                </div>
-                <!-- Mission -->
-                <div class="bg-gold p-12 rounded-3xl shadow-2xl text-navy" data-aos="flip-up" data-aos-delay="200">
-                    <div
-                        class="w-16 h-16 bg-navy/10 flex items-center justify-center rounded-2xl text-navy text-3xl mb-8">
-                        🎯</div>
-                    <h3 class="text-3xl font-bold mb-6">Our Mission</h3>
-                    <ul class="space-y-4 font-bold">
-                        <li class="flex items-start gap-3"><span>✓</span> Zero-damage delivery assurance</li>
-                        <li class="flex items-start gap-3"><span>✓</span> 100% Punctuality across all routes</li>
-                        <li class="flex items-start gap-3"><span>✓</span> Transparent, fixed-fee structure</li>
-                        <li class="flex items-start gap-3"><span>✓</span> Long-term partnership reliability</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/919667084988"
-        class="fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:scale-110 transition duration-300 z-[90] animate-bounce">
-        📱
-    </a>
-
-    <!-- Simple Footer -->
-    <footer class="bg-navy text-white text-center py-10 border-t border-white/5">
-        <p class="text-sm opacity-50 text-gold uppercase tracking-widest font-bold">© 2025 Brahmas Express Logistics</p>
+    <footer
+        class="py-12 px-[8%] border-t border-white/5 text-gray-600 text-xs text-center uppercase tracking-widest font-bold">
+        © 2025 Brahmas Express Management
     </footer>
 
+    <script src="assets/js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>AOS.init({ duration: 1000, once: true });</script>
-    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

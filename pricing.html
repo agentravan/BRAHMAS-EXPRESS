@@ -4,147 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing | Brahmas Express - Logistics & Relocation</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500&display=swap"
-        rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <title>Pricing | Brahmas Express - Cinematic Infrastructure</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navy: '#0B1F3A',
-                        gold: '#D4AF37',
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 
-<body class="bg-white text-gray-800">
-
-    <!-- Loader -->
-    <div id="loader" class="fixed inset-0 bg-white flex items-center justify-center z-[100]">
-        <div class="text-center">
-            <img src="assets/logo.png" alt="Logo" class="h-24 logo-animate">
-        </div>
-    </div>
-
-    <!-- Custom Cursor -->
+<body class="bg-[#0A0B10] text-white">
     <div id="cursor"></div>
-
-    <!-- Navbar -->
-    <nav
-        class="glass-nav sticky top-0 z-50 px-6 sm:px-12 py-4 flex justify-between items-center text-sm uppercase font-bold tracking-widest">
-        <div class="flex items-center gap-2">
-            <img src="assets/logo.png" alt="Brahmas Express" class="h-10">
-            <span class="text-navy hidden lg:block">Brahmas Express</span>
+    <header class="curved-header-container">
+        <div class="nav-box sora text-xs uppercase tracking-widest font-bold">
+            <a href="index.html" class="text-gray-400 hover:text-white transition">Home</a>
+            <a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a>
+            <a href="services.html" class="text-gray-400 hover:text-white transition">Services</a>
+            <a href="pricing.html" class="text-white">Pricing</a>
+            <a href="contact.html" class="text-gray-400 hover:text-white transition">Careers</a>
         </div>
-        <div class="hidden md:flex gap-8 text-navy">
-            <a href="index.html" class="hover:text-gold transition">Home</a>
-            <a href="about.html" class="hover:text-gold transition">About</a>
-            <a href="services.html" class="hover:text-gold transition pb-1">Services</a>
-            <a href="pricing.html" class="text-gold border-b-2 border-gold pb-1">Pricing</a>
-            <a href="contact.html" class="hover:text-gold transition pb-1">Contact</a>
-        </div>
-        <a href="contact.html"
-            class="bg-navy text-white px-5 py-2 rounded-md hover:bg-gold hover:text-navy transition shadow-md">Get
-            Quote</a>
-    </nav>
-
-    <!-- Header -->
-    <header class="bg-navy text-white py-24 px-6 text-center animate-fade-up relative">
-        <div class="container mx-auto relative z-10" data-aos="zoom-in">
-            <h1 class="text-5xl lg:text-7xl font-bold mb-4 uppercase tracking-tighter">Value Structures</h1>
-            <p class="text-gray-400 max-w-xl mx-auto italic font-light">"Transparent pricing models designed to scale
-                with your movement requirements."</p>
+        <div class="logo-curved-cutout">
+            <div class="flex flex-col items-center">
+                <img src="assets/logo.png" alt="Brahmas Express" class="h-10">
+                <div class="text-[10px] font-black text-[#0A0B10] tracking-tighter mt-1 uppercase">Brahmas Express</div>
+            </div>
         </div>
     </header>
 
-    <!-- Pricing Grid -->
-    <section class="py-24 bg-gray-50">
-        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12">
+    <section class="py-32 px-[8%]">
+        <div class="text-center mb-24" data-aos="fade-up">
+            <h1 class="display-text mb-4">Value Architecture.</h1>
+            <p class="text-gray-500 italic">"Precision at every price point."</p>
+        </div>
 
-            <!-- Basic -->
-            <div class="bg-white p-12 rounded-[2rem] shadow-xl border border-gray-100 flex flex-col lift-card"
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Tier 1 -->
+            <div class="p-12 border border-white/5 bg-white/5 rounded-[3rem] hover:bg-white/10 transition"
                 data-aos="fade-up">
-                <h3 class="text-2xl font-bold text-navy mb-2">Basic Tier</h3>
-                <p class="text-gray-500 text-sm mb-8 italic">Essentials for local relocations.</p>
-                <div class="text-4xl font-bold text-navy mb-10">Custom Quote</div>
-                <ul class="space-y-5 mb-12 flex-grow">
-                    <li class="flex items-center gap-3 text-sm font-bold text-navy">✓ Standard Grade Packing</li>
-                    <li class="flex items-center gap-3 text-sm font-bold text-navy">✓ Secure Loading Team</li>
-                    <li class="flex items-center gap-3 text-sm font-bold text-navy">✓ Optimized Logistics Route</li>
-                    <li class="flex items-center gap-3 text-sm font-gray-300 opacity-30 strike">✗ Specialized Unpacking
-                    </li>
+                <h3 class="text-2xl font-bold sora mb-2">Basic</h3>
+                <div class="text-sm text-red-500 uppercase tracking-widest mb-10">Essential Movement</div>
+                <ul class="space-y-4 text-gray-400 text-sm mb-12">
+                    <li>✓ High-Grade Packing</li>
+                    <li>✓ Secure Transport</li>
+                    <li>✓ 24/7 Support</li>
                 </ul>
-                <a href="contact.html"
-                    class="w-full text-center py-4 border-2 border-navy text-navy font-bold rounded-xl hover:bg-navy hover:text-white transition uppercase tracking-widest text-xs">Request
-                    Entry Quote</a>
+                <a href="contact.html" class="btn-glass w-full justify-center">Get Quote</a>
             </div>
-
-            <!-- Standard -->
-            <div class="bg-navy p-12 rounded-[2rem] shadow-2xl border-4 border-gold-glow flex flex-col scale-105 relative z-10 overflow-hidden"
+            <!-- Tier 2 -->
+            <div class="p-12 border-2 border-red-500 bg-red-500/5 rounded-[3rem] scale-105" data-aos="fade-up"
+                data-aos-delay="100">
+                <h3 class="text-2xl font-bold sora mb-2">Standard</h3>
+                <div class="text-sm text-red-500 uppercase tracking-widest mb-10">Premium Protection</div>
+                <ul class="space-y-4 text-white text-sm mb-12">
+                    <li>✓ 5-Layer Shield Packing</li>
+                    <li>✓ GPS Real-time Tracking</li>
+                    <li>✓ Priority Dispatch</li>
+                    <li>✓ Full Insurance Coverage</li>
+                </ul>
+                <a href="contact.html" class="btn-red w-full justify-center shadow-lg">Most Popular</a>
+            </div>
+            <!-- Tier 3 -->
+            <div class="p-12 border border-white/5 bg-white/5 rounded-[3rem] hover:bg-white/10 transition"
                 data-aos="fade-up" data-aos-delay="200">
-                <div
-                    class="absolute -top-0 -right-0 w-32 h-32 bg-gold/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl">
-                </div>
-                <div
-                    class="bg-gold text-navy text-[10px] font-black px-6 py-2 rounded-full uppercase tracking-widest mb-6 inline-block w-fit">
-                    Most Deployed</div>
-                <h3 class="text-2xl font-bold text-gold mb-2">Standard Tier</h3>
-                <p class="text-gray-400 text-sm mb-8 italic font-light">Recommended for family relocations.</p>
-                <div class="text-4xl font-bold text-white mb-10">Custom Quote</div>
-                <ul class="space-y-5 mb-12 flex-grow text-white">
-                    <li class="flex items-center gap-3 text-sm font-bold">✓ Multi-Layer Protection</li>
-                    <li class="flex items-center gap-3 text-sm font-bold">✓ Real-time GPS Tracking</li>
-                    <li class="flex items-center gap-3 text-sm font-bold">✓ Furniture Dismantling</li>
-                    <li class="flex items-center gap-3 text-sm font-bold">✓ Expedited Logistics Hub</li>
+                <h3 class="text-2xl font-bold sora mb-2">Elite</h3>
+                <div class="text-sm text-red-500 uppercase tracking-widest mb-10">Full Managed Ops</div>
+                <ul class="space-y-4 text-gray-400 text-sm mb-12">
+                    <li>✓ White-Glove Unpacking</li>
+                    <li>✓ Electronic Setup</li>
+                    <li>✓ Dedicated Manager</li>
+                    <li>✓ Global Standards</li>
                 </ul>
-                <a href="contact.html"
-                    class="w-full text-center py-4 bg-gold text-navy font-bold rounded-xl hover:bg-white transition uppercase tracking-widest text-xs shadow-xl gold-glow">Select
-                    Standard</a>
+                <a href="contact.html" class="btn-glass w-full justify-center">Custom Inquiry</a>
             </div>
-
-            <!-- Premium -->
-            <div class="bg-white p-12 rounded-[2rem] shadow-xl border border-gray-100 flex flex-col lift-card"
-                data-aos="fade-up" data-aos-delay="400">
-                <h3 class="text-2xl font-bold text-navy mb-2">Premium Tier</h3>
-                <p class="text-gray-500 text-sm mb-8 italic">Full-scale managed movement.</p>
-                <div class="text-4xl font-bold text-navy mb-10">Custom Quote</div>
-                <ul class="space-y-5 mb-12 flex-grow">
-                    <li class="flex items-center gap-3 text-sm font-bold text-navy">✓ Zero-Impact Packing</li>
-                    <li class="flex items-center gap-3 text-sm font-bold text-navy">✓ Dedicated Move Control Manager
-                    </li>
-                    <li class="flex items-center gap-3 text-sm font-bold text-navy">✓ White-Glove Unpacking</li>
-                    <li class="flex items-center gap-3 text-sm font-bold text-navy">✓ Electronics System Setup</li>
-                </ul>
-                <a href="contact.html"
-                    class="w-full text-center py-4 border-2 border-navy text-navy font-bold rounded-xl hover:bg-navy hover:text-white transition uppercase tracking-widest text-xs">Request
-                    Elite Quote</a>
-            </div>
-
         </div>
     </section>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/919667084988"
-        class="fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:scale-110 transition duration-300 z-[90]">
-        📱
-    </a>
-
-    <footer class="bg-navy text-white text-center py-10 border-t border-white/5">
-        <p class="text-sm opacity-50 text-gold font-bold uppercase tracking-widest">© 2025 Brahmas Express Management
-        </p>
+    <footer
+        class="py-12 px-[8%] border-t border-white/5 text-gray-600 text-xs text-center uppercase font-bold tracking-widest">
+        © 2025 Brahmas Express Logistics
     </footer>
-
+    <script src="assets/js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>AOS.init({ duration: 1000, once: true });</script>
-    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
