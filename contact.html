@@ -4,118 +4,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Command Center | Brahmas Express - Institutional Contact</title>
+    <title>Command Center | BRAHMAS EXPRESS - Institutional Link</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="bg-[#05080E] text-[#F3F4F6]">
+<body class="bg-[#020408]">
 
-    <div id="cursor" class="hidden lg:block"></div>
-
-
-
-    <!-- Sticky Header Architecture -->
+    <!-- Futuristic Header -->
     <header class="site-header">
         <div class="header-inner">
-            <a href="index.html" class="flex items-center gap-4 group">
-                <img src="assets/img/logo.png" alt="Brahmas Express Logo"
-                    class="h-10 w-auto object-contain transition-transform group-hover:scale-105"
-                    onerror="this.onerror=null; this.replaceWith(document.getElementById('fallback-logo').content.cloneNode(true));">
-                <template id="fallback-logo">
+            <a href="index.html" class="flex items-center gap-5 group">
+                <div class="relative w-12 h-12 flex items-center justify-center">
                     <div
-                        class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center text-white font-black sora">
-                        B</div>
-                </template>
-                <div class="flex flex-col">
-                    <div class="text-sm font-black text-white tracking-[0.2em] leading-none uppercase sora">Brahmas
+                        class="absolute inset-0 bg-red-600/20 blur-xl group-hover:bg-red-600/40 transition-all duration-500 rounded-full">
                     </div>
-                    <div class="text-[9px] font-bold text-red-500 tracking-[0.4em] mt-1 uppercase opacity-80">Express
-                        Logistics</div>
+                    <img src="assets/img/logo.png" alt="BRAHMAS Logo" class="relative z-10 w-full h-full object-contain"
+                        onerror="this.src='https://via.placeholder.com/48/FF003C/FFFFFF?text=B'">
+                </div>
+                <div class="flex flex-col">
+                    <span
+                        class="text-xl font-black text-white tracking-[0.3em] uppercase sora leading-none">BRAHMAS</span>
+                    <span
+                        class="text-xs font-bold text-red-500 tracking-[0.6em] uppercase mt-1 opacity-80">EXPRESS</span>
                 </div>
             </a>
 
-            <nav class="hidden lg:flex nav-links-container">
+            <nav class="hidden lg:flex items-center gap-12">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">Strategic History</a>
-                <a href="services.html" class="nav-link">Solution Matrix</a>
-                <a href="pricing.html" class="nav-link">Value Tiers</a>
-                <a href="contact.html" class="nav-link active">Command Center</a>
+                <a href="about.html" class="nav-link">History</a>
+                <a href="services.html" class="nav-link">Matrix</a>
+                <a href="pricing.html" class="nav-link">Tiers</a>
+                <a href="contact.html" class="nav-link active">Node</a>
             </nav>
 
-            <div class="flex items-center gap-6">
-                <a href="tel:9667084988" class="btn-enterprise !py-3 !px-8 !text-xs">HOTLINE</a>
-                <button class="lg:hidden text-white text-2xl" onclick="toggleMenu()">☰</button>
-            </div>
+            <a href="contact.html" class="btn-futuristic hidden sm:flex">
+                STABILIZE CONNECTION
+                <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+            </a>
         </div>
     </header>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu"
-        class="fixed inset-0 bg-[#05080E] z-[3000] flex flex-col items-center justify-center gap-8 -translate-x-full transition-transform duration-500 lg:hidden text-center">
-        <button class="absolute top-10 right-10 text-4xl text-white outline-none" onclick="toggleMenu()">✕</button>
-        <a href="index.html" class="text-2xl font-bold sora hover:text-red-500">Home</a>
-        <a href="about.html" class="text-2xl font-bold sora hover:text-red-500">About</a>
-        <a href="services.html" class="text-2xl font-bold sora hover:text-red-500">Services</a>
-        <a href="pricing.html" class="text-2xl font-bold sora hover:text-red-500">Pricing</a>
-        <a href="contact.html" class="text-2xl font-bold sora hover:text-red-500">Contact</a>
-    </div>
-
-    <section class="py-32 px-[8%] border-b border-white/5 bg-[#0D1117] relative overflow-hidden">
-        <div class="max-w-4xl relative z-10" data-aos="fade-up">
-            <span class="section-label">Institutional Contact Hub</span>
-            <h1 class="display-text mb-8">Direct Command.</h1>
-            <p class="text-lg text-gray-400 leading-relaxed italic max-w-2xl">"Connecting enterprise stability with
-                operational responsiveness."</p>
+    <!-- Authority Header -->
+    <section class="py-48 px-[8%] relative overflow-hidden">
+        <div class="neon-glow top-1/2 left-0 opacity-30"></div>
+        <div class="max-w-4xl relative z-10">
+            <span class="section-label" data-aos-futuristic>Uplink Initiation</span>
+            <h1 class="display-text text-white">Command <span>Center.</span></h1>
+            <p class="text-xl text-gray-400 font-light leading-relaxed max-w-2xl">
+                Direct neural-link to our operational directors. Secure your transition protocol immediately.
+            </p>
         </div>
     </section>
 
-    <!-- Contact Form -->
-    <section class="section-pad">
-        <div class="authority-container grid lg:grid-cols-2 gap-24">
-            <div data-aos="fade-right">
-                <h2 class="authority-title mb-12">Reach Authority Center.</h2>
+    <!-- Contact Matrix -->
+    <section class="section-pad bg-black/40">
+        <div class="authority-container">
+            <div class="grid lg:grid-cols-2 gap-24">
+                <div data-aos-futuristic>
+                    <div class="module-card !p-16 mb-12">
+                        <h2 class="text-4xl font-black sora text-white mb-10 uppercase tracking-tighter">Protocol
+                            Request.</h2>
+                        <form class="space-y-8">
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div class="space-y-4">
+                                    <label
+                                        class="text-[9px] font-black text-gray-500 uppercase tracking-widest pl-2">Subject
+                                        Name</label>
+                                    <input type="text" placeholder="ID: USER_NAME"
+                                        class="w-full bg-white/5 border border-white/5 p-5 text-white focus:border-red-600 outline-none transition rounded-xl font-mono text-xs">
+                                </div>
+                                <div class="space-y-4">
+                                    <label
+                                        class="text-[9px] font-black text-gray-500 uppercase tracking-widest pl-2">Subject
+                                        Link</label>
+                                    <input type="email" placeholder="EMAIL_ENCRYPTED"
+                                        class="w-full bg-white/5 border border-white/5 p-5 text-white focus:border-red-600 outline-none transition rounded-xl font-mono text-xs">
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <label
+                                    class="text-[9px] font-black text-gray-500 uppercase tracking-widest pl-2">Transition
+                                    Requirements</label>
+                                <textarea rows="4" placeholder="DESCRIBE_PAYLOAD_PARAMETERS"
+                                    class="w-full bg-white/5 border border-white/5 p-5 text-white focus:border-red-600 outline-none transition rounded-xl font-mono text-xs"></textarea>
+                            </div>
+                            <button class="btn-neon w-full">INITIATE UPLINK</button>
+                        </form>
+                    </div>
+                </div>
+
                 <div class="space-y-12">
-                    <div class="flex gap-8 items-start">
-                        <div
-                            class="w-16 h-16 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center shrink-0 shadow-lg text-red-500 text-2xl">
-                            📞</div>
-                        <div>
-                            <div class="text-[9px] font-black uppercase text-gray-500 tracking-[0.2em] mb-2">Central
-                                Dispatch</div>
-                            <div class="text-2xl font-black sora text-white">9667084988</div>
-                        </div>
+                    <div class="module-card">
+                        <h4 class="text-red-500 font-black text-[10px] uppercase tracking-[0.4em] mb-6">Operational Node
+                        </h4>
+                        <p class="text-2xl font-black text-white sora mb-2 uppercase">Headquarters</p>
+                        <p class="text-gray-400 font-light mb-8">Block C, New Delhi Matrix, IN 2025</p>
+                        <div class="w-full h-1 bg-white/5"></div>
+                    </div>
+
+                    <div class="module-card">
+                        <h4 class="text-red-500 font-black text-[10px] uppercase tracking-[0.4em] mb-6">Direct Uplink
+                        </h4>
+                        <div class="text-5xl font-black text-white sora tracking-tighter mb-4">9667084988</div>
+                        <p class="text-gray-600 font-bold uppercase tracking-widest text-[9px]">24/7 Priority Access
+                            Node</p>
+                    </div>
+
+                    <div class="module-card bg-red-600/5 border-red-600/20">
+                        <h4 class="text-red-500 font-black text-[10px] uppercase tracking-[0.4em] mb-4">Security
+                            Advisory</h4>
+                        <p class="text-xs text-gray-400 italic">"All transitions are monitored and insured under the
+                            Brahmas Zero-Loss Protocol."</p>
                     </div>
                 </div>
             </div>
-
-            <div class="bg-[#0D1117] p-12 rounded-[3rem] border border-white/10 shadow-2xl relative"
-                data-aos="fade-left">
-                <h3 class="text-2xl font-black sora mb-10 text-red-500">Audit Request</h3>
-                <form class="space-y-8">
-                    <input type="text" placeholder="Authorized Contact"
-                        class="w-full bg-transparent border-b border-white/10 py-4 focus:border-red-500 focus:outline-none transition font-bold text-white uppercase tracking-widest text-xs">
-                    <input type="tel" placeholder="Primary Channel"
-                        class="w-full bg-transparent border-b border-white/10 py-4 focus:border-red-500 focus:outline-none transition font-bold text-white uppercase tracking-widest text-xs">
-                    <textarea rows="4" placeholder="Briefly define objective constraints..."
-                        class="w-full bg-transparent border-b border-white/10 py-4 focus:border-red-500 focus:outline-none transition font-medium text-gray-300 text-sm"></textarea>
-                    <button type="submit" class="btn-enterprise w-full justify-center p-5 text-sm">Connect Protocol
-                        ↗</button>
-                </form>
-            </div>
         </div>
     </section>
 
-    <!-- Global Footer -->
-    <footer
-        class="py-20 bg-[#05080E] border-t border-white/5 text-center text-[9px] font-bold uppercase tracking-widest text-gray-600">
-        © 2025 Brahmas Express Logistics.
+    <!-- Futuristic Footer -->
+    <footer class="futuristic-footer">
+        <div class="authority-container">
+            <div class="footer-grid mb-32">
+                <div>
+                    <div class="flex items-center gap-4 mb-10">
+                        <img src="assets/img/logo.png" class="h-12"
+                            onerror="this.src='https://via.placeholder.com/48/FF003C/FFFFFF?text=B'">
+                        <span
+                            class="text-3xl font-black sora text-white italic tracking-tighter uppercase">BRAHMAS</span>
+                    </div>
+                    <p class="text-gray-500 font-medium text-sm leading-relaxed max-w-xs">
+                        The definitive authority in global asset transition. We engineering the future of movement.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Systems</h4>
+                    <a href="services.html" class="footer-link">Relocation Hub</a>
+                    <a href="services.html" class="footer-link">Logistics Matrix</a>
+                    <a href="services.html" class="footer-link">Secure Vault</a>
+                </div>
+                <div>
+                    <h4 class="text-white text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Network</h4>
+                    <a href="about.html" class="footer-link">Global Nodes</a>
+                    <a href="about.html" class="footer-link">Legacy Intel</a>
+                    <a href="contact.html" class="footer-link">Node Status</a>
+                </div>
+                <div>
+                    <h4 class="text-white text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Hotline</h4>
+                    <div class="text-4xl font-black text-red-500 sora mb-4 tracking-tighter">9667084988</div>
+                    <p class="text-[9px] text-gray-600 font-black uppercase tracking-[0.4em]">Propelled by Brahmas
+                        Express 2025</p>
+                </div>
+            </div>
+            <div
+                class="pt-12 border-t border-white/5 flex justify-between items-center text-[9px] font-bold uppercase tracking-widest text-gray-700">
+                <div>© 2025 BRAHMAS EXPRESS. SYSTEM SECURE.</div>
+                <div class="flex gap-10">
+                    <a href="#" class="hover:text-red-500 transition">Node Privacy</a>
+                    <a href="#" class="hover:text-red-500 transition">Legal Protocols</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: true });
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from('.module-card', {
+            scrollTrigger: {
+                trigger: '.module-card',
+                start: "top 90%",
+            },
+            y: 40,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.2,
+            ease: "power2.out"
+        });
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.site-header');
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
     </script>
 </body>
 

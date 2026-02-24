@@ -4,147 +4,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solution Matrix | Brahmas Express - Enterprise Logistics</title>
+    <title>Solution Matrix | BRAHMAS EXPRESS - Specialized Modules</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="bg-[#05080E] text-[#F3F4F6]">
+<body class="bg-[#020408]">
 
-    <div id="cursor" class="hidden lg:block"></div>
-
-
-
-    <!-- Sticky Header Architecture -->
+    <!-- Futuristic Header -->
     <header class="site-header">
         <div class="header-inner">
-            <a href="index.html" class="flex items-center gap-4 group">
-                <img src="assets/img/logo.png" alt="Brahmas Express Logo"
-                    class="h-10 w-auto object-contain transition-transform group-hover:scale-105"
-                    onerror="this.onerror=null; this.replaceWith(document.getElementById('fallback-logo').content.cloneNode(true));">
-                <template id="fallback-logo">
+            <a href="index.html" class="flex items-center gap-5 group">
+                <div class="relative w-12 h-12 flex items-center justify-center">
                     <div
-                        class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center text-white font-black sora">
-                        B</div>
-                </template>
-                <div class="flex flex-col">
-                    <div class="text-sm font-black text-white tracking-[0.2em] leading-none uppercase sora">Brahmas
+                        class="absolute inset-0 bg-red-600/20 blur-xl group-hover:bg-red-600/40 transition-all duration-500 rounded-full">
                     </div>
-                    <div class="text-[9px] font-bold text-red-500 tracking-[0.4em] mt-1 uppercase opacity-80">Express
-                        Logistics</div>
+                    <img src="assets/img/logo.png" alt="BRAHMAS Logo" class="relative z-10 w-full h-full object-contain"
+                        onerror="this.src='https://via.placeholder.com/48/FF003C/FFFFFF?text=B'">
+                </div>
+                <div class="flex flex-col">
+                    <span
+                        class="text-xl font-black text-white tracking-[0.3em] uppercase sora leading-none">BRAHMAS</span>
+                    <span
+                        class="text-xs font-bold text-red-500 tracking-[0.6em] uppercase mt-1 opacity-80">EXPRESS</span>
                 </div>
             </a>
 
-            <nav class="hidden lg:flex nav-links-container">
+            <nav class="hidden lg:flex items-center gap-12">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">Strategic History</a>
-                <a href="services.html" class="nav-link active">Solution Matrix</a>
-                <a href="pricing.html" class="nav-link">Value Tiers</a>
-                <a href="contact.html" class="nav-link">Command Center</a>
+                <a href="about.html" class="nav-link">History</a>
+                <a href="services.html" class="nav-link active">Matrix</a>
+                <a href="pricing.html" class="nav-link">Tiers</a>
+                <a href="contact.html" class="nav-link">Node</a>
             </nav>
 
-            <div class="flex items-center gap-6">
-                <a href="contact.html" class="btn-enterprise !py-3 !px-8 !text-xs">CONNECT</a>
-                <button class="lg:hidden text-white text-2xl" onclick="toggleMenu()">☰</button>
-            </div>
+            <a href="contact.html" class="btn-futuristic hidden sm:flex">
+                STABILIZE CONNECTION
+                <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+            </a>
         </div>
     </header>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu"
-        class="fixed inset-0 bg-[#05080E] z-[3000] flex flex-col items-center justify-center gap-8 -translate-x-full transition-transform duration-500 lg:hidden text-center">
-        <button class="absolute top-10 right-10 text-4xl text-white outline-none" onclick="toggleMenu()">✕</button>
-        <a href="index.html" class="text-2xl font-bold sora hover:text-red-500">Home</a>
-        <a href="about.html" class="text-2xl font-bold sora hover:text-red-500">About</a>
-        <a href="services.html" class="text-2xl font-bold sora hover:text-red-500">Services</a>
-        <a href="pricing.html" class="text-2xl font-bold sora hover:text-red-500">Pricing</a>
-        <a href="contact.html" class="text-2xl font-bold sora hover:text-red-500">Contact</a>
-    </div>
-
     <!-- Authority Header -->
-    <section class="py-32 px-[8%] border-b border-white/5 relative overflow-hidden bg-[#0D1117]">
-        <div class="max-w-4xl relative z-10" data-aos="fade-up">
-            <span class="section-label">Institutional Service Portfolio</span>
-            <h1 class="display-text mb-8">Specialized Logistical Matrix.</h1>
-            <p class="text-lg text-gray-400 leading-relaxed italic max-w-2xl">
-                "Our service architecture is designed for redundancy, security, and precision across every logistical
-                vertical."
+    <section class="py-48 px-[8%] relative overflow-hidden">
+        <div class="neon-glow top-0 left-1/4"></div>
+        <div class="max-w-4xl relative z-10">
+            <span class="section-label" data-aos-futuristic>Service Optimization</span>
+            <h1 class="display-text text-white">The <span>Solution</span> Matrix.</h1>
+            <p class="text-xl text-gray-400 font-light leading-relaxed max-w-2xl">
+                Deploying advanced logistical modules designed for high-stakes movement. Each tier is a secured
+                protocol.
             </p>
         </div>
     </section>
 
-    <!-- Services -->
-    <section class="section-pad">
-        <div class="authority-container space-y-32">
-            <div class="grid lg:grid-cols-2 gap-20 items-center">
-                <div data-aos="fade-right">
-                    <div class="text-[9px] font-black text-red-500 uppercase tracking-[0.4em] mb-4">Vertical 01 /
-                        Residential Engineering</div>
-                    <h2 class="authority-title mb-6">Domestic Asset Transition</h2>
-                    <p class="text-gray-400 mb-8 text-base">We redefine residential moving as a specialized engineering
-                        project with 7-layer protection.</p>
-                    <a href="contact.html" class="btn-enterprise">Consult Specialist</a>
+    <!-- Matrix Modules -->
+    <section class="section-pad bg-black/40">
+        <div class="authority-container">
+            <div class="grid-cols-module mb-40">
+                <!-- Module 01 -->
+                <div class="module-card">
+                    <div class="flex justify-between items-start mb-12">
+                        <div class="text-red-500 font-black text-4xl sora">01</div>
+                        <div
+                            class="bg-red-600/10 text-red-500 px-3 py-1 rounded text-[9px] font-black tracking-widest uppercase">
+                            High Affinity</div>
+                    </div>
+                    <h3 class="text-2xl font-black text-white mb-6 uppercase">Domestic Relocation</h3>
+                    <p class="text-sm text-gray-500 mb-10 leading-relaxed">Transitioning residential assets with
+                        zero-impact protocols. We treat your personal world as a high-value data transfer.</p>
+                    <ul class="space-y-4 mb-12 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-red-600 rounded-full"></span>
+                            Multi-Layer Packing</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-red-600 rounded-full"></span>
+                            Real-Time Sync</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-red-600 rounded-full"></span>
+                            Unpacking Synthesis</li>
+                    </ul>
                 </div>
-                <div class="h-[400px] border border-white/5 bg-white/5 rounded-[2.5rem] flex items-center justify-center font-black sora text-7xl text-white/5 uppercase select-none"
-                    data-aos="fade-left">Personal</div>
+
+                <!-- Module 02 -->
+                <div class="module-card">
+                    <div class="flex justify-between items-start mb-12">
+                        <div class="text-red-500 font-black text-4xl sora">02</div>
+                        <div
+                            class="bg-blue-600/10 text-blue-500 px-3 py-1 rounded text-[9px] font-black tracking-widest uppercase">
+                            Enterprise Class</div>
+                    </div>
+                    <h3 class="text-2xl font-black text-white mb-6 uppercase">Corporate Transit</h3>
+                    <p class="text-sm text-gray-500 mb-10 leading-relaxed">Industrial-scale office and server migration.
+                        Minimizing operational downtime through parallel transit logic.</p>
+                    <ul class="space-y-4 mb-12 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-red-600 rounded-full"></span> IT
+                            Asset Governance</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-red-600 rounded-full"></span>
+                            Document Security</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-red-600 rounded-full"></span>
+                            Weekend Deployment</li>
+                    </ul>
+                </div>
+
+                <!-- Module 03 -->
+                <div class="module-card">
+                    <div class="flex justify-between items-start mb-12">
+                        <div class="text-red-500 font-black text-4xl sora">03</div>
+                        <div
+                            class="bg-green-600/10 text-green-500 px-3 py-1 rounded text-[9px] font-black tracking-widest uppercase">
+                            Critical Load</div>
+                    </div>
+                    <h3 class="text-2xl font-black text-white mb-6 uppercase">Heavy Logistics</h3>
+                    <p class="text-sm text-gray-500 mb-10 leading-relaxed">Movement of oversized machinery and
+                        industrial hardware. Engineering custom transit solutions for heavy mass.</p>
+                    <ul class="space-y-4 mb-12 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-red-600 rounded-full"></span>
+                            Hydraulic Loading</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-red-600 rounded-full"></span>
+                            Route Optimization</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-red-600 rounded-full"></span>
+                            Specialized Fleet</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-20 items-center">
-                <div class="order-2 lg:order-1 h-[400px] border border-white/5 bg-white/5 rounded-[2.5rem] flex items-center justify-center font-black sora text-7xl text-white/5 uppercase select-none"
-                    data-aos="fade-right">Corporate</div>
-                <div class="order-1 lg:order-2" data-aos="fade-left">
-                    <div class="text-[9px] font-black text-red-500 uppercase tracking-[0.4em] mb-4">Vertical 02 /
-                        Institutional Continuity</div>
-                    <h2 class="authority-title mb-6">Enterprise Headquarter Relocation</h2>
-                    <p class="text-gray-400 mb-8 text-base">Stability and zero downtime for executive relocations and
-                        server architectures.</p>
-                    <a href="contact.html" class="btn-enterprise">Inquire Enterprise Shift</a>
-                </div>
+            <!-- Future Expansion Section -->
+            <div class="rounded-[4rem] border border-white/5 bg-white/5 p-20 text-center relative overflow-hidden">
+                <div class="neon-glow bottom-0 left-1/2 -translate-x-1/2 opacity-30"></div>
+                <h2 class="text-4xl font-black sora text-white mb-8 uppercase tracking-tighter">Need a Custom Protocol?
+                </h2>
+                <p class="text-gray-400 max-w-xl mx-auto mb-12 font-light">Our engineering team can design specialized
+                    logistics workflows for unique industrial requirements.</p>
+                <button class="btn-neon">REQUEST MASTER DEPLOYMENT</button>
             </div>
         </div>
     </section>
 
-    <!-- Global Footer -->
-    <footer class="py-20 bg-[#05080E] border-t border-white/5">
+    <!-- Futuristic Footer -->
+    <footer class="futuristic-footer">
         <div class="authority-container">
-            <div class="grid md:grid-cols-4 gap-16 mb-20">
-                <div class="col-span-1 lg:col-span-1">
-                    <a href="index.html" class="flex items-center gap-4 mb-8 grayscale opacity-70">
-                        <img src="assets/img/logo.png" alt="Logo" class="h-10 w-auto object-contain"
-                            onerror="this.src='https://via.placeholder.com/40x40/E11D48/FFFFFF?text=B'">
-                        <div class="text-xl font-black text-white tracking-tighter sora uppercase">Brahmas</div>
-                    </a>
+            <div class="footer-grid mb-32">
+                <div>
+                    <div class="flex items-center gap-4 mb-10">
+                        <img src="assets/img/logo.png" class="h-12"
+                            onerror="this.src='https://via.placeholder.com/48/FF003C/FFFFFF?text=B'">
+                        <span
+                            class="text-3xl font-black sora text-white italic tracking-tighter uppercase">BRAHMAS</span>
+                    </div>
+                    <p class="text-gray-500 font-medium text-sm leading-relaxed max-w-xs">
+                        The definitive authority in global asset transition. We engineering the future of movement.
+                    </p>
                 </div>
                 <div>
-                    <h4 class="text-white sora font-black text-[10px] uppercase tracking-widest mb-8">Matrix</h4>
-                    <ul class="space-y-4 text-gray-500 text-[10px] font-bold uppercase tracking-widest">
-                        <li><a href="services.html" class="hover:text-red-500 transition">Services</a></li>
-                        <li><a href="pricing.html" class="hover:text-red-500 transition">Pricing</a></li>
-                    </ul>
+                    <h4 class="text-white text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Systems</h4>
+                    <a href="services.html" class="footer-link">Relocation Hub</a>
+                    <a href="services.html" class="footer-link">Logistics Matrix</a>
+                    <a href="services.html" class="footer-link">Secure Vault</a>
                 </div>
                 <div>
-                    <h4 class="text-white sora font-black text-[10px] uppercase tracking-widest mb-8">The Authority</h4>
-                    <ul class="space-y-4 text-gray-500 text-[10px] font-bold uppercase tracking-widest">
-                        <li><a href="about.html" class="hover:text-red-500 transition">About Us</a></li>
-                        <li><a href="contact.html" class="hover:text-red-500 transition">Contact</a></li>
-                    </ul>
+                    <h4 class="text-white text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Network</h4>
+                    <a href="about.html" class="footer-link">Global Nodes</a>
+                    <a href="about.html" class="footer-link">Legacy Intel</a>
+                    <a href="contact.html" class="footer-link">Node Status</a>
                 </div>
                 <div>
-                    <h4 class="text-white sora font-black text-[10px] uppercase tracking-widest mb-8">Hotline</h4>
-                    <div class="text-2xl font-black sora text-white mb-2">9667084988</div>
+                    <h4 class="text-white text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Hotline</h4>
+                    <div class="text-4xl font-black text-red-500 sora mb-4 tracking-tighter">9667084988</div>
+                    <p class="text-[9px] text-gray-600 font-black uppercase tracking-[0.4em]">Propelled by Brahmas
+                        Express 2025</p>
                 </div>
             </div>
             <div
-                class="pt-12 border-t border-white/5 text-center text-[9px] font-bold uppercase tracking-widest text-gray-600">
-                © 2025 Brahmas Express Logistics.
+                class="pt-12 border-t border-white/5 flex justify-between items-center text-[9px] font-bold uppercase tracking-widest text-gray-700">
+                <div>© 2025 BRAHMAS EXPRESS. SYSTEM SECURE.</div>
+                <div class="flex gap-10">
+                    <a href="#" class="hover:text-red-500 transition">Node Privacy</a>
+                    <a href="#" class="hover:text-red-500 transition">Legal Protocols</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: true });
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.utils.toArray('.module-card').forEach(card => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 90%",
+                },
+                x: -30,
+                opacity: 0,
+                duration: 0.8,
+                ease: "power2.out"
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.site-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
     </script>
 </body>
 
