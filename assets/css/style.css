@@ -44,8 +44,7 @@ h4,
 /* --- Sticky Professional Header --- */
 .site-header {
     position: fixed;
-    top: 36px;
-    /* Offset for Top Status Bar */
+    top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
