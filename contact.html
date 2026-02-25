@@ -4,168 +4,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Command Center | Brahmas Express - Institutional Link</title>
+    <title>Contact Us | Brahmas Express Logistics</title>
+    <meta name="description"
+        content="Contact Brahmas Express for all your logistics and relocation needs. Get a free custom quote today. Operations based in Sector 99A, Gurugram.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        body {
-            background-color: #040A14;
-            background-image:
-                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 60px 60px;
-            overflow-x: hidden;
-        }
-    </style>
 </head>
 
-<body class="bg-[#040A14] text-white">
+<body class="bg-gray-50 text-gray-900">
 
-    <!-- Premium Loader -->
-    <div id="loader" class="fixed inset-0 bg-[#040A14] flex items-center justify-center z-[100]">
-        <div class="relative text-center">
-            <div class="w-16 h-16 bg-[#D4AF37] rounded-lg mx-auto mb-6 flex items-center justify-center">
-                <span class="text-black font-black text-2xl sora">B</span>
-            </div>
-            <div class="w-40 h-1 bg-gray-800 mx-auto overflow-hidden">
-                <div class="h-full bg-[#D4AF37] animate-pulse"></div>
-            </div>
-            <p class="text-gray-400 text-xs mt-4 tracking-[3px] uppercase">Initializing Command Network</p>
-        </div>
-    </div>
-
-    <!-- Command Header -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-black/60 backdrop-blur-xl border-b border-white/10">
-        <div class="max-w-7xl mx-auto flex justify-between items-center px-10 py-6">
+    <!-- Navbar / Shared Header -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
             <a href="./index.html" class="flex items-center gap-3">
-                <div class="h-10 w-10 bg-[#D4AF37] rounded-md flex items-center justify-center">
-                    <span class="text-black font-black text-lg sora">B</span>
+                <div class="h-10 w-10 bg-gold rounded-md flex items-center justify-center">
+                    <span class="text-gray-900 font-black text-lg sora">B</span>
                 </div>
-                <div class="text-white tracking-[6px] text-sm uppercase font-bold">
-                    Brahmas <span class="text-[#D4AF37]">Express</span>
+                <div class="text-gray-900 tracking-wider text-sm font-bold uppercase sora">
+                    Brahmas <span class="text-gold">Express</span>
                 </div>
             </a>
-            <nav class="hidden md:flex gap-12 text-gray-300 uppercase text-xs tracking-[3px]">
-                <a href="./index.html" class="hover:text-[#D4AF37] transition relative group">
-                    Home
-                    <span
-                        class="absolute bottom-[-6px] left-0 w-0 h-[2px] bg-[#D4AF37] transition-all group-hover:w-full"></span>
-                </a>
-                <a href="./about.html" class="hover:text-[#D4AF37] transition relative group">
-                    About
-                    <span
-                        class="absolute bottom-[-6px] left-0 w-0 h-[2px] bg-[#D4AF37] transition-all group-hover:w-full"></span>
-                </a>
-                <a href="./services.html" class="hover:text-[#D4AF37] transition relative group">
-                    Services
-                    <span
-                        class="absolute bottom-[-6px] left-0 w-0 h-[2px] bg-[#D4AF37] transition-all group-hover:w-full"></span>
-                </a>
-                <a href="./contact.html" class="hover:text-[#D4AF37] transition relative group text-[#D4AF37]">
-                    Contact
-                    <span class="absolute bottom-[-6px] left-0 w-full h-[2px] bg-[#D4AF37]"></span>
-                </a>
+
+            <nav class="hidden md:flex gap-8 text-sm uppercase tracking-wider">
+                <a href="./index.html" class="nav-link">Home</a>
+                <a href="./about.html" class="nav-link">About</a>
+                <a href="./services.html" class="nav-link">Services</a>
+                <a href="./pricing.html" class="nav-link">Pricing</a>
+                <a href="./contact.html" class="nav-link active">Contact</a>
             </nav>
-            <a href="./contact.html"
-                class="border border-[#D4AF37] text-[#D4AF37] px-6 py-3 rounded-md text-xs tracking-[3px] uppercase hover:bg-[#D4AF37] hover:text-black transition font-bold">
-                Request Quote
-            </a>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="tel:9667084988" class="text-sm font-bold flex items-center gap-2 hover:text-gold transition">
+                    <i class="fa-solid fa-phone text-gold"></i> 9667084988
+                </a>
+                <a href="./contact.html" class="btn-primary text-sm py-2 px-4 border-none">
+                    Get Quote
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-900 text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </header>
 
-    <section class="py-48 px-[8%] relative overflow-hidden bg-[#0D1117]/50 border-b border-white/5">
-        <div class="max-w-4xl relative z-10" data-aos="fade-up">
-            <span class="text-[#D4AF37] uppercase tracking-[4px] text-xs font-bold mb-4 block">Uplink Initiation</span>
-            <h1 class="text-5xl md:text-6xl font-black sora text-white mb-8">Command Center.</h1>
-            <p class="text-xl text-gray-400 leading-relaxed font-light max-w-2xl">
-                Direct neural-link to our operational directors. Secure your transition protocol immediately.
-            </p>
+    <!-- SECTION 1 — PAGE TITLE -->
+    <section class="pt-40 pb-20 bg-gray-900 text-white relative flex items-center justify-center min-h-[30vh]">
+        <div class="absolute inset-0 bg-black/60 z-10"></div>
+        <div
+            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1596524430615-b46475ddff6e?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center z-0">
+        </div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-20">
+            <h1 class="text-5xl lg:text-6xl font-black sora mb-6">Contact Us</h1>
+            <p class="text-xl text-gray-300 font-medium tracking-wide">We're here to help you move.</p>
         </div>
     </section>
 
-    <section class="py-32 bg-transparent">
-        <div class="max-w-7xl mx-auto px-10">
-            <div class="grid lg:grid-cols-2 gap-24">
-                <div class="p-12 bg-white/5 border border-white/5 rounded-3xl">
-                    <h2 class="text-3xl font-black sora text-white mb-8">Deploy Protocol</h2>
-                    <form class="space-y-6">
-                        <input type="text" placeholder="SUBJECT NAME"
-                            class="w-full bg-white/5 border border-white/10 p-5 rounded-xl outline-none focus:border-[#D4AF37] transition">
-                        <input type="email" placeholder="SUBJECT LINK (EMAIL)"
-                            class="w-full bg-white/5 border border-white/10 p-5 rounded-xl outline-none focus:border-[#D4AF37] transition">
-                        <textarea rows="4" placeholder="DESCRIBE PAYLOAD"
-                            class="w-full bg-white/5 border border-white/10 p-5 rounded-xl outline-none focus:border-[#D4AF37] transition"></textarea>
-                        <button
-                            class="btn-command-gold w-full text-center uppercase tracking-widest font-black">Initiate
-                            Uplink</button>
-                    </form>
-                </div>
+    <!-- SECTION 2 & 3 — CONTACT DETAILS & FORM -->
+    <section class="py-24 bg-white relative -mt-10 z-30 rounded-t-[3rem]">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
+
+            <!-- Contact Details -->
+            <div>
+                <span class="text-gold font-bold uppercase tracking-widest text-sm sora mb-3 block">Get In Touch</span>
+                <h2 class="text-4xl font-extrabold text-gray-900 sora mb-8">Let's Discuss Your Move</h2>
+                <p class="text-gray-600 mb-10 text-lg">Our experts are available 24/7 to provide estimates, answer
+                    questions, and schedule your relocation.</p>
+
                 <div class="space-y-8">
-                    <div class="p-8 bg-white/5 border border-white/5 rounded-2xl">
-                        <h4 class="text-[#D4AF37] font-black text-[10px] uppercase tracking-[0.4em] mb-4">Direct Uplink
-                        </h4>
-                        <div class="text-4xl font-black text-white sora mb-2 tracking-tighter">9667084988</div>
-                        <p class="text-gray-500 font-bold uppercase tracking-widest text-[9px]">Operational 24/7</p>
+                    <!-- Detail Item -->
+                    <div
+                        class="flex items-start gap-6 p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:border-gold transition">
+                        <div
+                            class="w-14 h-14 bg-white rounded-xl shadow-sm text-gold flex items-center justify-center text-2xl flex-shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold sora text-gray-900 mb-2">Headquarters</h4>
+                            <p class="text-gray-600">Sector 99A, Gurugram,<br>Haryana 122505, India</p>
+                        </div>
+                    </div>
+
+                    <!-- Detail Item -->
+                    <div
+                        class="flex items-start gap-6 p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:border-gold transition">
+                        <div
+                            class="w-14 h-14 bg-white rounded-xl shadow-sm text-gold flex items-center justify-center text-2xl flex-shrink-0">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold sora text-gray-900 mb-2">24/7 Support</h4>
+                            <p class="text-gray-600">Give us a call anytime.</p>
+                            <a href="tel:9667084988"
+                                class="text-gold font-bold text-lg mt-1 block hover:text-gray-900 transition">9667084988</a>
+                        </div>
+                    </div>
+
+                    <!-- Detail Item -->
+                    <div
+                        class="flex items-start gap-6 p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:border-gold transition">
+                        <div
+                            class="w-14 h-14 bg-white rounded-xl shadow-sm text-gold flex items-center justify-center text-2xl flex-shrink-0">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold sora text-gray-900 mb-2">Email Address</h4>
+                            <p class="text-gray-600">We respond to all inquiries within 2 hours.</p>
+                            <a href="mailto:info@brahmasexpress.in"
+                                class="text-gold font-bold text-lg mt-1 block hover:text-gray-900 transition">info@brahmasexpress.in</a>
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="bg-white p-10 rounded-3xl shadow-2xl border border-gray-100 relative">
+                <div
+                    class="absolute top-0 right-10 transform -translate-y-1/2 w-20 h-20 bg-gold rounded-full flex items-center justify-center shadow-lg text-black text-2xl">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </div>
+                <h3 class="text-2xl font-bold sora text-gray-900 mb-6 mt-4">Request a Free Quote</h3>
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Full Name *</label>
+                            <input type="text"
+                                class="w-full bg-gray-50 border border-gray-200 px-4 py-3 rounded-xl focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition"
+                                placeholder="John Doe" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Phone Number *</label>
+                            <input type="tel"
+                                class="w-full bg-gray-50 border border-gray-200 px-4 py-3 rounded-xl focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition"
+                                placeholder="+91 XXXXX XXXXX" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Email Address</label>
+                        <input type="email"
+                            class="w-full bg-gray-50 border border-gray-200 px-4 py-3 rounded-xl focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition"
+                            placeholder="john@example.com">
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Moving From *</label>
+                            <input type="text"
+                                class="w-full bg-gray-50 border border-gray-200 px-4 py-3 rounded-xl focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition"
+                                placeholder="City or ZIP" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Moving To *</label>
+                            <input type="text"
+                                class="w-full bg-gray-50 border border-gray-200 px-4 py-3 rounded-xl focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition"
+                                placeholder="City or ZIP" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Service Type *</label>
+                        <select
+                            class="w-full bg-gray-50 border border-gray-200 px-4 py-3 rounded-xl focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition"
+                            required>
+                            <option value="">Select a service</option>
+                            <option value="residential">Residential Relocation</option>
+                            <option value="corporate">Corporate Relocation</option>
+                            <option value="packing">Packing & Storage</option>
+                            <option value="fleet">Fleet Transportation</option>
+                        </select>
+                    </div>
+                    <button type="button" class="w-full btn-primary py-4 text-lg">Send Request</button>
+                    <p class="text-xs text-center text-gray-500 mt-4"><i class="fa-solid fa-lock text-gold mr-1"></i>
+                        Your information is secure and encrypted.</p>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-20 bg-black border-t border-white/10 relative">
-        <div class="max-w-7xl mx-auto px-10">
-            <div class="grid md:grid-cols-4 gap-16 mb-20">
-                <div class="col-span-1">
-                    <div class="flex items-center gap-3 mb-8">
-                        <div class="h-8 w-8 bg-[#D4AF37] rounded flex items-center justify-center">
-                            <span class="text-black font-black text-sm sora">B</span>
+    <!-- SECTION 4 — GOOGLE MAP -->
+    <section class="h-[500px] w-full bg-gray-200 relative">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.756209772658!2d76.95379891508212!3d28.44858888248982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d17ec23f46f39%3A0xb36f8623ad999dc6!2sSector%2099A%2C%20Gurugram%2C%20Haryana%20122505!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="absolute inset-0 grayscale hover:grayscale-0 transition duration-700">
+        </iframe>
+    </section>
+
+    <!-- FOOTER -->
+    <!-- ... same footer content ... -->
+    <footer class="bg-gray-900 text-white pt-10 pb-10 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Company Info -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="h-10 w-10 bg-gold rounded flex items-center justify-center">
+                            <span class="text-black font-black text-lg sora">B</span>
                         </div>
-                        <div class="text-white tracking-[4px] text-xs uppercase font-bold">
-                            Brahmas <span class="text-[#D4AF37]">Express</span>
+                        <div class="text-white tracking-widest text-sm uppercase font-bold sora">
+                            Brahmas <span class="text-gold">Express</span>
                         </div>
                     </div>
-                    <p class="text-xs text-gray-500 leading-relaxed italic">
-                        "Engineering the future of movement with absolute command and control."
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        Premium logistics and relocation services across India. Secure, insured, and professional
+                        transportation solutions.
                     </p>
+                    <div class="flex gap-4">
+                        <a href="javascript:void(0)"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-black transition">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-black transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-black transition">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
                 </div>
+
+                <!-- Quick Links -->
                 <div>
-                    <h4 class="text-white text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Systems</h4>
-                    <ul class="space-y-4 text-gray-500 text-[10px] font-bold uppercase tracking-widest">
-                        <li><a href="services.html" class="hover:text-[#D4AF37] transition">Relocation Matrix</a></li>
-                        <li><a href="services.html" class="hover:text-[#D4AF37] transition">Logistics Node</a></li>
+                    <h4 class="text-white font-bold sora mb-6 uppercase tracking-wider text-sm">Important Links</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-gold transition flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Home</a></li>
+                        <li><a href="about.html" class="hover:text-gold transition flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> About Us</a></li>
+                        <li><a href="services.html" class="hover:text-gold transition flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Services</a></li>
+                        <li><a href="pricing.html" class="hover:text-gold transition flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Pricing</a></li>
                     </ul>
                 </div>
+
+                <!-- Services Links -->
                 <div>
-                    <h4 class="text-white text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Authority</h4>
-                    <ul class="space-y-4 text-gray-500 text-[10px] font-bold uppercase tracking-widest">
-                        <li><a href="about.html" class="hover:text-[#D4AF37] transition">History</a></li>
-                        <li><a href="contact.html" class="hover:text-[#D4AF37] transition">Status</a></li>
+                    <h4 class="text-white font-bold sora mb-6 uppercase tracking-wider text-sm">Our Services</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="services.html" class="hover:text-gold transition flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Residential Relocation</a></li>
+                        <li><a href="services.html" class="hover:text-gold transition flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Corporate Relocation</a></li>
+                        <li><a href="services.html" class="hover:text-gold transition flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Packing & Storage</a></li>
+                        <li><a href="services.html" class="hover:text-gold transition flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Fleet Transportation</a></li>
                     </ul>
                 </div>
+
+                <!-- Contact Info -->
                 <div>
-                    <h4 class="text-white text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Command Center</h4>
-                    <div class="text-3xl font-black text-[#D4AF37] sora mb-2 tracking-tighter">9667084988</div>
-                    <p class="text-[9px] text-gray-600 font-black uppercase tracking-[0.4em]">Operational 24/7</p>
+                    <h4 class="text-white font-bold sora mb-6 uppercase tracking-wider text-sm">Contact Us</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-phone text-gold mt-1"></i>
+                            <div>
+                                <a href="tel:9667084988"
+                                    class="hover:text-gold block transition font-bold text-white text-lg tracking-wider">9667084988</a>
+                                <span class="text-xs text-gray-500 uppercase">24/7 Support</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope text-gold mt-1"></i>
+                            <a href="mailto:info@brahmasexpress.in"
+                                class="hover:text-white transition block">info@brahmasexpress.in</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-gold mt-1"></i>
+                            <span>Sector 99A, Gurugram, 122505<br>PAN India</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
+
             <div
-                class="pt-12 border-t border-white/5 text-center text-[9px] font-black uppercase tracking-widest text-gray-700">
-                © 2025 Brahmas Express. All Regulatory Standards Met. System Secure.
+                class="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 Brahmas Express. All Rights Reserved.</p>
+                <div class="flex gap-4">
+                    <a href="javascript:void(0)" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="javascript:void(0)" class="hover:text-white transition">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        window.addEventListener("load", function () {
-            const loader = document.getElementById("loader");
-            loader.style.opacity = "0";
-            loader.style.transition = "opacity 0.5s ease";
-            setTimeout(() => loader.style.display = "none", 500);
-        });
-    </script>
 </body>
 
 </html>

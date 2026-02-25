@@ -4,180 +4,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Value Tiers | Brahmas Express - Strategic Investment</title>
+    <title>Pricing Plans | Brahmas Express Logistics</title>
+    <meta name="description"
+        content="Flexible logistics and relocation pricing plans by Brahmas Express. Compare our Basic, Standard, and Premium packages.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        body {
-            background-color: #040A14;
-            background-image:
-                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 60px 60px;
-            overflow-x: hidden;
-        }
-    </style>
 </head>
 
-<body class="bg-[#040A14] text-white">
+<body class="bg-gray-50 text-gray-900">
 
-    <!-- Premium Loader -->
-    <div id="loader" class="fixed inset-0 bg-[#040A14] flex items-center justify-center z-[100]">
-        <div class="relative text-center">
-            <div class="w-16 h-16 bg-[#D4AF37] rounded-lg mx-auto mb-6 flex items-center justify-center">
-                <span class="text-black font-black text-2xl sora">B</span>
-            </div>
-            <div class="w-40 h-1 bg-gray-800 mx-auto overflow-hidden">
-                <div class="h-full bg-[#D4AF37] animate-pulse"></div>
-            </div>
-            <p class="text-gray-400 text-xs mt-4 tracking-[3px] uppercase">Initializing Command Network</p>
-        </div>
-    </div>
-
-    <!-- Command Header -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-black/60 backdrop-blur-xl border-b border-white/10">
-        <div class="max-w-7xl mx-auto flex justify-between items-center px-10 py-6">
+    <!-- Navbar / Shared Header -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
             <a href="./index.html" class="flex items-center gap-3">
-                <div class="h-10 w-10 bg-[#D4AF37] rounded-md flex items-center justify-center">
-                    <span class="text-black font-black text-lg sora">B</span>
+                <div class="h-10 w-10 bg-gold rounded-md flex items-center justify-center">
+                    <span class="text-gray-900 font-black text-lg sora">B</span>
                 </div>
-                <div class="text-white tracking-[6px] text-sm uppercase font-bold">
-                    Brahmas <span class="text-[#D4AF37]">Express</span>
+                <div class="text-gray-900 tracking-wider text-sm font-bold uppercase sora">
+                    Brahmas <span class="text-gold">Express</span>
                 </div>
             </a>
-            <nav class="hidden md:flex gap-12 text-gray-300 uppercase text-xs tracking-[3px]">
-                <a href="./index.html" class="hover:text-[#D4AF37] transition relative group">
-                    Home
-                    <span
-                        class="absolute bottom-[-6px] left-0 w-0 h-[2px] bg-[#D4AF37] transition-all group-hover:w-full"></span>
-                </a>
-                <a href="./about.html" class="hover:text-[#D4AF37] transition relative group">
-                    About
-                    <span
-                        class="absolute bottom-[-6px] left-0 w-0 h-[2px] bg-[#D4AF37] transition-all group-hover:w-full"></span>
-                </a>
-                <a href="./services.html" class="hover:text-[#D4AF37] transition relative group">
-                    Services
-                    <span
-                        class="absolute bottom-[-6px] left-0 w-0 h-[2px] bg-[#D4AF37] transition-all group-hover:w-full"></span>
-                </a>
-                <a href="./pricing.html" class="hover:text-[#D4AF37] transition relative group">
-                    Contact
-                    <span class="absolute bottom-[-6px] left-0 w-full h-[2px] bg-[#D4AF37]"></span>
-                </a>
+
+            <nav class="hidden md:flex gap-8 text-sm uppercase tracking-wider">
+                <a href="./index.html" class="nav-link">Home</a>
+                <a href="./about.html" class="nav-link">About</a>
+                <a href="./services.html" class="nav-link">Services</a>
+                <a href="./pricing.html" class="nav-link active">Pricing</a>
+                <a href="./contact.html" class="nav-link">Contact</a>
             </nav>
-            <a href="./contact.html"
-                class="border border-[#D4AF37] text-[#D4AF37] px-6 py-3 rounded-md text-xs tracking-[3px] uppercase hover:bg-[#D4AF37] hover:text-black transition font-bold">
-                Request Quote
-            </a>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="tel:9667084988" class="text-sm font-bold flex items-center gap-2 hover:text-gold transition">
+                    <i class="fa-solid fa-phone text-gold"></i> 9667084988
+                </a>
+                <a href="./contact.html" class="btn-primary text-sm py-2 px-4 border-none">
+                    Get Quote
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-900 text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </header>
 
-    <section class="py-48 px-[8%] relative overflow-hidden bg-[#0D1117]/50 border-b border-white/5">
-        <div class="max-w-4xl relative z-10" data-aos="fade-up">
-            <span class="text-[#D4AF37] uppercase tracking-[4px] text-xs font-bold mb-4 block">Cost Efficiency
-                Matrix</span>
-            <h1 class="text-5xl md:text-6xl font-black sora text-white mb-8">Value Tiers.</h1>
-            <p class="text-xl text-gray-400 leading-relaxed font-light max-w-2xl">
-                Transparent investment structures for institutional and individual movement. Engineered for precision
-                and control.
-            </p>
+    <!-- SECTION 1 — PAGE HEADER -->
+    <section class="pt-40 pb-20 bg-gray-900 text-white relative flex items-center justify-center min-h-[40vh]">
+        <div class="absolute inset-0 bg-black/60 z-10"></div>
+        <div
+            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1554757388-3bc71536b6bf?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center z-0">
+        </div>
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-20">
+            <h1 class="text-5xl lg:text-6xl font-black sora mb-6">Service Packages</h1>
+            <p class="text-xl text-gray-300 font-medium tracking-wide">Transparent value without compromise.</p>
         </div>
     </section>
 
-    <section class="py-32 bg-transparent">
-        <div class="max-w-7xl mx-auto px-10">
-            <div class="grid lg:grid-cols-3 gap-8">
-                <div class="p-12 bg-white/5 border border-white/5 rounded-3xl hover:border-[#D4AF37]/30 transition">
-                    <h3 class="text-xs font-black text-gray-600 mb-4 tracking-[0.4em] uppercase">Core Protocol</h3>
-                    <div class="text-4xl font-black text-white sora mb-8">Standard</div>
-                    <ul class="space-y-4 text-gray-500 text-xs font-bold uppercase tracking-widest mb-10">
-                        <li>Sub-City Transit</li>
-                        <li>Basic Asset Wrapper</li>
-                        <li>48h Delivery</li>
+    <!-- SECTION 2 — PRICING PACKAGES -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-gold font-bold uppercase tracking-widest text-sm sora mb-3 block">Flexible
+                    Options</span>
+                <h2 class="text-4xl font-extrabold text-gray-900 sora mb-6">Choose Your Service Level</h2>
+                <p class="text-gray-600 text-lg">We offer customized transit and relocation tiers depending on the
+                    complexity and priority of your move.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Basic Card -->
+                <div
+                    class="bg-white rounded-3xl p-10 border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-bold sora text-gray-900 mb-2">Basic</h3>
+                    <p class="text-sm text-gray-500 mb-8 border-b border-gray-100 pb-8">Standard transportation for
+                        budget-conscious moves.</p>
+
+                    <ul class="space-y-4 mb-10 flex-grow text-gray-600">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-gold mt-1"></i> Basic Carton
+                            Packing</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-gold mt-1"></i> Standard
+                            Point-to-Point Transit</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-gold mt-1"></i> Loading &
+                            Unloading Assistance</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-gold mt-1"></i> Shared
+                            Transport Vehicles</li>
+                        <li class="flex items-start gap-3 text-gray-400"><i class="fa-solid fa-xmark mt-1"></i>
+                            Unpacking at Destination</li>
                     </ul>
-                    <a href="contact.html" class="btn-command-gold w-full text-center">Select Module</a>
+
+                    <a href="contact.html" class="w-full btn-secondary text-center">Get Custom Quote</a>
                 </div>
-                <div class="p-12 bg-white/5 border border-[#D4AF37]/30 rounded-3xl relative overflow-hidden">
+
+                <!-- Standard Card -->
+                <div
+                    class="bg-white rounded-3xl p-10 border-2 border-gold shadow-xl transition-all duration-300 flex flex-col h-full transform scale-105 relative z-10">
                     <div
-                        class="absolute top-6 right-6 text-[8px] font-black bg-[#D4AF37] text-black px-3 py-1 rounded-full">
-                        RECOMMENDED</div>
-                    <h3 class="text-xs font-black text-[#D4AF37] mb-4 tracking-[0.4em] uppercase">Advanced Flux</h3>
-                    <div class="text-4xl font-black text-white sora mb-8">Professional</div>
-                    <ul class="space-y-4 text-gray-300 text-xs font-bold uppercase tracking-widest mb-10">
-                        <li>Multi-State Transit</li>
-                        <li>Secure Packing</li>
-                        <li>24h Delivery</li>
+                        class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gold text-black font-bold uppercase tracking-widest text-xs py-1 px-4 rounded-full sora">
+                        Most Popular
+                    </div>
+                    <h3 class="text-2xl font-bold sora text-gray-900 mb-2">Standard</h3>
+                    <p class="text-sm text-gray-500 mb-8 border-b border-gray-100 pb-8">Comprehensive shifting for
+                        individuals and families.</p>
+
+                    <ul class="space-y-4 mb-10 flex-grow text-gray-600">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-gold mt-1"></i> Multi-layer
+                            Safe Packing</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-gold mt-1"></i> Dedicated
+                            Transport Vehicle</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-gold mt-1"></i> Loading,
+                            Unloading & Placement</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-gold mt-1"></i> GPS Shipment
+                            Tracking</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-gold mt-1"></i> Basic
+                            Transit Insurance</li>
+                        <li class="flex items-start gap-3 text-gray-400"><i class="fa-solid fa-xmark mt-1"></i>
+                            White-glove Setup</li>
                     </ul>
-                    <a href="contact.html" class="btn-command-gold w-full text-center">Deploy Module</a>
+
+                    <a href="contact.html" class="w-full btn-primary text-center">Get Custom Quote</a>
                 </div>
-                <div class="p-12 bg-white/5 border border-white/5 rounded-3xl hover:border-[#D4AF37]/30 transition">
-                    <h3 class="text-xs font-black text-gray-600 mb-4 tracking-[0.4em] uppercase">Quantum Class</h3>
-                    <div class="text-4xl font-black text-white sora mb-8">Enterprise</div>
-                    <ul class="space-y-4 text-gray-500 text-xs font-bold uppercase tracking-widest mb-10">
-                        <li>International Link</li>
-                        <li>White-Glove Ops</li>
-                        <li>Instant Status</li>
+
+                <!-- Premium Card -->
+                <div
+                    class="bg-white rounded-3xl p-10 border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-bold sora text-gray-900 mb-2">Premium</h3>
+                    <p class="text-sm text-gray-500 mb-8 border-b border-gray-100 pb-8">White-glove executive service
+                        for fragile & corporate moves.</p>
+
+                    <ul class="space-y-4 mb-10 flex-grow text-gray-600">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-gold mt-1"></i>
+                            Export-Quality Bubble & Crate Packing</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-gold mt-1"></i> Express
+                            Dedicated Transit</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-gold mt-1"></i> Complete
+                            Unpacking & Setup</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-gold mt-1"></i>
+                            Comprehensive Insurance Coverage</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-gold mt-1"></i> IT / Data
+                            Center Equipment Handling</li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-gold mt-1"></i> Dedicated
+                            24/7 Move Manager</li>
                     </ul>
-                    <a href="contact.html" class="btn-command-gold w-full text-center">Contact Director</a>
+
+                    <a href="contact.html" class="w-full btn-secondary text-center">Get Custom Quote</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 bg-black border-t border-white/10 relative">
-        <div class="max-w-7xl mx-auto px-10">
-            <div class="grid md:grid-cols-4 gap-16 mb-20">
-                <div class="col-span-1">
-                    <div class="flex items-center gap-3 mb-8">
-                        <div class="h-8 w-8 bg-[#D4AF37] rounded flex items-center justify-center">
-                            <span class="text-black font-black text-sm sora">B</span>
+    <!-- FOOTER -->
+    <!-- ... same footer content ... -->
+    <footer class="bg-gray-900 text-white pt-10 pb-10 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Company Info -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="h-10 w-10 bg-gold rounded flex items-center justify-center">
+                            <span class="text-black font-black text-lg sora">B</span>
                         </div>
-                        <div class="text-white tracking-[4px] text-xs uppercase font-bold">
-                            Brahmas <span class="text-[#D4AF37]">Express</span>
+                        <div class="text-white tracking-widest text-sm uppercase font-bold sora">
+                            Brahmas <span class="text-gold">Express</span>
                         </div>
                     </div>
-                    <p class="text-xs text-gray-500 leading-relaxed italic">
-                        "Engineering the future of movement with absolute command and control."
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        Premium logistics and relocation services across India. Secure, insured, and professional
+                        transportation solutions.
                     </p>
+                    <div class="flex gap-4">
+                        <a href="javascript:void(0)"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-black transition">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-black transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-black transition">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
                 </div>
+
+                <!-- Quick Links -->
                 <div>
-                    <h4 class="text-white text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Systems</h4>
-                    <ul class="space-y-4 text-gray-500 text-[10px] font-bold uppercase tracking-widest">
-                        <li><a href="services.html" class="hover:text-[#D4AF37] transition">Relocation Matrix</a></li>
-                        <li><a href="services.html" class="hover:text-[#D4AF37] transition">Logistics Node</a></li>
+                    <h4 class="text-white font-bold sora mb-6 uppercase tracking-wider text-sm">Important Links</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-gold transition flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Home</a></li>
+                        <li><a href="about.html" class="hover:text-gold transition flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> About Us</a></li>
+                        <li><a href="services.html" class="hover:text-gold transition flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Services</a></li>
+                        <li><a href="pricing.html" class="hover:text-gold transition flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Pricing</a></li>
                     </ul>
                 </div>
+
+                <!-- Services Links -->
                 <div>
-                    <h4 class="text-white text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Authority</h4>
-                    <ul class="space-y-4 text-gray-500 text-[10px] font-bold uppercase tracking-widest">
-                        <li><a href="about.html" class="hover:text-[#D4AF37] transition">History</a></li>
-                        <li><a href="contact.html" class="hover:text-[#D4AF37] transition">Status</a></li>
+                    <h4 class="text-white font-bold sora mb-6 uppercase tracking-wider text-sm">Our Services</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="services.html" class="hover:text-gold transition flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Residential Relocation</a></li>
+                        <li><a href="services.html" class="hover:text-gold transition flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Corporate Relocation</a></li>
+                        <li><a href="services.html" class="hover:text-gold transition flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Packing & Storage</a></li>
+                        <li><a href="services.html" class="hover:text-gold transition flex items-center gap-2"><i
+                                    class="fa-solid fa-angle-right text-xs"></i> Fleet Transportation</a></li>
                     </ul>
                 </div>
+
+                <!-- Contact Info -->
                 <div>
-                    <h4 class="text-white text-[10px] font-bold uppercase tracking-[0.3em] mb-10">Command Center</h4>
-                    <div class="text-3xl font-black text-[#D4AF37] sora mb-2 tracking-tighter">9667084988</div>
-                    <p class="text-[9px] text-gray-600 font-black uppercase tracking-[0.4em]">Operational 24/7</p>
+                    <h4 class="text-white font-bold sora mb-6 uppercase tracking-wider text-sm">Contact Us</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-phone text-gold mt-1"></i>
+                            <div>
+                                <a href="tel:9667084988"
+                                    class="hover:text-gold block transition font-bold text-white text-lg tracking-wider">9667084988</a>
+                                <span class="text-xs text-gray-500 uppercase">24/7 Support</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope text-gold mt-1"></i>
+                            <a href="mailto:info@brahmasexpress.in"
+                                class="hover:text-white transition block">info@brahmasexpress.in</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-gold mt-1"></i>
+                            <span>Sector 99A, Gurugram, 122505<br>PAN India</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
+
             <div
-                class="pt-12 border-t border-white/5 text-center text-[9px] font-black uppercase tracking-widest text-gray-700">
-                © 2025 Brahmas Express. All Regulatory Standards Met. System Secure.
+                class="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 Brahmas Express. All Rights Reserved.</p>
+                <div class="flex gap-4">
+                    <a href="javascript:void(0)" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="javascript:void(0)" class="hover:text-white transition">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        window.addEventListener("load", function () {
-            const loader = document.getElementById("loader");
-            loader.style.opacity = "0";
-            loader.style.transition = "opacity 0.5s ease";
-            setTimeout(() => loader.style.display = "none", 500);
-        });
-    </script>
 </body>
 
 </html>

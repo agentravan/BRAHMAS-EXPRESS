@@ -1,13 +1,19 @@
-/* BRAHMAS EXPRESS - HYBRID COMMAND SYSTEM DESIGN */
+/* BRAHMAS EXPRESS - PREMIUM LIGHT DESIGN */
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --command-gold: #D4AF37;
-    --navy-base: #040A14;
-    --navy-light: #0D1424;
-    --text-main: #F3F4F6;
-    --text-dim: #9CA3AF;
-    --border-soft: rgba(255, 255, 255, 0.1);
+    --brand-gold: #D4AF37;
+    --brand-gold-dark: #b5952f;
+    --brand-gold-light: rgba(212, 175, 55, 0.1);
+    --text-main: #111827;
+    /* Gray 900 */
+    --text-muted: #4B5563;
+    /* Gray 600 */
+    --bg-main: #ffffff;
+    --bg-soft: #f9fafb;
+    /* Gray 50 */
+    --border-soft: #e5e7eb;
+    /* Gray 200 */
 }
 
 * {
@@ -17,125 +23,196 @@
 }
 
 body {
-    background-color: var(--navy-base);
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
+    background-color: var(--bg-main);
     font-family: 'Inter', sans-serif;
     color: var(--text-main);
     overflow-x: hidden;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 .sora {
     font-family: 'Sora', sans-serif;
 }
 
-/* --- Loader --- */
-#loader {
-    transition: opacity 0.5s ease;
+/* Typography Utilities */
+.text-brand {
+    color: var(--text-main);
 }
 
-.animate-pulse {
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+.text-muted {
+    color: var(--text-muted);
 }
 
-@keyframes pulse {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: .5;
-    }
+.text-gold {
+    color: var(--brand-gold);
 }
 
-/* --- Navigation --- */
-nav a {
+.bg-gold {
+    background-color: var(--brand-gold);
+}
+
+.bg-soft {
+    background-color: var(--bg-soft);
+}
+
+/* Custom Backgrounds */
+.bg-subtle-gradient {
+    background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+}
+
+.bg-brand-soft {
+    background-color: #fcfaf5;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--brand-gold);
+    color: #111827;
+    padding: 0.875rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-family: 'Sora', sans-serif;
     transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--brand-gold);
 }
 
-.nav-active-indicator {
+.btn-primary:hover {
+    background-color: var(--brand-gold-dark);
+    border-color: var(--brand-gold-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(212, 175, 55, 0.3);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-main);
+    padding: 0.875rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-family: 'Sora', sans-serif;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--text-main);
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-main);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Base Nav Link */
+.nav-link {
+    position: relative;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--text-main);
+}
+
+.nav-link::after {
+    content: '';
     position: absolute;
-    bottom: -6px;
+    bottom: -4px;
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--command-gold);
-    transition: all 0.3s ease;
+    background-color: var(--brand-gold);
+    transition: width 0.3s ease;
 }
 
-.group:hover .nav-active-indicator {
+.nav-link:hover::after,
+.nav-link.active::after {
     width: 100%;
 }
 
-/* --- Hero Architecture --- */
-.hero-gradient-overlay {
-    background: linear-gradient(90deg, #040A14 0%, rgba(4, 10, 20, 0.8) 50%, transparent 100%);
-}
-
-/* --- Utility Components --- */
-.max-w-7xl {
-    max-width: 80rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.btn-command-gold {
-    background-color: var(--command-gold);
-    color: #000;
-    padding: 1rem 2rem;
-    border-radius: 0.5rem;
-    font-weight: 600;
-    transition: transform 0.3s ease;
-    display: inline-block;
-}
-
-.btn-command-gold:hover {
-    transform: scale(1.05);
-}
-
-.btn-outline {
-    border: 1px solid white;
-    padding: 1rem 2rem;
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.btn-outline:hover {
-    background-color: white;
-    color: black;
-}
-
-/* --- Sections --- */
-.section-pad {
-    padding: 120px 0;
-}
-
-/* --- Responsive Pricing / Modules --- */
-.module-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-}
-
-.module-card {
-    background: rgba(255, 255, 255, 0.02);
+/* Service Cards */
+.service-card {
+    background: #ffffff;
     border: 1px solid var(--border-soft);
-    padding: 3rem;
+    padding: 2.5rem;
     border-radius: 1rem;
     transition: all 0.3s ease;
+    height: 100%;
 }
 
-.module-card:hover {
-    border-color: var(--command-gold);
-    background: rgba(212, 175, 55, 0.03);
+.service-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    transform: translateY(-5px);
+    border-color: var(--brand-gold);
+}
+
+.service-icon-wrapper {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--brand-gold-light);
+    color: var(--brand-gold-dark);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    background: #ffffff;
+    border: 1px solid var(--border-soft);
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    height: 100%;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Steps */
+.step-circle {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: var(--brand-gold-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin: 0 auto 1.5rem auto;
+    position: relative;
+    z-index: 2;
+    border: 2px solid var(--brand-gold);
+    box-shadow: 0 4px 6px -1px rgba(212, 175, 55, 0.2);
+}
+
+.step-line {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--border-soft);
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .step-line {
+        display: none;
+    }
 }
