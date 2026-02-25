@@ -1,19 +1,16 @@
-/* BRAHMAS EXPRESS - PREMIUM LIGHT DESIGN */
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+/* BRAHMAS EXPRESS - ENTERPRISE DESIGN */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
     --brand-gold: #D4AF37;
     --brand-gold-dark: #b5952f;
-    --brand-gold-light: rgba(212, 175, 55, 0.1);
-    --text-main: #111827;
-    /* Gray 900 */
-    --text-muted: #4B5563;
-    /* Gray 600 */
+    --brand-deep-blue: #0B1B3D;
+
+    --text-main: #1e293b;
+    --text-muted: #475569;
     --bg-main: #ffffff;
-    --bg-soft: #f9fafb;
-    /* Gray 50 */
-    --border-soft: #e5e7eb;
-    /* Gray 200 */
+    --bg-soft: #F8FAFC;
+    --border-soft: #e2e8f0;
 }
 
 * {
@@ -24,20 +21,24 @@
 
 body {
     background-color: var(--bg-main);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: var(--text-main);
     overflow-x: hidden;
     line-height: 1.6;
 }
 
+.font-heading,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-.sora {
-    font-family: 'Sora', sans-serif;
+h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.font-body {
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Typography Utilities */
